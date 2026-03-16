@@ -27,49 +27,9 @@ foreach ($orthosmile_includes as $file) {
     }
 }
 
-// Support de traduction amélioré pour Polylang et WPML
-add_action('after_setup_theme', function () {
-    // Compatibilité Polylang : forcer la langue du site sur la langue courante de Polylang si activé
-    if (function_exists('pll_current_language')) {
-        $lang = pll_current_language('locale');
-        if ($lang && $lang !== get_locale()) {
-            switch_to_locale($lang);
-        }
-    }
-    
-    // Support WPML
-    if (defined('ICL_LANGUAGE_CODE') && function_exists('icl_get_home_url')) {
-        $current_lang = ICL_LANGUAGE_CODE;
-        if ($current_lang && $current_lang !== get_locale()) {
-            switch_to_locale($current_lang);
-        }
-    }
-});
-
 // Charger les fichiers de traduction du thème
 add_action('after_setup_theme', function () {
     load_theme_textdomain('orthosmile', get_template_directory() . '/languages');
-});
-
-// Support des chaînes traduisibles dans les options du Customizer
-add_filter('option_page_on_front', function ($value) {
-    if (function_exists('pll__')) {
-        return pll__($value);
-    }
-    return $value;
-});
-
-// Support des chaînes traduisibles pour les menus
-add_filter('wp_nav_menu_args', function ($args) {
-    if (function_exists('pll__')) {
-        if (isset($args['menu'])) {
-            $args['menu'] = pll__($args['menu']);
-        }
-        if (isset($args['menu_class'])) {
-            $args['menu_class'] = pll__($args['menu_class']);
-        }
-    }
-    return $args;
 });
 
 // Gestion du formulaire de contact
@@ -125,3 +85,11 @@ function orthosmile_handle_contact_form() {
 if (file_exists(get_template_directory() . '/inc/customizer-extended.php')) {
     require_once get_template_directory() . '/inc/customizer-extended.php';
 }
+
+// Affichage du message de succès
+add_action('wp_head', function() {
+    if (isset($_GET['contact_success'])) {
+        echo '<style>.orthosmile-notice{position:fixed;top:20px;left:50%;transform:translateX(-50%);background:#0f766e;color:#fff;padding:14px 28px;border-radius:6px;z-index:9999;font-family:sans-serif;box-shadow:0 4px 12px rgba(0,0,0,.15)}</style>';
+        echo '<div class="orthosmile-notice">' . esc_html__('Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais.', 'orthosmile') . '</div>';
+    }
+});
