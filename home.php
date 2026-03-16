@@ -6,6 +6,10 @@
  */
 
 get_header();
+
+$hero    = orthosmile_get_hero_content();
+$trust   = orthosmile_get_trust_content();
+$contact = orthosmile_get_contact_info();
 ?>
 
 <main id="primary" class="site-main" role="main">
@@ -14,13 +18,13 @@ get_header();
         <div class="container">
             <div class="hero-content">
                 <div class="hero-tagline">
-                    <span class="tagline-badge">Excellence Orthodontique</span>
+                    <span class="tagline-badge"><?php esc_html_e('Excellence Orthodontique', 'orthosmile'); ?></span>
                 </div>
-                <h1 class="hero-title">Votre sourire, notre expertise</h1>
-                <p class="hero-subtitle">Des traitements orthodontiques sur mesure pour des résultats naturels et durables</p>
+                <h1 class="hero-title"><?php echo esc_html($hero['title']); ?></h1>
+                <p class="hero-subtitle"><?php echo esc_html($hero['subtitle']); ?></p>
                 <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary">Prendre rendez-vous</a>
-                    <a href="#contact" class="btn btn-secondary">Nous contacter</a>
+                    <a href="<?php echo esc_url($hero['cta_url'] ?: '#contact'); ?>" class="btn btn-primary"><?php echo esc_html($hero['cta_text']); ?></a>
+                    <a href="#contact" class="btn btn-secondary"><?php esc_html_e('Nous contacter', 'orthosmile'); ?></a>
                 </div>
             </div>
         </div>
@@ -30,26 +34,18 @@ get_header();
     <section class="trust-section" id="trust">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Une orthodontie fondée sur la précision et la pédagogie</h2>
-                <p class="section-subtitle">Chaque traitement est défini selon votre occlusion, vos objectifs esthétiques et fonctionnels, puis expliqué simplement à chaque étape.</p>
+                <h2 class="section-title"><?php echo esc_html($trust['title']); ?></h2>
+                <p class="section-subtitle"><?php echo esc_html($trust['subtitle']); ?></p>
             </div>
-            
+
             <div class="trust-grid">
+                <?php foreach ($trust['items'] as $item) : ?>
                 <div class="trust-card">
-                    <span class="material-symbols-outlined trust-icon">workspace_premium</span>
-                    <div class="trust-value">18+</div>
-                    <div class="trust-label">années d'expérience clinique</div>
+                    <span class="material-symbols-outlined trust-icon"><?php echo esc_html($item['icon']); ?></span>
+                    <div class="trust-value"><?php echo esc_html($item['value']); ?></div>
+                    <div class="trust-label"><?php echo esc_html($item['label']); ?></div>
                 </div>
-                <div class="trust-card">
-                    <span class="material-symbols-outlined trust-icon">groups</span>
-                    <div class="trust-value">8 500+</div>
-                    <div class="trust-label">patients traités avec succès</div>
-                </div>
-                <div class="trust-card">
-                    <span class="material-symbols-outlined trust-icon">health_and_safety</span>
-                    <div class="trust-value">100%</div>
-                    <div class="trust-label">protocoles certifiés et suivi expert</div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
@@ -58,133 +54,138 @@ get_header();
     <?php get_template_part('template-parts/specialists'); ?>
 
     <!-- Services Section -->
+    <?php if (orthosmile_show_section('services')) : ?>
     <section class="services-section" id="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Nos Services</h2>
-                <p class="section-subtitle">Une approche personnalisée pour chaque sourire, avec des solutions adaptées à votre âge, votre mode de vie et vos objectifs.</p>
+                <h2 class="section-title"><?php esc_html_e('Nos Services', 'orthosmile'); ?></h2>
+                <p class="section-subtitle"><?php esc_html_e('Une approche personnalisée pour chaque sourire, avec des solutions adaptées à votre âge, votre mode de vie et vos objectifs.', 'orthosmile'); ?></p>
             </div>
-            
+
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-content">
-                        <div class="service-badge">Expertise</div>
-                        <h3 class="service-title">Orthodontie Adulte</h3>
-                        <p class="service-description">Des traitements sur mesure pour adultes, discrets et efficaces pour redonner éclat à votre sourire.</p>
-                        <a href="#" class="btn btn-secondary">En savoir plus</a>
+                        <div class="service-badge"><?php esc_html_e('Expertise', 'orthosmile'); ?></div>
+                        <h3 class="service-title"><?php esc_html_e('Orthodontie Adulte', 'orthosmile'); ?></h3>
+                        <p class="service-description"><?php esc_html_e('Des traitements sur mesure pour adultes, discrets et efficaces pour redonner éclat à votre sourire.', 'orthosmile'); ?></p>
+                        <a href="#" class="btn btn-secondary"><?php esc_html_e('En savoir plus', 'orthosmile'); ?></a>
                     </div>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-content">
-                        <div class="service-badge">Prévention</div>
-                        <h3 class="service-title">Orthodontie Enfant</h3>
-                        <p class="service-description">Prise en charge précoce pour guider le développement harmonieux de la dentition et de la mâchoire.</p>
-                        <a href="#" class="btn btn-secondary">En savoir plus</a>
+                        <div class="service-badge"><?php esc_html_e('Prévention', 'orthosmile'); ?></div>
+                        <h3 class="service-title"><?php esc_html_e('Orthodontie Enfant', 'orthosmile'); ?></h3>
+                        <p class="service-description"><?php esc_html_e('Prise en charge précoce pour guider le développement harmonieux de la dentition et de la mâchoire.', 'orthosmile'); ?></p>
+                        <a href="#" class="btn btn-secondary"><?php esc_html_e('En savoir plus', 'orthosmile'); ?></a>
                     </div>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-content">
-                        <div class="service-badge">Innovation</div>
-                        <h3 class="service-title">Invisalign</h3>
-                        <p class="service-description">Aligneurs transparents pour un traitement invisible et amovible, adapté à votre mode de vie.</p>
-                        <a href="#" class="btn btn-secondary">En savoir plus</a>
+                        <div class="service-badge"><?php esc_html_e('Innovation', 'orthosmile'); ?></div>
+                        <h3 class="service-title"><?php esc_html_e('Invisalign', 'orthosmile'); ?></h3>
+                        <p class="service-description"><?php esc_html_e('Aligneurs transparents pour un traitement invisible et amovible, adapté à votre mode de vie.', 'orthosmile'); ?></p>
+                        <a href="#" class="btn btn-secondary"><?php esc_html_e('En savoir plus', 'orthosmile'); ?></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <?php endif; ?>
 
     <!-- Contact Section -->
     <section class="contact-section" id="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Contact & Prendre Rendez-vous</h2>
-                <p class="section-subtitle">Nous sommes à votre écoute pour répondre à toutes vos questions et vous accompagner dans votre parcours orthodontique.</p>
+                <h2 class="section-title"><?php esc_html_e('Contact &amp; Prendre Rendez-vous', 'orthosmile'); ?></h2>
+                <p class="section-subtitle"><?php esc_html_e('Nous sommes à votre écoute pour répondre à toutes vos questions et vous accompagner dans votre parcours orthodontique.', 'orthosmile'); ?></p>
             </div>
-            
+
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3>Coordonnées</h3>
-                    
+                    <h3><?php esc_html_e('Coordonnées', 'orthosmile'); ?></h3>
+
                     <div class="contact-item">
                         <div class="contact-icon">
                             <span class="material-symbols-outlined">location_on</span>
                         </div>
                         <div class="contact-details">
-                            <h4>Adresse</h4>
-                            <p>123 Rue de la Santé, 75000 Paris</p>
+                            <h4><?php esc_html_e('Adresse', 'orthosmile'); ?></h4>
+                            <p><?php echo esc_html($contact['address']); ?></p>
                         </div>
                     </div>
-                    
+
                     <div class="contact-item">
                         <div class="contact-icon">
                             <span class="material-symbols-outlined">call</span>
                         </div>
                         <div class="contact-details">
-                            <h4>Téléphone</h4>
-                            <p><a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
+                            <h4><?php esc_html_e('Téléphone', 'orthosmile'); ?></h4>
+                            <p><a href="tel:<?php echo esc_attr(preg_replace('/[^0-9+]/', '', $contact['phone'])); ?>"><?php echo esc_html($contact['phone']); ?></a></p>
                         </div>
                     </div>
-                    
+
                     <div class="contact-item">
                         <div class="contact-icon">
                             <span class="material-symbols-outlined">email</span>
                         </div>
                         <div class="contact-details">
-                            <h4>Email</h4>
-                            <p><a href="mailto:contact@orthosmile.fr">contact@orthosmile.fr</a></p>
+                            <h4><?php esc_html_e('Email', 'orthosmile'); ?></h4>
+                            <p><a href="mailto:<?php echo esc_attr($contact['email']); ?>"><?php echo esc_html($contact['email']); ?></a></p>
                         </div>
                     </div>
-                    
+
                     <div class="contact-item">
                         <div class="contact-icon">
                             <span class="material-symbols-outlined">schedule</span>
                         </div>
                         <div class="contact-details">
-                            <h4>Horaires</h4>
-                            <p>Lun-Ven: 9h-19h</p>
+                            <h4><?php esc_html_e('Horaires', 'orthosmile'); ?></h4>
+                            <p><?php echo esc_html($contact['opening_hours']); ?></p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="contact-form">
-                    <h3>Formulaire de Contact</h3>
-                    <form action="#" method="post" class="contact-form">
+                    <h3><?php esc_html_e('Formulaire de Contact', 'orthosmile'); ?></h3>
+                    <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post">
+                        <?php wp_nonce_field('contact_form', 'contact_nonce'); ?>
+                        <input type="hidden" name="action" value="orthosmile_contact_form">
+
                         <div class="form-group">
-                            <label for="contact_name">Nom <span class="required">*</span></label>
-                            <input type="text" id="contact_name" name="contact_name" required>
+                            <label for="home_contact_name"><?php esc_html_e('Nom', 'orthosmile'); ?> <span class="required">*</span></label>
+                            <input type="text" id="home_contact_name" name="contact_name" required>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label for="contact_email">Email <span class="required">*</span></label>
-                            <input type="email" id="contact_email" name="contact_email" required>
+                            <label for="home_contact_email"><?php esc_html_e('Email', 'orthosmile'); ?> <span class="required">*</span></label>
+                            <input type="email" id="home_contact_email" name="contact_email" required>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label for="contact_phone">Téléphone</label>
-                            <input type="tel" id="contact_phone" name="contact_phone">
+                            <label for="home_contact_phone"><?php esc_html_e('Téléphone', 'orthosmile'); ?></label>
+                            <input type="tel" id="home_contact_phone" name="contact_phone">
                         </div>
-                        
+
                         <div class="form-group">
-                            <label for="contact_subject">Sujet <span class="required">*</span></label>
-                            <select id="contact_subject" name="contact_subject" required>
-                                <option value="">Choisissez un sujet</option>
-                                <option value="rendez-vous">Prendre rendez-vous</option>
-                                <option value="question">Poser une question</option>
-                                <option value="urgence">Urgence orthodontique</option>
-                                <option value="autre">Autre</option>
+                            <label for="home_contact_subject"><?php esc_html_e('Sujet', 'orthosmile'); ?> <span class="required">*</span></label>
+                            <select id="home_contact_subject" name="contact_subject" required>
+                                <option value=""><?php esc_html_e('Choisissez un sujet', 'orthosmile'); ?></option>
+                                <option value="rendez-vous"><?php esc_html_e('Prendre rendez-vous', 'orthosmile'); ?></option>
+                                <option value="question"><?php esc_html_e('Poser une question', 'orthosmile'); ?></option>
+                                <option value="urgence"><?php esc_html_e('Urgence orthodontique', 'orthosmile'); ?></option>
+                                <option value="autre"><?php esc_html_e('Autre', 'orthosmile'); ?></option>
                             </select>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label for="contact_message">Message <span class="required">*</span></label>
-                            <textarea id="contact_message" name="contact_message" rows="5" required></textarea>
+                            <label for="home_contact_message"><?php esc_html_e('Message', 'orthosmile'); ?> <span class="required">*</span></label>
+                            <textarea id="home_contact_message" name="contact_message" rows="5" required></textarea>
                         </div>
-                        
+
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                            <button type="submit" class="btn btn-primary"><?php esc_html_e('Envoyer le message', 'orthosmile'); ?></button>
                         </div>
                     </form>
                 </div>

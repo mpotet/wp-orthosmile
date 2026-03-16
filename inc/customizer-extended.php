@@ -437,9 +437,5 @@ function orthosmile_customize_register_extended($wp_customize) {
         'type'     => 'textarea',
     ]);
 
-    // Fonction de validation pour les checkboxes
-    function orthosmile_sanitize_checkbox($checked) {
-        return ((isset($checked) && true == $checked) ? true : false);
-    }
 }
 add_action('customize_register', 'orthosmile_customize_register_extended');
