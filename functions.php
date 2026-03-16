@@ -38,7 +38,7 @@ add_action('admin_post_nopriv_orthosmile_contact_form', 'orthosmile_handle_conta
 
 function orthosmile_handle_contact_form() {
     // Vérification du nonce
-    if (!isset($_POST['contact_nonce']) || !wp_verify_nonce($_POST['contact_nonce'], 'contact_form')) {
+    if (!isset($_POST['orthosmile_contact_nonce']) || !wp_verify_nonce($_POST['orthosmile_contact_nonce'], 'orthosmile_contact_form')) {
         wp_die(__('Erreur de sécurité', 'orthosmile'));
     }
 

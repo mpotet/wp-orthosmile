@@ -41,6 +41,7 @@ $faq_items = get_theme_mod('faq_items', [
 <section class="faq-section" id="faq">
     <div class="container">
         <div class="section-header fade-in-up">
+            <span class="section-eyebrow"><?php esc_html_e('Vos questions', 'orthosmile'); ?></span>
             <h2 class="section-title"><?php esc_html_e('Questions Fréquentes', 'orthosmile'); ?></h2>
             <p class="section-subtitle"><?php esc_html_e('Vous avez des questions ? Nous avons les réponses. Retrouvez ici les informations essentielles sur l\'orthodontie.', 'orthosmile'); ?></p>
         </div>

@@ -436,6 +436,50 @@ function orthosmile_customize_register_extended($wp_customize) {
         'settings' => 'orthosmile_value_3_description',
         'type'     => 'textarea',
     ]);
-
 }
+
+/**
+ * Add hero stats customizer section.
+ *
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ */
+function orthosmile_customize_hero_stats($wp_customize) {
+    $wp_customize->add_section('orthosmile_hero_stats', [
+        'title'    => __('Hero – Statistiques', 'orthosmile'),
+        'priority' => 30,
+        'panel'    => '',
+    ]);
+
+    $stats = [
+        'orthosmile_stat_patients' => [
+            'label'   => __('Stat : Patients traités', 'orthosmile'),
+            'default' => '2 500+',
+        ],
+        'orthosmile_stat_years' => [
+            'label'   => __('Stat : Années d\'expérience', 'orthosmile'),
+            'default' => '18',
+        ],
+        'orthosmile_stat_success' => [
+            'label'   => __('Stat : Taux de satisfaction', 'orthosmile'),
+            'default' => '98%',
+        ],
+        'orthosmile_stat_reviews' => [
+            'label'   => __('Stat : Avis 5 étoiles', 'orthosmile'),
+            'default' => '500+',
+        ],
+    ];
+
+    foreach ($stats as $setting_id => $args) {
+        $wp_customize->add_setting($setting_id, [
+            'default'           => $args['default'],
+            'sanitize_callback' => 'sanitize_text_field',
+        ]);
+        $wp_customize->add_control($setting_id, [
+            'label'   => $args['label'],
+            'section' => 'orthosmile_hero_stats',
+            'type'    => 'text',
+        ]);
+    }
+}
+add_action('customize_register', 'orthosmile_customize_hero_stats');
 add_action('customize_register', 'orthosmile_customize_register_extended');
