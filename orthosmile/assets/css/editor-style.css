@@ -1,0 +1,173 @@
+/*
+Theme Name: OrthoSmile
+Description: CSS for the WordPress editor
+*/
+
+/* Editor styles to match the front-end */
+body.block-editor-page {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #1f2937;
+    background: #ffffff;
+}
+
+.editor-post-title__input {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.editor-block-list__block {
+    margin-bottom: 1.5rem;
+}
+
+/* Block styles */
+.wp-block {
+    margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.wp-block-button__link {
+    background-color: #0f766e;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.wp-block-button__link:hover {
+    background-color: #0d5c53;
+    transform: translateY(-2px);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.875rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+/* Paragraphs */
+p {
+    margin: 0 0 1.5rem 0;
+    line-height: 1.6;
+}
+
+/* Links */
+a {
+    color: #0f766e;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0d5c53;
+    text-decoration: underline;
+}
+
+/* Lists */
+ul, ol {
+    margin: 0 0 1.5rem 0;
+    padding-left: 2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+/* Quotes */
+blockquote {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-left: 4px solid #0f766e;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Code */
+code {
+    background: #f3f4f6;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+}
+
+pre {
+    background: #f3f4f6;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+th, td {
+    border: 1px solid #e5e7eb;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+th {
+    background-color: #f8fafc;
+    font-weight: 600;
+}
+
+/* WordPress specific editor styles */
+.block-editor-block-list__layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .editor-post-title__input {
+        font-size: 2.5rem;
+    }
+    
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+    
+    .block-editor-block-list__layout {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .editor-post-title__input {
+        font-size: 2rem;
+    }
+    
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+}

@@ -1,0 +1,54 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: OrthoSmile\n"
+"POT-Creation-Date: 2026-03-15\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: GitHub Copilot\n"
+
+# Ajoutez ici toutes les chaînes à traduire, exemple :
+msgid "Prendre rendez-vous"
+msgstr ""
+
+msgid "Voir le profil"
+msgstr ""
+
+msgid "Voir tous les traitements"
+msgstr ""
+
+msgid "Voir le cas complet"
+msgstr ""
+
+msgid "Menu principal"
+msgstr ""
+
+msgid "Menu footer"
+msgstr ""
+
+msgid "Équipe"
+msgstr ""
+
+msgid "L’expertise de notre équipe médicale"
+msgstr ""
+
+msgid "Des spécialistes expérimentés, attentifs à votre confort et engagés dans des résultats durables."
+msgstr ""
+
+msgid "Direction medicale"
+msgstr ""
+
+msgid "Spécialiste qualifié en orthodontie"
+msgstr ""
+
+msgid "Photo avant traitement"
+msgstr ""
+
+msgid "Photo après traitement"
+msgstr ""
+
+msgid "Avant"
+msgstr ""
+
+msgid "Après"
+msgstr ""
