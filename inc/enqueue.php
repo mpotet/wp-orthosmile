@@ -27,10 +27,11 @@ function orthosmile_enqueue_scripts() {
     // Enqueue main script
     wp_enqueue_script('orthosmile-main', get_template_directory_uri() . '/assets/js/main.js', ['jquery'], '1.0.0', true);
     
-    // Localize script for AJAX
+    // Localize script for AJAX and service worker
     wp_localize_script('orthosmile-main', 'orthosmile_ajax', [
         'ajax_url' => admin_url('admin-ajax.php'),
         'nonce'    => wp_create_nonce('orthosmile_nonce'),
+        'sw_url'   => get_template_directory_uri() . '/sw.js',
     ]);
 }
 

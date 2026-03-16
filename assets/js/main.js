@@ -256,3 +256,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Register service worker after the page has fully loaded to avoid
+// InvalidStateError caused by registering during document navigation.
+if ('serviceWorker' in navigator && typeof orthosmile_ajax !== 'undefined' && orthosmile_ajax.sw_url) {
+    window.addEventListener('load', function () {
+        navigator.serviceWorker.register(orthosmile_ajax.sw_url)
+            .catch(function (err) {
+                // Ignore registration failures in restricted contexts (e.g.
+                // webviews or cross-origin iframes where service workers are
+                // not allowed). Log a warning to help developers diagnose issues.
+                if (typeof console !== 'undefined' && console.warn) {
+                    console.warn('[OrthoSmile] Service worker registration failed:', err);
+                }
+            });
+    });
+}
