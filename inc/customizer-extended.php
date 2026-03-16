@@ -62,7 +62,7 @@ function orthosmile_customize_register_extended($wp_customize) {
 
     // Spécialiste 1
     $wp_customize->add_setting('orthosmile_specialist_1_name', [
-        'default'           => __('Dr. Jean Dupont', 'orthosmile'),
+        'default'           => '',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
 
@@ -99,7 +99,7 @@ function orthosmile_customize_register_extended($wp_customize) {
 
     // Spécialiste 2
     $wp_customize->add_setting('orthosmile_specialist_2_name', [
-        'default'           => __('Dr. Marie Martin', 'orthosmile'),
+        'default'           => '',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
 
@@ -136,7 +136,7 @@ function orthosmile_customize_register_extended($wp_customize) {
 
     // Spécialiste 3
     $wp_customize->add_setting('orthosmile_specialist_3_name', [
-        'default'           => __('Dr. Pierre Bernard', 'orthosmile'),
+        'default'           => '',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
 

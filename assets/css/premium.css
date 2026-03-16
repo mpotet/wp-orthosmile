@@ -19,7 +19,7 @@
     pointer-events: none;
     animation: float 4s ease-in-out infinite;
 }
-.hero-float-card .material-symbols-outlined { font-size: 1.25rem; color: #5eead4; }
+.hero-float-card .material-symbols-outlined { font-size: 1.25rem; color: #93c5fd; }
 .hero-float-card-1 { bottom: 2.5rem; left: -1rem; animation-delay: 0s; }
 .hero-float-card-2 { top: 2.5rem;   right: -1rem; animation-delay: 1.5s; }
 
@@ -41,7 +41,7 @@
    ===================================================== */
 .section-divider {
     width: 48px; height: 4px;
-    background: linear-gradient(90deg, var(--color-primary), #5eead4);
+    background: linear-gradient(90deg, var(--color-primary), #93c5fd);
     border-radius: var(--radius-full);
     margin: 0 auto 1.5rem;
 }
@@ -130,7 +130,7 @@
    GRADIENT TEXT UTILITY
    ===================================================== */
 .gradient-text {
-    background: linear-gradient(135deg, var(--color-primary), #5eead4);
+    background: linear-gradient(135deg, var(--color-primary), #93c5fd);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

@@ -77,7 +77,7 @@ $contact = orthosmile_get_contact_info();
                     <p><?php esc_html_e('Remplissez le formulaire ci-dessous pour nous contacter. Nous vous répondrons dans les plus brefs délais.', 'orthosmile'); ?></p>
 
                     <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post" class="contact-form">
-                        <?php wp_nonce_field('contact_form', 'contact_nonce'); ?>
+                        <?php wp_nonce_field('orthosmile_contact_form', 'contact_nonce'); ?>
                         <input type="hidden" name="action" value="orthosmile_contact_form">
 
                         <div class="form-group">

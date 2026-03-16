@@ -13,10 +13,6 @@ if (! defined('ABSPATH')) {
 $orthosmile_includes = [
     'inc/theme-setup.php',
     'inc/enqueue.php',
-    'inc/cpt.php',
-    'inc/theme-options.php',
-    'inc/admin-meta.php',
-    'inc/acf-fields.php',
 ];
 
 
@@ -38,7 +34,7 @@ add_action('admin_post_nopriv_orthosmile_contact_form', 'orthosmile_handle_conta
 
 function orthosmile_handle_contact_form() {
     // Vérification du nonce
-    if (!isset($_POST['orthosmile_contact_nonce']) || !wp_verify_nonce($_POST['orthosmile_contact_nonce'], 'orthosmile_contact_form')) {
+    if (!isset($_POST['contact_nonce']) || !wp_verify_nonce($_POST['contact_nonce'], 'orthosmile_contact_form')) {
         wp_die(__('Erreur de sécurité', 'orthosmile'));
     }
 
@@ -89,7 +85,8 @@ if (file_exists(get_template_directory() . '/inc/customizer-extended.php')) {
 // Affichage du message de succès
 add_action('wp_head', function() {
     if (isset($_GET['contact_success'])) {
-        echo '<style>.orthosmile-notice{position:fixed;top:20px;left:50%;transform:translateX(-50%);background:#0f766e;color:#fff;padding:14px 28px;border-radius:6px;z-index:9999;font-family:sans-serif;box-shadow:0 4px 12px rgba(0,0,0,.15)}</style>';
+        $primary = orthosmile_get_primary_color();
+        echo '<style>.orthosmile-notice{position:fixed;top:20px;left:50%;transform:translateX(-50%);background:' . esc_attr($primary) . ';color:#fff;padding:14px 28px;border-radius:6px;z-index:9999;font-family:sans-serif;box-shadow:0 4px 12px rgba(0,0,0,.15)}</style>';
         echo '<div class="orthosmile-notice">' . esc_html__('Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais.', 'orthosmile') . '</div>';
     }
 });

@@ -73,17 +73,6 @@ function orthosmile_setup() {
     // Add theme support for selective refresh for widgets.
     add_theme_support('customize-selective-refresh-widgets');
 
-    // Add support for core custom logo.
-    add_theme_support(
-        'custom-logo',
-        [
-            'height'      => 250,
-            'width'       => 250,
-            'flex-width'  => true,
-            'flex-height' => true,
-        ]
-    );
-
     // Add support for editor styles.
     add_theme_support('editor-styles');
     add_editor_style('assets/css/editor-style.css');
@@ -152,8 +141,8 @@ function orthosmile_scripts() {
     // Theme stylesheet
     wp_enqueue_style('orthosmile-main', get_template_directory_uri() . '/assets/css/main.css', [], wp_get_theme()->get('Version'));
 
-    // Google Fonts
-    wp_enqueue_style('orthosmile-fonts', 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap', [], null);
+    // Google Fonts — typographie médicale professionnelle
+    wp_enqueue_style('orthosmile-fonts', 'https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&family=Playfair+Display:wght@600;700&display=swap', [], null);
 
     // Material Icons
     wp_enqueue_style('orthosmile-icons', 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200', [], null);

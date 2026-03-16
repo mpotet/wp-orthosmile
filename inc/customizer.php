@@ -30,7 +30,7 @@ function orthosmile_customize_register($wp_customize) {
 
     // Phone number
     $wp_customize->add_setting('phone_number', [
-        'default'           => '+33 1 23 45 67 89',
+        'default'           => '',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
 
@@ -42,7 +42,7 @@ function orthosmile_customize_register($wp_customize) {
 
     // Email
     $wp_customize->add_setting('contact_email', [
-        'default'           => 'contact@orthosmile.fr',
+        'default'           => '',
         'sanitize_callback' => 'sanitize_email',
     ]);
 
@@ -54,7 +54,7 @@ function orthosmile_customize_register($wp_customize) {
 
     // Address
     $wp_customize->add_setting('contact_address', [
-        'default'           => '123 Rue de la Santé, 75000 Paris',
+        'default'           => '',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
 
@@ -66,7 +66,7 @@ function orthosmile_customize_register($wp_customize) {
 
     // Opening hours
     $wp_customize->add_setting('opening_hours', [
-        'default'           => 'Lun-Ven: 9h-19h',
+        'default'           => '',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
 

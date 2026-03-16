@@ -150,7 +150,7 @@ $contact = orthosmile_get_contact_info();
                 <div class="contact-form">
                     <h3><?php esc_html_e('Formulaire de Contact', 'orthosmile'); ?></h3>
                     <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post">
-                        <?php wp_nonce_field('contact_form', 'contact_nonce'); ?>
+        <?php wp_nonce_field('orthosmile_contact_form', 'contact_nonce'); ?>
                         <input type="hidden" name="action" value="orthosmile_contact_form">
 
                         <div class="form-group">

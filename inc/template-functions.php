@@ -33,7 +33,7 @@ function orthosmile_get_option($key, $default = false) {
  * @return string
  */
 function orthosmile_get_phone() {
-    return orthosmile_get_option('phone_number', '+33 1 23 45 67 89');
+    return orthosmile_get_option('phone_number', '');
 }
 
 /**
@@ -42,7 +42,7 @@ function orthosmile_get_phone() {
  * @return string
  */
 function orthosmile_get_opening_hours() {
-    return orthosmile_get_option('opening_hours', 'Lun-Ven: 9h-19h');
+    return orthosmile_get_option('opening_hours', '');
 }
 
 /**
@@ -193,11 +193,11 @@ function orthosmile_get_trust_content() {
  */
 function orthosmile_get_contact_info() {
     return [
-        'address' => orthosmile_get_option('contact_address', '123 Rue de la Santé, 75000 Paris'),
-        'phone' => orthosmile_get_phone(),
-        'email' => orthosmile_get_option('contact_email', 'contact@orthosmile.fr'),
+        'address'       => orthosmile_get_option('contact_address', ''),
+        'phone'         => orthosmile_get_phone(),
+        'email'         => orthosmile_get_option('contact_email', ''),
         'opening_hours' => orthosmile_get_opening_hours(),
-        'map_embed' => orthosmile_get_option('contact_map_embed'),
+        'map_embed'     => orthosmile_get_option('contact_map_embed'),
     ];
 }
 
