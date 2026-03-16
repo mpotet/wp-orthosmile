@@ -30,7 +30,7 @@ function orthosmile_customize_register($wp_customize) {
 
     // Phone number
     $wp_customize->add_setting('phone_number', [
-        'default'           => '',
+        'default'           => 'XXXX',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
 
@@ -42,7 +42,7 @@ function orthosmile_customize_register($wp_customize) {
 
     // Email
     $wp_customize->add_setting('contact_email', [
-        'default'           => '',
+        'default'           => 'XXXX@XXXX.fr',
         'sanitize_callback' => 'sanitize_email',
     ]);
 
@@ -54,7 +54,7 @@ function orthosmile_customize_register($wp_customize) {
 
     // Address
     $wp_customize->add_setting('contact_address', [
-        'default'           => '',
+        'default'           => 'XXXX — Adresse du cabinet',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
 
@@ -66,7 +66,7 @@ function orthosmile_customize_register($wp_customize) {
 
     // Opening hours
     $wp_customize->add_setting('opening_hours', [
-        'default'           => '',
+        'default'           => 'XXXX — Horaires d\'ouverture',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
 
@@ -98,7 +98,7 @@ function orthosmile_customize_register($wp_customize) {
 
     // Hero title
     $wp_customize->add_setting('hero_title', [
-        'default'           => 'Votre sourire, notre expertise',
+        'default'           => 'XXXX — Titre principal',
         'sanitize_callback' => 'sanitize_text_field',
         'transport'         => 'postMessage',
     ]);
@@ -111,7 +111,7 @@ function orthosmile_customize_register($wp_customize) {
 
     // Hero subtitle
     $wp_customize->add_setting('hero_subtitle', [
-        'default'           => 'Des traitements orthodontiques sur mesure pour des résultats naturels et durables',
+        'default'           => 'XXXX — Sous-titre de la page d\'accueil',
         'sanitize_callback' => 'sanitize_textarea_field',
         'transport'         => 'postMessage',
     ]);
@@ -168,7 +168,7 @@ function orthosmile_customize_register($wp_customize) {
 
     // Trust title
     $wp_customize->add_setting('trust_title', [
-        'default'           => 'Une orthodontie fondée sur la précision et la pédagogie',
+        'default'           => 'XXXX — Titre de la section confiance',
         'sanitize_callback' => 'sanitize_text_field',
         'transport'         => 'postMessage',
     ]);
@@ -181,7 +181,7 @@ function orthosmile_customize_register($wp_customize) {
 
     // Trust subtitle
     $wp_customize->add_setting('trust_subtitle', [
-        'default'           => 'Chaque traitement est défini selon votre occlusion, vos objectifs esthétiques et fonctionnels, puis expliqué simplement à chaque étape.',
+        'default'           => 'XXXX — Sous-titre de la section confiance',
         'sanitize_callback' => 'sanitize_textarea_field',
         'transport'         => 'postMessage',
     ]);
@@ -194,7 +194,7 @@ function orthosmile_customize_register($wp_customize) {
 
     // Trust item 1
     $wp_customize->add_setting('trust_1_value', [
-        'default'           => '18+',
+        'default'           => 'XXXX',
         'sanitize_callback' => 'sanitize_text_field',
         'transport'         => 'postMessage',
     ]);
@@ -206,7 +206,7 @@ function orthosmile_customize_register($wp_customize) {
     ]);
 
     $wp_customize->add_setting('trust_1_label', [
-        'default'           => 'années d\'expérience clinique',
+        'default'           => 'XXXX — Légende statistique 1',
         'sanitize_callback' => 'sanitize_text_field',
         'transport'         => 'postMessage',
     ]);
@@ -219,7 +219,7 @@ function orthosmile_customize_register($wp_customize) {
 
     // Trust item 2
     $wp_customize->add_setting('trust_2_value', [
-        'default'           => '8 500+',
+        'default'           => 'XXXX',
         'sanitize_callback' => 'sanitize_text_field',
         'transport'         => 'postMessage',
     ]);
@@ -231,7 +231,7 @@ function orthosmile_customize_register($wp_customize) {
     ]);
 
     $wp_customize->add_setting('trust_2_label', [
-        'default'           => 'patients traités avec succès',
+        'default'           => 'XXXX — Légende statistique 2',
         'sanitize_callback' => 'sanitize_text_field',
         'transport'         => 'postMessage',
     ]);
@@ -244,7 +244,7 @@ function orthosmile_customize_register($wp_customize) {
 
     // Trust item 3
     $wp_customize->add_setting('trust_3_value', [
-        'default'           => '100%',
+        'default'           => 'XXXX',
         'sanitize_callback' => 'sanitize_text_field',
         'transport'         => 'postMessage',
     ]);
@@ -256,7 +256,7 @@ function orthosmile_customize_register($wp_customize) {
     ]);
 
     $wp_customize->add_setting('trust_3_label', [
-        'default'           => 'protocoles certifiés et suivi expert',
+        'default'           => 'XXXX — Légende statistique 3',
         'sanitize_callback' => 'sanitize_text_field',
         'transport'         => 'postMessage',
     ]);

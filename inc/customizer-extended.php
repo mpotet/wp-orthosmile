@@ -62,7 +62,7 @@ function orthosmile_customize_register_extended($wp_customize) {
 
     // Spécialiste 1
     $wp_customize->add_setting('orthosmile_specialist_1_name', [
-        'default'           => '',
+        'default'           => 'Dr. XXXX',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
 
@@ -99,7 +99,7 @@ function orthosmile_customize_register_extended($wp_customize) {
 
     // Spécialiste 2
     $wp_customize->add_setting('orthosmile_specialist_2_name', [
-        'default'           => '',
+        'default'           => 'Dr. XXXX',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
 
@@ -136,7 +136,7 @@ function orthosmile_customize_register_extended($wp_customize) {
 
     // Spécialiste 3
     $wp_customize->add_setting('orthosmile_specialist_3_name', [
-        'default'           => '',
+        'default'           => 'Dr. XXXX',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
 
@@ -170,6 +170,41 @@ function orthosmile_customize_register_extended($wp_customize) {
         'settings' => 'orthosmile_specialist_3_description',
         'type'     => 'textarea',
     ]);
+
+    // Photo de l'équipe (grand format)
+    $wp_customize->add_setting('orthosmile_team_photo', [
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ]);
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'orthosmile_team_photo', [
+        'label'       => __('Photo de l\'équipe (bannière)', 'orthosmile'),
+        'description' => __('Image panoramique de votre équipe affichée en bannière dans la section Spécialistes.', 'orthosmile'),
+        'section'     => 'orthosmile_specialists',
+        'settings'    => 'orthosmile_team_photo',
+    ]));
+
+    $wp_customize->add_setting('orthosmile_team_photo_caption', [
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+    $wp_customize->add_control('orthosmile_team_photo_caption', [
+        'label'   => __('Légende de la photo d\'équipe', 'orthosmile'),
+        'section' => 'orthosmile_specialists',
+        'type'    => 'text',
+    ]);
+
+    // Photos individuelles
+    for ($i = 1; $i <= 3; $i++) {
+        $wp_customize->add_setting("orthosmile_specialist_{$i}_photo", [
+            'default'           => '',
+            'sanitize_callback' => 'esc_url_raw',
+        ]);
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, "orthosmile_specialist_{$i}_photo", [
+            'label'    => sprintf(__('Photo du Spécialiste %d', 'orthosmile'), $i),
+            'section'  => 'orthosmile_specialists',
+            'settings' => "orthosmile_specialist_{$i}_photo",
+        ]));
+    }
 
     // Section "Nos Réalisations"
     $wp_customize->add_section('orthosmile_realizations', [

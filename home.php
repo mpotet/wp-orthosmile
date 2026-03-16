@@ -94,25 +94,28 @@ $contact = orthosmile_get_contact_info();
     </section>
     <?php endif; ?>
 
+    <!-- FAQ Section -->
+    <?php if (orthosmile_show_section('faq')) : ?>
+    <?php get_template_part('template-parts/faq'); ?>
+    <?php endif; ?>
+
     <!-- Contact Section -->
     <section class="contact-section" id="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title"><?php esc_html_e('Contact &amp; Prendre Rendez-vous', 'orthosmile'); ?></h2>
-                <p class="section-subtitle"><?php esc_html_e('Nous sommes à votre écoute pour répondre à toutes vos questions et vous accompagner dans votre parcours orthodontique.', 'orthosmile'); ?></p>
+                <h2 class="section-title"><?php esc_html_e('Contact &amp; Informations', 'orthosmile'); ?></h2>
+                <p class="section-subtitle"><?php esc_html_e('Retrouvez toutes nos coordonnées pour prendre rendez-vous ou nous contacter.', 'orthosmile'); ?></p>
             </div>
 
-            <div class="contact-container">
+            <div class="contact-container contact-container--simple">
                 <div class="contact-info">
-                    <h3><?php esc_html_e('Coordonnées', 'orthosmile'); ?></h3>
-
                     <div class="contact-item">
                         <div class="contact-icon">
                             <span class="material-symbols-outlined">location_on</span>
                         </div>
                         <div class="contact-details">
                             <h4><?php esc_html_e('Adresse', 'orthosmile'); ?></h4>
-                            <p><?php echo esc_html($contact['address']); ?></p>
+                            <p><?php echo esc_html($contact['address'] ?: 'XXXX — adresse à renseigner dans le Customiseur'); ?></p>
                         </div>
                     </div>
 
@@ -122,7 +125,13 @@ $contact = orthosmile_get_contact_info();
                         </div>
                         <div class="contact-details">
                             <h4><?php esc_html_e('Téléphone', 'orthosmile'); ?></h4>
-                            <p><a href="tel:<?php echo esc_attr(preg_replace('/[^0-9+]/', '', $contact['phone'])); ?>"><?php echo esc_html($contact['phone']); ?></a></p>
+                            <p>
+                                <?php if ($contact['phone']) : ?>
+                                <a href="tel:<?php echo esc_attr(preg_replace('/[^0-9+]/', '', $contact['phone'])); ?>"><?php echo esc_html($contact['phone']); ?></a>
+                                <?php else : ?>
+                                XXXX — téléphone à renseigner dans le Customiseur
+                                <?php endif; ?>
+                            </p>
                         </div>
                     </div>
 
@@ -132,7 +141,13 @@ $contact = orthosmile_get_contact_info();
                         </div>
                         <div class="contact-details">
                             <h4><?php esc_html_e('Email', 'orthosmile'); ?></h4>
-                            <p><a href="mailto:<?php echo esc_attr($contact['email']); ?>"><?php echo esc_html($contact['email']); ?></a></p>
+                            <p>
+                                <?php if ($contact['email']) : ?>
+                                <a href="mailto:<?php echo esc_attr($contact['email']); ?>"><?php echo esc_html($contact['email']); ?></a>
+                                <?php else : ?>
+                                XXXX — email à renseigner dans le Customiseur
+                                <?php endif; ?>
+                            </p>
                         </div>
                     </div>
 
@@ -142,52 +157,9 @@ $contact = orthosmile_get_contact_info();
                         </div>
                         <div class="contact-details">
                             <h4><?php esc_html_e('Horaires', 'orthosmile'); ?></h4>
-                            <p><?php echo esc_html($contact['opening_hours']); ?></p>
+                            <p><?php echo esc_html($contact['opening_hours'] ?: 'XXXX — horaires à renseigner dans le Customiseur'); ?></p>
                         </div>
                     </div>
-                </div>
-
-                <div class="contact-form">
-                    <h3><?php esc_html_e('Formulaire de Contact', 'orthosmile'); ?></h3>
-                    <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post">
-        <?php wp_nonce_field('orthosmile_contact_form', 'contact_nonce'); ?>
-                        <input type="hidden" name="action" value="orthosmile_contact_form">
-
-                        <div class="form-group">
-                            <label for="home_contact_name"><?php esc_html_e('Nom', 'orthosmile'); ?> <span class="required">*</span></label>
-                            <input type="text" id="home_contact_name" name="contact_name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="home_contact_email"><?php esc_html_e('Email', 'orthosmile'); ?> <span class="required">*</span></label>
-                            <input type="email" id="home_contact_email" name="contact_email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="home_contact_phone"><?php esc_html_e('Téléphone', 'orthosmile'); ?></label>
-                            <input type="tel" id="home_contact_phone" name="contact_phone">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="home_contact_subject"><?php esc_html_e('Sujet', 'orthosmile'); ?> <span class="required">*</span></label>
-                            <select id="home_contact_subject" name="contact_subject" required>
-                                <option value=""><?php esc_html_e('Choisissez un sujet', 'orthosmile'); ?></option>
-                                <option value="rendez-vous"><?php esc_html_e('Prendre rendez-vous', 'orthosmile'); ?></option>
-                                <option value="question"><?php esc_html_e('Poser une question', 'orthosmile'); ?></option>
-                                <option value="urgence"><?php esc_html_e('Urgence orthodontique', 'orthosmile'); ?></option>
-                                <option value="autre"><?php esc_html_e('Autre', 'orthosmile'); ?></option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="home_contact_message"><?php esc_html_e('Message', 'orthosmile'); ?> <span class="required">*</span></label>
-                            <textarea id="home_contact_message" name="contact_message" rows="5" required></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary"><?php esc_html_e('Envoyer le message', 'orthosmile'); ?></button>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>

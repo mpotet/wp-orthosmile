@@ -149,8 +149,8 @@ function orthosmile_show_section($section, $default = true) {
  */
 function orthosmile_get_hero_content() {
     return [
-        'title' => orthosmile_get_option('hero_title', 'Votre sourire, notre expertise'),
-        'subtitle' => orthosmile_get_option('hero_subtitle', 'Des traitements orthodontiques sur mesure pour des résultats naturels et durables'),
+        'title' => orthosmile_get_option('hero_title', 'XXXX — Titre principal'),
+        'subtitle' => orthosmile_get_option('hero_subtitle', 'XXXX — Sous-titre'),
         'cta_text' => orthosmile_get_option('hero_cta_text', 'Prendre rendez-vous'),
         'cta_url' => orthosmile_get_option('hero_cta_url', orthosmile_get_appointment_url()),
         'image' => orthosmile_get_option('hero_image'),
@@ -164,22 +164,22 @@ function orthosmile_get_hero_content() {
  */
 function orthosmile_get_trust_content() {
     return [
-        'title' => orthosmile_get_option('trust_title', 'Une orthodontie fondée sur la précision et la pédagogie'),
-        'subtitle' => orthosmile_get_option('trust_subtitle', 'Chaque traitement est défini selon votre occlusion, vos objectifs esthétiques et fonctionnels, puis expliqué simplement à chaque étape.'),
+        'title' => orthosmile_get_option('trust_title', 'XXXX — Titre section confiance'),
+        'subtitle' => orthosmile_get_option('trust_subtitle', 'XXXX — Sous-titre section confiance'),
         'items' => [
             [
-                'value' => orthosmile_get_option('trust_1_value', '18+'),
-                'label' => orthosmile_get_option('trust_1_label', 'années d\'expérience clinique'),
+                'value' => orthosmile_get_option('trust_1_value', 'XXXX'),
+                'label' => orthosmile_get_option('trust_1_label', 'XXXX — Légende 1'),
                 'icon' => 'workspace_premium'
             ],
             [
-                'value' => orthosmile_get_option('trust_2_value', '8 500+'),
-                'label' => orthosmile_get_option('trust_2_label', 'patients traités avec succès'),
+                'value' => orthosmile_get_option('trust_2_value', 'XXXX'),
+                'label' => orthosmile_get_option('trust_2_label', 'XXXX — Légende 2'),
                 'icon' => 'groups'
             ],
             [
-                'value' => orthosmile_get_option('trust_3_value', '100%'),
-                'label' => orthosmile_get_option('trust_3_label', 'protocoles certifiés et suivi expert'),
+                'value' => orthosmile_get_option('trust_3_value', 'XXXX'),
+                'label' => orthosmile_get_option('trust_3_label', 'XXXX — Légende 3'),
                 'icon' => 'health_and_safety'
             ]
         ]
@@ -193,7 +193,7 @@ function orthosmile_get_trust_content() {
  */
 function orthosmile_get_contact_info() {
     return [
-        'address'       => orthosmile_get_option('contact_address', ''),
+        'address'       => orthosmile_get_option('contact_address', 'XXXX — Adresse du cabinet'),
         'phone'         => orthosmile_get_phone(),
         'email'         => orthosmile_get_option('contact_email', ''),
         'opening_hours' => orthosmile_get_opening_hours(),
