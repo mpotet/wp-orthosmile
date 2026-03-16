@@ -38,10 +38,10 @@ if ($hero_content['image']) {
             <h1 class="hero-title">
                 <?php
                 $title = $hero_content['title'];
-                // Bold the last word / phrase in a gradient span
-                $parts = explode(' ', $title, -1);
-                $last  = implode(' ', array_slice(explode(' ', $title), -2));
-                $first = trim(str_replace($last, '', $title));
+                // Split title: last two words get the gradient-span treatment
+                $words = explode(' ', $title);
+                $last  = implode(' ', array_slice($words, -2));
+                $first = trim(implode(' ', array_slice($words, 0, -2)));
                 if ($first && $last) {
                     echo esc_html($first) . ' <span>' . esc_html($last) . '</span>';
                 } else {

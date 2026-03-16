@@ -125,10 +125,3 @@ function orthosmile_handle_contact_form() {
 if (file_exists(get_template_directory() . '/inc/customizer-extended.php')) {
     require_once get_template_directory() . '/inc/customizer-extended.php';
 }
-
-// Affichage du message de succès – rendered inline in contact.php via query var
-add_action('wp_head', function() {
-    if (isset($_GET['contact_success']) && '1' === $_GET['contact_success']) {
-        echo '<meta name="orthosmile-contact-success" content="1">';
-    }
-});
