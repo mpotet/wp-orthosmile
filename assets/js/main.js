@@ -1,258 +1,170 @@
 /**
- * OrthoSmile - Main JavaScript file
- * Handles interactive functionality for the orthodontist theme
+ * OrthoSmile – Main JavaScript
+ * Handles interactive functionality for the premium orthodontist theme
  */
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const mainMenu = document.querySelector('.main-menu');
-    
-    if (menuToggle && mainMenu) {
-        menuToggle.addEventListener('click', function() {
-            mainMenu.classList.toggle('active');
-            menuToggle.setAttribute('aria-expanded', 
-                menuToggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
-            );
-        });
-    }
+document.addEventListener('DOMContentLoaded', function () {
 
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(e) {
-        if (menuToggle && mainMenu && mainMenu.classList.contains('active')) {
-            if (!menuToggle.contains(e.target) && !mainMenu.contains(e.target)) {
-                mainMenu.classList.remove('active');
+    /* ====================================================
+       1. MOBILE MENU TOGGLE
+       ==================================================== */
+    const menuToggle   = document.querySelector('.menu-toggle');
+    const siteNav      = document.querySelector('#site-navigation');
+    const menuIcon     = menuToggle ? menuToggle.querySelector('.material-symbols-outlined') : null;
+
+    if (menuToggle && siteNav) {
+        menuToggle.addEventListener('click', function () {
+            const isOpen = siteNav.classList.toggle('mobile-open');
+            menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            if (menuIcon) menuIcon.textContent = isOpen ? 'close' : 'menu';
+        });
+
+        document.addEventListener('click', function (e) {
+            if (siteNav.classList.contains('mobile-open') &&
+                !menuToggle.contains(e.target) &&
+                !siteNav.contains(e.target)) {
+                siteNav.classList.remove('mobile-open');
                 menuToggle.setAttribute('aria-expanded', 'false');
+                if (menuIcon) menuIcon.textContent = 'menu';
             }
-        }
-    });
+        });
+    }
 
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    /* ====================================================
+       2. SMOOTH SCROLLING
+       ==================================================== */
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+            const target = document.querySelector(href);
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-                
-                // Close mobile menu if open
-                if (mainMenu && mainMenu.classList.contains('active')) {
-                    mainMenu.classList.remove('active');
-                    menuToggle.setAttribute('aria-expanded', 'false');
-                }
-            }
-        });
-    });
-
-    // Header scroll effect
-    const header = document.querySelector('.site-header');
-    if (header) {
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-    }
-
-    // FAQ accordion functionality
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        if (question) {
-            question.addEventListener('click', function() {
-                const isActive = item.classList.contains('active');
-                
-                // Close all items
-                faqItems.forEach(otherItem => {
-                    otherItem.classList.remove('active');
-                });
-                
-                // Open clicked item if it wasn't active
-                if (!isActive) {
-                    item.classList.add('active');
-                }
-            });
-        }
-    });
-
-    // Before/after image comparison slider
-    const beforeAfterStages = document.querySelectorAll('.before-after-stage');
-    beforeAfterStages.forEach(stage => {
-        const beforeImage = stage.querySelector('.before-after-image');
-        const overlay = stage.querySelector('.before-after-overlay');
-        const divider = stage.querySelector('.before-after-divider');
-        const handle = stage.querySelector('.before-after-handle');
-        
-        if (beforeImage && overlay && divider && handle) {
-            let isDragging = false;
-
-            // Set initial position
-            const setInitialPosition = () => {
-                const width = stage.offsetWidth;
-                const initialPosition = width * 0.5;
-                overlay.style.clipPath = `inset(0 ${width - initialPosition}px 0 0)`;
-                divider.style.left = `${initialPosition}px`;
-                handle.style.left = `${initialPosition}px`;
-            };
-
-            setInitialPosition();
-
-            // Handle mouse events
-            const handleMove = (clientX) => {
-                const rect = stage.getBoundingClientRect();
-                const x = clientX - rect.left;
-                const width = rect.width;
-                
-                // Constrain position
-                const position = Math.max(0, Math.min(width, x));
-                
-                overlay.style.clipPath = `inset(0 ${width - position}px 0 0)`;
-                divider.style.left = `${position}px`;
-                handle.style.left = `${position}px`;
-            };
-
-            const handleDown = (e) => {
-                isDragging = true;
-                stage.classList.add('is-dragging');
-                handleMove(e.clientX);
-            };
-
-            const handleMoveEvent = (e) => {
-                if (isDragging) {
-                    handleMove(e.clientX);
-                }
-            };
-
-            const handleUp = () => {
-                isDragging = false;
-                stage.classList.remove('is-dragging');
-            };
-
-            // Event listeners
-            handle.addEventListener('mousedown', handleDown);
-            window.addEventListener('mousemove', handleMoveEvent);
-            window.addEventListener('mouseup', handleUp);
-
-            // Touch events for mobile
-            handle.addEventListener('touchstart', (e) => {
-                handleDown(e.touches[0]);
-            });
-
-            window.addEventListener('touchmove', (e) => {
-                if (isDragging) {
-                    handleMoveEvent(e.touches[0]);
-                }
-            });
-
-            window.addEventListener('touchend', handleUp);
-
-            // Reset on resize
-            window.addEventListener('resize', setInitialPosition);
-        }
-    });
-
-    // Form validation and submission
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            const requiredFields = this.querySelectorAll('[required]');
-            let isValid = true;
-
-            requiredFields.forEach(field => {
-                if (!field.value.trim()) {
-                    isValid = false;
-                    field.style.borderColor = '#ef4444';
-                } else {
-                    field.style.borderColor = '#e5e7eb';
-                }
-            });
-
-            if (!isValid) {
                 e.preventDefault();
-                alert('Veuillez remplir tous les champs obligatoires.');
+                const headerH = document.querySelector('.site-header') ? document.querySelector('.site-header').offsetHeight : 0;
+                const top = target.getBoundingClientRect().top + window.pageYOffset - headerH - 16;
+                window.scrollTo({ top: top, behavior: 'smooth' });
+
+                if (siteNav && siteNav.classList.contains('mobile-open')) {
+                    siteNav.classList.remove('mobile-open');
+                    menuToggle && menuToggle.setAttribute('aria-expanded', 'false');
+                    if (menuIcon) menuIcon.textContent = 'menu';
+                }
             }
         });
+    });
+
+    /* ====================================================
+       3. STICKY HEADER SHADOW
+       ==================================================== */
+    var header = document.querySelector('.site-header');
+    if (header) {
+        window.addEventListener('scroll', function () {
+            header.classList.toggle('scrolled', window.scrollY > 60);
+        }, { passive: true });
     }
 
-    // Newsletter form submission
-    const newsletterForm = document.querySelector('.newsletter-form');
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const emailInput = this.querySelector('.newsletter-input');
-            const email = emailInput.value.trim();
-            
-            if (!email) {
-                alert('Veuillez saisir votre email.');
-                return;
-            }
-
-            if (!isValidEmail(email)) {
-                alert('Veuillez saisir une adresse email valide.');
-                return;
-            }
-
-            // Simulate successful submission
-            emailInput.value = '';
-            alert('Merci pour votre inscription à notre newsletter !');
+    /* ====================================================
+       4. FAQ ACCORDION
+       ==================================================== */
+    var faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(function (item) {
+        var question = item.querySelector('.faq-question');
+        if (!question) return;
+        question.addEventListener('click', function () {
+            var isActive = item.classList.contains('active');
+            faqItems.forEach(function (other) { other.classList.remove('active'); });
+            if (!isActive) item.classList.add('active');
         });
-    }
+    });
 
-    // Utility function to validate email
-    function isValidEmail(email) {
-        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(String(email).toLowerCase());
-    }
+    /* ====================================================
+       5. BEFORE / AFTER IMAGE SLIDER
+       ==================================================== */
+    document.querySelectorAll('.before-after-stage').forEach(function (stage) {
+        var overlay  = stage.querySelector('.before-after-overlay');
+        var divider  = stage.querySelector('.before-after-divider');
+        var handle   = stage.querySelector('.before-after-handle');
+        if (!overlay || !divider || !handle) return;
 
-    // Intersection Observer for fade-in animations
-    if ('IntersectionObserver' in window) {
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+        var dragging = false;
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+        function setPos(clientX) {
+            var rect  = stage.getBoundingClientRect();
+            var pos   = Math.max(0, Math.min(rect.width, clientX - rect.left));
+            var pct   = (pos / rect.width * 100).toFixed(2);
+            overlay.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+            divider.style.left     = pct + '%';
+            handle.style.left      = pct + '%';
+        }
+
+        setPos(stage.getBoundingClientRect().left + stage.offsetWidth / 2);
+
+        handle.addEventListener('mousedown',  function () { dragging = true; });
+        window.addEventListener('mouseup',    function () { dragging = false; });
+        window.addEventListener('mousemove',  function (e) { if (dragging) setPos(e.clientX); });
+
+        handle.addEventListener('touchstart', function (e) { dragging = true; e.preventDefault(); }, { passive: false });
+        window.addEventListener('touchend',   function () { dragging = false; });
+        window.addEventListener('touchmove',  function (e) { if (dragging) setPos(e.touches[0].clientX); }, { passive: true });
+
+        window.addEventListener('resize', function () {
+            setPos(stage.getBoundingClientRect().left + stage.offsetWidth / 2);
+        }, { passive: true });
+    });
+
+    /* ====================================================
+       6. CONTACT FORM CLIENT-SIDE VALIDATION
+       ==================================================== */
+    var contactForm = document.querySelector('form.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            var valid = true;
+            contactForm.querySelectorAll('[required]').forEach(function (field) {
+                if (!field.value.trim()) {
+                    valid = false;
+                    field.style.borderColor = '#ef4444';
+                    field.addEventListener('input', function () {
+                        field.style.borderColor = '';
+                    }, { once: true });
                 }
             });
-        }, observerOptions);
+            if (!valid) {
+                e.preventDefault();
+            }
+        });
+    }
 
-        // Observe elements with fade-in-up class
-        document.querySelectorAll('.fade-in-up').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    /* ====================================================
+       7. SCROLL-TO-TOP BUTTON
+       ==================================================== */
+    var scrollBtn = document.getElementById('scrollToTop');
+    if (scrollBtn) {
+        window.addEventListener('scroll', function () {
+            scrollBtn.style.opacity  = window.scrollY > 400 ? '1' : '0';
+            scrollBtn.style.pointerEvents = window.scrollY > 400 ? 'auto' : 'none';
+        }, { passive: true });
+
+        scrollBtn.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    /* ====================================================
+       8. INTERSECTION OBSERVER (fade-in-up)
+       ==================================================== */
+    if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.fade-in-up').forEach(function (el) {
             observer.observe(el);
         });
     }
 
-    // Scroll to top button
-    const scrollToTopBtn = document.createElement('button');
-    scrollToTopBtn.innerHTML = '<span class="material-symbols-outlined">arrow_upward</span>';
-    scrollToTopBtn.className = 'scroll-to-top';
-    scrollToTopBtn.setAttribute('aria-label', 'Retour en haut');
-    document.body.appendChild(scrollToTopBtn);
-
-    scrollToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            scrollToTopBtn.style.display = 'block';
-        } else {
-            scrollToTopBtn.style.display = 'none';
-        }
-    });
 });

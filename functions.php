@@ -78,7 +78,7 @@ add_action('admin_post_nopriv_orthosmile_contact_form', 'orthosmile_handle_conta
 
 function orthosmile_handle_contact_form() {
     // Vérification du nonce
-    if (!isset($_POST['contact_nonce']) || !wp_verify_nonce($_POST['contact_nonce'], 'contact_form')) {
+    if (!isset($_POST['orthosmile_contact_nonce']) || !wp_verify_nonce($_POST['orthosmile_contact_nonce'], 'orthosmile_contact_form')) {
         wp_die(__('Erreur de sécurité', 'orthosmile'));
     }
 
@@ -126,9 +126,9 @@ if (file_exists(get_template_directory() . '/inc/customizer-extended.php')) {
     require_once get_template_directory() . '/inc/customizer-extended.php';
 }
 
-// Affichage du message de succès
+// Affichage du message de succès – rendered inline in contact.php via query var
 add_action('wp_head', function() {
-    if (isset($_GET['contact_success'])) {
-        echo '<script>alert("Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais.");</script>';
+    if (isset($_GET['contact_success']) && '1' === $_GET['contact_success']) {
+        echo '<meta name="orthosmile-contact-success" content="1">';
     }
 });

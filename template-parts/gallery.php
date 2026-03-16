@@ -32,7 +32,8 @@ $gallery_images = get_theme_mod('gallery_images', [
 <section class="gallery-section" id="gallery">
     <div class="container">
         <div class="section-header fade-in-up">
-            <h2 class="section-title"><?php esc_html_e('Galerie de Transformation', 'orthosmile'); ?></h2>
+            <span class="section-eyebrow"><?php esc_html_e('Avant / Après', 'orthosmile'); ?></span>
+            <h2 class="section-title"><?php esc_html_e('Galerie de Transformations', 'orthosmile'); ?></h2>
             <p class="section-subtitle"><?php esc_html_e('Découvrez des cas cliniques traités avec succès. Chaque sourire raconte une histoire de confiance retrouvée.', 'orthosmile'); ?></p>
         </div>
         
