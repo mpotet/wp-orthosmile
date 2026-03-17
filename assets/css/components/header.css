@@ -230,3 +230,160 @@
 }
 .menu-toggle:hover { background: var(--color-teal-light); }
 .menu-toggle .material-symbols-outlined { font-size: 1.5rem; color: var(--color-teal); }
+
+/* ── Fallback wp_list_pages (aucun menu assigné) ──── */
+.menu-fallback {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu-fallback > li > a {
+    display: flex;
+    align-items: center;
+    padding: .5rem .875rem;
+    font-size: .875rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    transition: var(--t-fast);
+    position: relative;
+}
+.menu-fallback > li > a::after {
+    content: '';
+    position: absolute;
+    bottom: 2px; left: 0; right: 0;
+    height: 2px;
+    background: var(--color-teal);
+    border-radius: var(--radius-full);
+    transform: scaleX(0);
+    transition: transform .25s ease;
+}
+.menu-fallback > li > a:hover,
+.menu-fallback > li.current_page_item > a { color: var(--color-teal); }
+.menu-fallback > li > a:hover::after,
+.menu-fallback > li.current_page_item > a::after { transform: scaleX(1); }
+
+/* ── Sous-menus dropdown (desktop) ─────────────────── */
+.main-menu li { position: relative; }
+
+.main-menu .sub-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    min-width: 210px;
+    background: #fff;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 32px rgba(0,0,0,.12);
+    border: 1px solid rgba(15,118,110,.1);
+    padding: .375rem 0;
+    list-style: none;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity .2s ease, transform .2s ease, visibility .2s;
+    z-index: 200;
+}
+.main-menu li:hover > .sub-menu,
+.main-menu li:focus-within > .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.main-menu .sub-menu li a {
+    display: block;
+    padding: .5rem 1.125rem;
+    font-size: .85rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: var(--t-fast);
+}
+.main-menu .sub-menu li a:hover {
+    background: var(--color-teal-ultralight);
+    color: var(--color-teal);
+    padding-left: 1.375rem;
+}
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 1024px) {
+
+    .header-cta-group { display: none; }
+    .menu-toggle { display: flex; }
+
+    /* Panneau latéral */
+    .site-navigation {
+        display: block;
+        position: fixed;
+        top: 0; right: 0;
+        width: min(320px, 85vw);
+        height: 100svh;
+        background: #fff;
+        box-shadow: -8px 0 40px rgba(0,0,0,.12);
+        padding: 5rem 1.5rem 2rem;
+        overflow-y: auto;
+        transform: translateX(100%);
+        transition: transform .3s cubic-bezier(.4,0,.2,1);
+        z-index: 900;
+        flex: none;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .site-navigation.is-open { transform: translateX(0); }
+
+    .main-menu,
+    .menu-fallback {
+        flex-direction: column;
+        align-items: stretch;
+        gap: .25rem;
+        width: 100%;
+    }
+
+    .main-menu > li > a,
+    .menu-fallback > li > a {
+        padding: .75rem 1rem;
+        font-size: .95rem;
+    }
+
+    /* Sous-menus : affichés inline, indentés */
+    .main-menu .sub-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        border-left: 2px solid var(--color-teal-light);
+        border-radius: 0;
+        padding: .25rem 0 .25rem 1rem;
+        background: transparent;
+    }
+    .main-menu .sub-menu li a {
+        font-size: .875rem;
+        padding: .4rem .75rem;
+        white-space: normal;
+    }
+    .main-menu .sub-menu li a:hover { padding-left: 1rem; }
+}
+
+@media (max-width: 640px) {
+    .header-info-bar { display: none; }
+    .header-inner { padding: .75rem 1rem; }
+}
+
+/* ── Backdrop overlay (menu mobile ouvert) ─────────── */
+@media (max-width: 1024px) {
+    body.menu-open { overflow: hidden; }
+    body.menu-open::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,.35);
+        z-index: 899;
+    }
+}
