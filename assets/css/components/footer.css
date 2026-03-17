@@ -83,8 +83,14 @@
     align-items: center;
     gap: .375rem;
 }
+.footer-links a::before {
+    content: '›';
+    font-size: 1.1em;
+    line-height: 1;
+    color: var(--color-teal);
+    flex-shrink: 0;
+}
 .footer-links a:hover { color: #fff; transform: translateX(4px); }
-.footer-links a .material-symbols-outlined { font-size: .9rem; color: var(--color-teal); }
 
 /* ── Contact column ──────────────────────────────────── */
 .footer-contact-list {

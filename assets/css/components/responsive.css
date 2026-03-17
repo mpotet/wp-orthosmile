@@ -38,31 +38,6 @@
 
     /* Header */
     .header-inner { padding: .875rem 1.25rem; flex-wrap: wrap; gap: .75rem; }
-    .site-navigation {
-        display: none;
-        order: 3;
-        width: 100%;
-        padding: .875rem 0;
-        border-top: 1px solid var(--color-border-light);
-    }
-    .site-navigation.mobile-open,
-    .site-navigation.is-open {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .main-menu { flex-direction: column; width: 100%; gap: .25rem; }
-    .main-menu > li { width: 100%; }
-    .main-menu > li > a {
-        display: block;
-        padding: .75rem 1rem;
-        border-radius: var(--radius-md);
-        font-size: .9375rem;
-    }
-    .main-menu > li > a::after { display: none; }
-    .main-menu > li > a:hover { background: var(--color-teal-ultralight); }
-    .header-cta-group { gap: .5rem; }
-    .menu-toggle { display: flex; }
 
     /* Hero */
     .hero { min-height: auto; padding: 4.5rem 0 3.5rem; }

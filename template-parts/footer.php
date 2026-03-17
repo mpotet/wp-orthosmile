@@ -93,22 +93,10 @@ $socials = [
                     ]); ?>
                 <?php else : ?>
                     <ul class="footer-links">
-                        <li><a href="<?php echo esc_url(home_url('/')); ?>">
-                            <span class="material-symbols-outlined">chevron_right</span>
-                            <?php esc_html_e('Accueil', 'orthosmile'); ?>
-                        </a></li>
-                        <li><a href="#services">
-                            <span class="material-symbols-outlined">chevron_right</span>
-                            <?php esc_html_e('Traitements', 'orthosmile'); ?>
-                        </a></li>
-                        <li><a href="#team">
-                            <span class="material-symbols-outlined">chevron_right</span>
-                            <?php esc_html_e('Notre équipe', 'orthosmile'); ?>
-                        </a></li>
-                        <li><a href="#faq">
-                            <span class="material-symbols-outlined">chevron_right</span>
-                            <?php esc_html_e('FAQ', 'orthosmile'); ?>
-                        </a></li>
+                        <?php wp_list_pages([
+                            'title_li' => '',
+                            'depth'    => 1,
+                        ]); ?>
                     </ul>
                 <?php endif; ?>
             </div>

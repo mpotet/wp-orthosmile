@@ -30,13 +30,6 @@
    CLASS ALIASES (aligns PHP class names with CSS)
    ===================================================== */
 
-/* --- Mobile nav: JS toggles .is-open --- */
-.site-navigation.is-open {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
 /* --- FAQ: JS/PHP use .is-open, CSS also supports .active --- */
 .faq-item.is-open { border-color: var(--color-teal-light); box-shadow: 0 4px 24px rgba(15,118,110,.09); }
 .faq-item.is-open .faq-question { color: var(--color-teal); background: var(--color-teal-ultralight); }
