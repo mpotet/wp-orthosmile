@@ -56,7 +56,7 @@ $hero_class = 'hero' . ($has_hero_image ? '' : ' hero--no-image');
                 <?php if (!empty($cabinet_name)) : ?>
                 <div class="hero-eyebrow">
                     <span class="material-symbols-outlined" aria-hidden="true">verified</span>
-                    <?php echo esc_html($cabinet_name ?: __('Cabinet Orthodontiste', 'orthosmile')); ?>
+                    <?php echo esc_html($cabinet_name); ?>
                 </div>
                 <?php endif; ?>
 
