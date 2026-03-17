@@ -17,10 +17,11 @@
    INFO BAR (ex-ribbon)
    ===================================================== */
 .header-info-bar {
-    background: linear-gradient(90deg, var(--color-teal-dark) 0%, var(--color-teal) 100%);
+    background: var(--color-bg);
     padding: .4rem 0;
     font-size: .78rem;
     font-weight: 500;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .header-info-inner {
@@ -42,20 +43,20 @@
     display: flex;
     align-items: center;
     gap: .325rem;
-    color: rgba(255,255,255,.88);
+    color: var(--color-text-secondary);
     text-decoration: none;
     transition: var(--t-fast);
 }
-.info-contact:hover { color: #fff; }
-.info-contact .material-symbols-outlined { font-size: .9rem; opacity: .8; }
+.info-contact:hover { color: var(--color-teal); }
+.info-contact .material-symbols-outlined { font-size: .9rem; color: var(--color-teal); }
 
 .info-hours {
     display: flex;
     align-items: center;
     gap: .325rem;
-    color: rgba(255,255,255,.6);
+    color: var(--color-text-light);
 }
-.info-hours .material-symbols-outlined { font-size: .9rem; }
+.info-hours .material-symbols-outlined { font-size: .9rem; color: var(--color-teal); }
 
 .header-info-right {
     display: flex;
@@ -73,32 +74,31 @@
     align-items: center;
     justify-content: center;
     width: 24px; height: 24px;
-    background: rgba(255,255,255,.1);
+    background: var(--color-teal-ultralight);
     border-radius: var(--radius-full);
-    color: rgba(255,255,255,.75);
+    color: var(--color-teal);
     transition: var(--t-fast);
 }
-.info-social a:hover { background: rgba(255,255,255,.25); color: #fff; }
+.info-social a:hover { background: var(--color-teal); color: #fff; }
 
 .info-cta {
     display: inline-flex;
     align-items: center;
     gap: .325rem;
-    background: var(--color-gold);
+    background: var(--color-teal);
     color: #fff;
     font-size: .7rem;
-    font-weight: 800;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .07em;
     padding: .3rem .875rem;
     border-radius: var(--radius-full);
     text-decoration: none;
     transition: var(--t);
-    box-shadow: 0 2px 8px rgba(245,158,11,.35);
     white-space: nowrap;
 }
 .info-cta:hover {
-    background: var(--color-gold-dark);
+    background: var(--color-teal-dark);
     color: #fff;
     transform: translateY(-1px);
 }
@@ -329,7 +329,7 @@
         overflow-y: auto;
         transform: translateX(100%);
         transition: transform .3s cubic-bezier(.4,0,.2,1);
-        z-index: 900;
+        z-index: 1001;
         flex: none;
         justify-content: flex-start;
         align-items: flex-start;
@@ -384,6 +384,6 @@
         position: fixed;
         inset: 0;
         background: rgba(0,0,0,.35);
-        z-index: 899;
+        z-index: 150;
     }
 }
