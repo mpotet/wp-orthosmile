@@ -163,8 +163,7 @@
     content: '';
     position: absolute;
     bottom: 2px;
-    left: .875rem;
-    right: .875rem;
+    left: 0; right: 0;
     height: 2px;
     background: var(--color-teal);
     border-radius: var(--radius-full);

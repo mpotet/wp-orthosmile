@@ -65,17 +65,12 @@
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0;
     transition: var(--t);
-}
-.faq-icon.material-symbols-outlined {
     font-size: 1.25rem;
     color: var(--color-text-light);
-    background: var(--color-bg-section);
-    padding: .25rem;
-    width: 32px; height: 32px;
-    border-radius: var(--radius-full);
-    display: flex; align-items: center; justify-content: center;
-    transition: var(--t);
 }
+/* When the icon element is also a Material Symbol span */
+.faq-icon.material-symbols-outlined { padding: .25rem; }
+
 .faq-item.active .faq-icon,
 .faq-item.is-open .faq-icon {
     background: var(--color-teal);
