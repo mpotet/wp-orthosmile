@@ -1,0 +1,485 @@
+# Copyright (C) 2026 OrthoSmile
+# This file is distributed under the same license as the OrthoSmile package.
+msgid ""
+msgstr ""
+"Project-Id-Version: OrthoSmile 1.0.0\n"
+"Report-Msgid-Bugs-To: https://example.com/support\n"
+"POT-Creation-Date: 2026-03-16T00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: GitHub Copilot\n"
+"X-Domain: orthosmile\n"
+
+# --- theme-setup.php ---
+msgid "Primary Menu"
+msgstr ""
+
+msgid "Footer Menu"
+msgstr ""
+
+msgid "Footer 1"
+msgstr ""
+
+msgid "Footer 2"
+msgstr ""
+
+msgid "Footer 3"
+msgstr ""
+
+msgid "Sidebar"
+msgstr ""
+
+msgid "Add widgets here to appear in your footer."
+msgstr ""
+
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+
+# --- customizer.php ---
+msgid "Options OrthoSmile"
+msgstr ""
+
+msgid "Coordonnées"
+msgstr ""
+
+msgid "Numéro de téléphone"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Adresse"
+msgstr ""
+
+msgid "Horaires d’ouverture"
+msgstr ""
+
+msgid "Code d’intégration Google Maps"
+msgstr ""
+
+msgid "Collez ici le code d’intégration de Google Maps pour afficher votre localisation."
+msgstr ""
+
+msgid "Section Héro"
+msgstr ""
+
+msgid "Titre principal"
+msgstr ""
+
+msgid "Sous-titre"
+msgstr ""
+
+msgid "Texte du bouton CTA"
+msgstr ""
+
+msgid "URL du bouton CTA"
+msgstr ""
+
+msgid "Image de fond héro"
+msgstr ""
+
+msgid "Section Confiance"
+msgstr ""
+
+msgid "Titre de la section"
+msgstr ""
+
+msgid "Sous-titre de la section"
+msgstr ""
+
+msgid "Valeur 1"
+msgstr ""
+
+msgid "Légende 1"
+msgstr ""
+
+msgid "Valeur 2"
+msgstr ""
+
+msgid "Légende 2"
+msgstr ""
+
+msgid "Valeur 3"
+msgstr ""
+
+msgid "Légende 3"
+msgstr ""
+
+msgid "Couleurs"
+msgstr ""
+
+msgid "Couleur primaire"
+msgstr ""
+
+msgid "Couleur d’accent"
+msgstr ""
+
+msgid "Réseaux Sociaux"
+msgstr ""
+
+msgid "URL Facebook"
+msgstr ""
+
+msgid "URL Twitter"
+msgstr ""
+
+msgid "URL Instagram"
+msgstr ""
+
+msgid "URL LinkedIn"
+msgstr ""
+
+msgid "Affichage des Sections"
+msgstr ""
+
+msgid "Afficher la section Services"
+msgstr ""
+
+msgid "Afficher la section Galerie"
+msgstr ""
+
+msgid "Afficher la section Équipe"
+msgstr ""
+
+msgid "Afficher la section Témoignages"
+msgstr ""
+
+msgid "Afficher la section FAQ"
+msgstr ""
+
+msgid "Afficher la section Appel à l’action"
+msgstr ""
+
+msgid "URL de prise de rendez-vous"
+msgstr ""
+
+msgid "Laissez vide pour utiliser la page de contact par défaut."
+msgstr ""
+
+# --- header.php ---
+msgid "Toggle navigation"
+msgstr ""
+
+msgid "Navigation principale"
+msgstr ""
+
+msgid "Prendre rendez-vous"
+msgstr ""
+
+# --- home.php ---
+msgid "Excellence Orthodontique"
+msgstr ""
+
+msgid "Nous contacter"
+msgstr ""
+
+msgid "Nos Services"
+msgstr ""
+
+msgid "Une approche personnalisée pour chaque sourire, avec des solutions adaptées à votre âge, votre mode de vie et vos objectifs."
+msgstr ""
+
+msgid "Expertise"
+msgstr ""
+
+msgid "Orthodontie Adulte"
+msgstr ""
+
+msgid "Des traitements sur mesure pour adultes, discrets et efficaces pour redonner éclat à votre sourire."
+msgstr ""
+
+msgid "En savoir plus"
+msgstr ""
+
+msgid "Prévention"
+msgstr ""
+
+msgid "Orthodontie Enfant"
+msgstr ""
+
+msgid "Prise en charge précoce pour guider le développement harmonieux de la dentition et de la mâchoire."
+msgstr ""
+
+msgid "Invisalign"
+msgstr ""
+
+msgid "Aligneurs transparents pour un traitement invisible et amovible, adapté à votre mode de vie."
+msgstr ""
+
+msgid "Contact &amp; Prendre Rendez-vous"
+msgstr ""
+
+msgid "Nous sommes à votre écoute pour répondre à toutes vos questions et vous accompagner dans votre parcours orthodontique."
+msgstr ""
+
+msgid "Téléphone"
+msgstr ""
+
+msgid "Horaires"
+msgstr ""
+
+msgid "Formulaire de Contact"
+msgstr ""
+
+msgid "Nom"
+msgstr ""
+
+msgid "Sujet"
+msgstr ""
+
+msgid "Choisissez un sujet"
+msgstr ""
+
+msgid "Urgence orthodontique"
+msgstr ""
+
+msgid "Autre"
+msgstr ""
+
+msgid "Message"
+msgstr ""
+
+msgid "Envoyer le message"
+msgstr ""
+
+# --- contact.php ---
+msgid "Contactez-nous"
+msgstr ""
+
+msgid "Nos Coordonnées"
+msgstr ""
+
+msgid "Horaires d’ouverture"
+msgstr ""
+
+msgid "Remplissez le formulaire ci-dessous pour nous contacter. Nous vous répondrons dans les plus brefs délais."
+msgstr ""
+
+msgid "Nom complet"
+msgstr ""
+
+msgid "Demande de devis"
+msgstr ""
+
+msgid "Poser une question"
+msgstr ""
+
+msgid "Décrivez votre demande..."
+msgstr ""
+
+# --- template-parts/footer.php ---
+msgid "Votre partenaire de confiance pour des soins orthodontiques de qualité. Des traitements personnalisés pour des sourires naturels et durables."
+msgstr ""
+
+msgid "Services"
+msgstr ""
+
+msgid "Appareils Fixes"
+msgstr ""
+
+msgid "Retenue Orthodontique"
+msgstr ""
+
+msgid "Informations"
+msgstr ""
+
+msgid "Notre Équipe"
+msgstr ""
+
+msgid "FAQ"
+msgstr ""
+
+msgid "Galerie"
+msgstr ""
+
+msgid "Contact"
+msgstr ""
+
+msgid "Tous droits réservés."
+msgstr ""
+
+msgid "Politique de confidentialité"
+msgstr ""
+
+msgid "Mentions légales"
+msgstr ""
+
+msgid "Newsletter"
+msgstr ""
+
+msgid "Restez informé de nos actualités et conseils orthodontiques."
+msgstr ""
+
+msgid "Votre email"
+msgstr ""
+
+msgid "S’abonner"
+msgstr ""
+
+# --- 404.php ---
+msgid "Oops! Cette page n’existe pas."
+msgstr ""
+
+msgid "Il semble que la page que vous recherchez ait été déplacée, renommée ou supprimée."
+msgstr ""
+
+msgid "Retour à l’accueil"
+msgstr ""
+
+# --- index.php ---
+msgid "Derniers Articles"
+msgstr ""
+
+msgid "Précédent"
+msgstr ""
+
+msgid "Suivant"
+msgstr ""
+
+# --- template-tags.php ---
+#. translators: %s: post date.
+msgid "Posted on %s"
+msgstr ""
+
+#. translators: %s: post author.
+msgid "by %s"
+msgstr ""
+
+#. translators: 1: list of categories.
+msgid "Posted in %1$s"
+msgstr ""
+
+#. translators: 1: list of tags.
+msgid "Tagged %1$s"
+msgstr ""
+
+#. translators: %s: post title
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+# --- functions.php ---
+msgid "Erreur de sécurité"
+msgstr ""
+
+msgid "Tous les champs requis doivent être remplis."
+msgstr ""
+
+msgid "L’adresse email n’est pas valide."
+msgstr ""
+
+msgid "Erreur lors de l’envoi du message. Veuillez réessayer."
+msgstr ""
+
+msgid "Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais."
+msgstr ""
+
+# --- customizer-extended.php ---
+msgid "Les Spécialistes"
+msgstr ""
+
+msgid "Afficher la section \"Les Spécialistes\""
+msgstr ""
+
+msgid "Nos Spécialistes"
+msgstr ""
+
+msgid "Une équipe de spécialistes dévoués pour votre santé bucco-dentaire."
+msgstr ""
+
+msgid "Dr. Jean Dupont"
+msgstr ""
+
+msgid "Orthodontiste Senior"
+msgstr ""
+
+msgid "Spécialiste en orthodontie adulte avec plus de 15 ans d’expérience."
+msgstr ""
+
+msgid "Dr. Marie Martin"
+msgstr ""
+
+msgid "Orthodontiste Pédiatrique"
+msgstr ""
+
+msgid "Spécialiste en orthodontie infantile et préventive."
+msgstr ""
+
+msgid "Dr. Pierre Bernard"
+msgstr ""
+
+msgid "Chirurgien Orthognathique"
+msgstr ""
+
+msgid "Expert en chirurgie orthognathique et traitements complexes."
+msgstr ""
+
+msgid "Nos Réalisations"
+msgstr ""
+
+msgid "Afficher la section \"Nos Réalisations\""
+msgstr ""
+
+msgid "Découvrez quelques-unes de nos réalisations les plus marquantes."
+msgstr ""
+
+msgid "Témoignages Clients"
+msgstr ""
+
+msgid "Afficher la section \"Témoignages\""
+msgstr ""
+
+msgid "Témoignages de nos patients"
+msgstr ""
+
+msgid "Un traitement exceptionnel, des résultats au-delà de mes espérances !"
+msgstr ""
+
+msgid "Sophie L."
+msgstr ""
+
+msgid "L’équipe est professionnelle et à l’écoute. Je recommande vivement !"
+msgstr ""
+
+msgid "Marc D."
+msgstr ""
+
+msgid "Informations Pratiques"
+msgstr ""
+
+msgid "Afficher la section \"Infos Pratiques\""
+msgstr ""
+
+msgid "Prenez rendez-vous en ligne ou par téléphone. Nous sommes à votre écoute pour toutes questions."
+msgstr ""
+
+msgid "Nos Valeurs"
+msgstr ""
+
+msgid "Afficher la section \"Nos Valeurs\""
+msgstr ""
+
+msgid "Excellence"
+msgstr ""
+
+msgid "Nous visons l’excellence dans chaque traitement que nous proposons."
+msgstr ""
+
+msgid "Bienveillance"
+msgstr ""
+
+msgid "Nous traitons chaque patient avec bienveillance et respect."
+msgstr ""
+
+msgid "Innovation"
+msgstr ""
+
+msgid "Nous adoptons les dernières technologies pour un meilleur confort."
+msgstr ""

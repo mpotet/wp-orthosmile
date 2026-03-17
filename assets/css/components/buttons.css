@@ -1,0 +1,55 @@
+/* Boutons OrthoSmile */
+.btn .material-symbols-outlined { font-size: 1.25rem; }
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-teal), var(--color-teal-dark));
+    color: #fff;
+    box-shadow: var(--shadow-teal);
+}
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--color-teal-dark), var(--color-teal-deep));
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-teal-lg);
+}
+.btn-primary:active { transform: translateY(0); }
+
+.btn-secondary {
+    background: rgba(255,255,255,.95);
+    color: var(--color-text);
+    border-color: var(--color-border);
+    box-shadow: var(--shadow-sm);
+}
+.btn-secondary:hover {
+    background: #fff;
+    color: var(--color-teal);
+    border-color: var(--color-teal-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-outline-white {
+    background: transparent;
+    color: #fff;
+    border-color: rgba(255,255,255,.5);
+}
+.btn-outline-white:hover {
+    background: #fff;
+    color: var(--color-teal);
+    border-color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-gold {
+    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(245,158,11,.35);
+}
+.btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(245,158,11,.50);
+    color: #fff;
+}
+
+.btn-lg { padding: 1.125rem 2.25rem; font-size: 1rem; }
+.btn-sm { padding: .625rem 1.25rem; font-size: .8125rem; }

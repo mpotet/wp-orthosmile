@@ -1,0 +1,75 @@
+/* Header & Ribbon OrthoSmile */
+
+.ribbon-contact {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    color: rgba(255,255,255,.85);
+    text-decoration: none;
+    transition: var(--t-fast);
+}
+.ribbon-contact:hover { color: #fff; }
+.ribbon-contact .material-symbols-outlined { font-size: 1rem; opacity: .75; }
+
+.ribbon-hours {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    color: rgba(255,255,255,.6);
+}
+.ribbon-hours .material-symbols-outlined { font-size: 1rem; }
+
+.ribbon-actions { display: flex; align-items: center; gap: .75rem; }
+
+.ribbon-social { display: flex; align-items: center; gap: .375rem; }
+.ribbon-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px; height: 26px;
+    background: rgba(255,255,255,.1);
+    border-radius: var(--radius-full);
+    color: rgba(255,255,255,.75);
+    transition: var(--t-fast);
+}
+.ribbon-social a:hover { background: rgba(255,255,255,.25); color: #fff; }
+.ribbon-social a .material-symbols-outlined { font-size: .9rem; }
+
+.ribbon-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: .375rem;
+    background: var(--color-gold);
+    color: #fff;
+    font-size: .72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    padding: .375rem 1rem;
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    transition: var(--t);
+    box-shadow: 0 2px 10px rgba(245,158,11,.4);
+}
+.ribbon-cta:hover {
+    background: var(--color-gold-dark);
+    color: #fff;
+    transform: translateY(-1px);
+}
+.ribbon-cta .material-symbols-outlined { font-size: .9rem; }
+
+.site-header {
+    background: rgba(255,255,255,.92);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border-bottom: 1px solid rgba(15,118,110,.08);
+    position: sticky;
+    top: 0;
+    z-index: var(--z-sticky);
+    transition: var(--t);
+}
+
+.site-header.scrolled {
+    box-shadow: 0 4px 28px rgba(0,0,0,.07);
+    border-bottom-color: transparent;
+}

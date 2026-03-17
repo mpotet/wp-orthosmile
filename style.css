@@ -1,0 +1,20 @@
+/*
+Theme Name: OrthoSmile
+Theme URI: https://github.com/mpotet/wp-orthosmile
+Author: Maxim Potet
+Author URI: https://github.com/mpotet
+Description: Theme WordPress premium pour cabinets d'orthodontie et cliniques dentaires.
+Version: 1.0.0
+Requires at least: 6.4
+Tested up to: 6.7
+Requires PHP: 8.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: orthosmile
+Tags: medical, dental, clinic, custom-logo, custom-menu, featured-images
+*/
+
+/*
+Ce fichier ne contient que l'entête du thème.
+Tout le CSS du thème est compilé et chargé via main.css (voir functions.php et inc/enqueue.php).
+*/
