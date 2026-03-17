@@ -1,6 +1,6 @@
 <?php
 /**
- * Header global — doctype, head, top ribbon, navigation.
+ * Header global - doctype, head, top ribbon, navigation.
  *
  * @package OrthoSmile
  */

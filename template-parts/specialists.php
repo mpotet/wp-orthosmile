@@ -10,7 +10,7 @@ if (!get_theme_mod('orthosmile_enable_specialists', true)) {
 }
 
 $title       = get_theme_mod('orthosmile_specialists_title', __('Notre Équipe', 'orthosmile'));
-$description = get_theme_mod('orthosmile_specialists_description', __('XXXX — description de votre équipe à personnaliser dans le Customiseur.', 'orthosmile'));
+$description = get_theme_mod('orthosmile_specialists_description', __('XXXX - description de votre équipe à personnaliser dans le Customiseur.', 'orthosmile'));
 $team_photo  = get_theme_mod('orthosmile_team_photo', '');
 $team_photo_caption = get_theme_mod('orthosmile_team_photo_caption', '');
 
@@ -29,20 +29,20 @@ if (empty($specialists)) {
     $specialists = [
         [
             'name'    => 'Dr. XXXX',
-            'title_s' => __('XXXX — Titre', 'orthosmile'),
-            'desc'    => __('XXXX — Présentation du praticien à personnaliser dans le Customiseur.', 'orthosmile'),
+            'title_s' => __('XXXX - Titre', 'orthosmile'),
+            'desc'    => __('XXXX - Présentation du praticien à personnaliser dans le Customiseur.', 'orthosmile'),
             'photo'   => '',
         ],
         [
             'name'    => 'Dr. XXXX',
-            'title_s' => __('XXXX — Titre', 'orthosmile'),
-            'desc'    => __('XXXX — Présentation du praticien à personnaliser dans le Customiseur.', 'orthosmile'),
+            'title_s' => __('XXXX - Titre', 'orthosmile'),
+            'desc'    => __('XXXX - Présentation du praticien à personnaliser dans le Customiseur.', 'orthosmile'),
             'photo'   => '',
         ],
         [
             'name'    => 'Dr. XXXX',
-            'title_s' => __('XXXX — Titre', 'orthosmile'),
-            'desc'    => __('XXXX — Présentation du praticien à personnaliser dans le Customiseur.', 'orthosmile'),
+            'title_s' => __('XXXX - Titre', 'orthosmile'),
+            'desc'    => __('XXXX - Présentation du praticien à personnaliser dans le Customiseur.', 'orthosmile'),
             'photo'   => '',
         ],
     ];

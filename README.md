@@ -1,4 +1,4 @@
-# OrthoSmile — Thème WordPress pour Cabinets d'Orthodontie
+# OrthoSmile - Thème WordPress pour Cabinets d'Orthodontie
 
 Thème WordPress premium conçu pour les cabinets d'orthodontie et cliniques dentaires. Installez-le en quelques minutes et personnalisez tout depuis le panneau d'administration.
 
@@ -96,4 +96,4 @@ Pour toute question ou demande d'aide, contactez le développeur du thème.
 
 ## Licence
 
-GNU General Public License v2 ou ultérieur — https://www.gnu.org/licenses/gpl-2.0.html
+GNU General Public License v2 ou ultérieur - https://www.gnu.org/licenses/gpl-2.0.html

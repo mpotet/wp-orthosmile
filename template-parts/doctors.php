@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part: Team / Doctors section — Splide carousel.
+ * Template part: Team / Doctors section - Splide carousel.
  *
  * @package OrthoSmile
  */
@@ -9,9 +9,11 @@ if (!defined('ABSPATH')) exit;
 
 if (!get_theme_mod('show_doctors', true)) return;
 
-$section_title    = get_theme_mod('equipe_title', 'Notre équipe');
-$section_subtitle = get_theme_mod('equipe_subtitle', 'Des spécialistes passionnés à votre service');
-$team_image_id    = get_theme_mod('team_photo', '');
+$section_title    = get_theme_mod('equipe_title',    __('Notre équipe', 'orthosmile'));
+$section_subtitle = get_theme_mod('equipe_subtitle', __('Des spécialistes passionnés à votre service', 'orthosmile'));
+$team_img_url     = get_theme_mod('equipe_team_photo', '');
+$rdv_label        = get_theme_mod('equipe_rdv_label', __('Prendre rendez-vous', 'orthosmile'));
+$rdv_url          = orthosmile_get_appointment_url();
 
 $praticiens = new WP_Query([
     'post_type'      => 'praticien',
@@ -34,22 +36,16 @@ $praticiens = new WP_Query([
             <p class="section-subtitle"><?php echo esc_html($section_subtitle); ?></p>
         </div>
 
-        <?php if ($team_image_id) : ?>
+        <?php if ($team_img_url) : ?>
         <div class="team-banner fade-in-up">
-            <?php
-            $team_img_url = wp_get_attachment_image_url($team_image_id, 'team-banner');
-            if (!$team_img_url) $team_img_url = wp_get_attachment_image_url($team_image_id, 'large');
-            ?>
-            <?php if ($team_img_url) : ?>
-                <img src="<?php echo esc_url($team_img_url); ?>"
-                     alt="<?php esc_attr_e('Photo de l\'équipe du cabinet', 'orthosmile'); ?>"
-                     loading="lazy"
-                     class="team-banner-img">
-                <div class="team-banner-caption">
-                    <span class="material-symbols-outlined" aria-hidden="true">verified</span>
-                    <?php echo esc_html($section_title); ?> — <?php echo esc_html($section_subtitle); ?>
-                </div>
-            <?php endif; ?>
+            <img src="<?php echo esc_url($team_img_url); ?>"
+                 alt="<?php esc_attr_e('Photo de l\'équipe du cabinet', 'orthosmile'); ?>"
+                 loading="lazy"
+                 class="team-banner-img">
+            <div class="team-banner-caption">
+                <span class="material-symbols-outlined" aria-hidden="true">verified</span>
+                <?php echo esc_html($section_title); ?> - <?php echo esc_html($section_subtitle); ?>
+            </div>
         </div>
         <?php endif; ?>
 
@@ -96,6 +92,12 @@ $praticiens = new WP_Query([
                                 <?php if ($bio) : ?>
                                     <p class="praticien-bio"><?php echo esc_html($bio); ?></p>
                                 <?php endif; ?>
+                                <?php if ($rdv_label) : ?>
+                                <a href="<?php echo esc_url($rdv_url); ?>" class="btn btn-primary btn-sm praticien-rdv-btn">
+                                    <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
+                                    <?php echo esc_html($rdv_label); ?>
+                                </a>
+                                <?php endif; ?>
                             </div>
                         </article>
                     </li>
@@ -118,7 +120,7 @@ $praticiens = new WP_Query([
         <div class="team-placeholder fade-in-up">
             <p class="placeholder-notice">
                 <span class="material-symbols-outlined" aria-hidden="true">info</span>
-                <?php esc_html_e('XXXX — Ajoutez vos praticiens depuis l\'interface d\'administration (Praticiens → Ajouter).', 'orthosmile'); ?>
+                <?php esc_html_e('XXXX - Ajoutez vos praticiens depuis l\'interface d\'administration (Praticiens → Ajouter).', 'orthosmile'); ?>
             </p>
         </div>
         <?php endif; ?>

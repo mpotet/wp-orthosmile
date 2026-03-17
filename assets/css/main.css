@@ -1,12 +1,12 @@
 /*
- * OrthoSmile — Feuille de styles principale.
+ * OrthoSmile - Feuille de styles principale.
  * Ce fichier importe tous les modules CSS dans l'ordre correct.
  *
  * Ordre :
- *   1. global     — variables, reset, typo, utilitaires, base .btn
- *   2. components — header, hero, stats, boutons, sections…
- *   3. responsive — media queries
- *   4. wordpress  — classes WP, aliases, utilitaires
+ *   1. global     - variables, reset, typo, utilitaires, base .btn
+ *   2. components - header, hero, stats, boutons, sections…
+ *   3. responsive - media queries
+ *   4. wordpress  - classes WP, aliases, utilitaires
  */
 
 /* ── 1. Base ─────────────────────────────────────────── */

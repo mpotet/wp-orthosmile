@@ -1,4 +1,4 @@
-/* Gallery / Avant-Après Section — OrthoSmile */
+/* Gallery / Avant-Après Section - OrthoSmile */
 
 .gallery-section {
     padding: var(--section-py) 0;
@@ -94,7 +94,7 @@
     position: absolute;
     inset: 0;
     overflow: hidden;
-    clip-path: inset(0 50% 0 0);
+    clip-path: inset(0 0 0 50%);
 }
 
 .before-after-divider {
@@ -129,7 +129,7 @@
 /* .ba-tag is INSIDE the stage (positioned absolute) */
 .ba-tag {
     position: absolute;
-    bottom: .875rem;
+    top: .875rem;
     font-size: .65rem;
     font-weight: 800;
     text-transform: uppercase;

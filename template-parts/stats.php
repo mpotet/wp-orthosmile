@@ -12,22 +12,22 @@ if (!get_theme_mod('show_stats', true)) return;
 $stats = [
     [
         'value' => get_theme_mod('stat_1_value', 'XXXX'),
-        'label' => get_theme_mod('stat_1_label', 'XXXX — Légende statistique 1'),
+        'label' => get_theme_mod('stat_1_label', 'XXXX - Légende statistique 1'),
         'icon'  => get_theme_mod('stat_1_icon', 'emoji_events'),
     ],
     [
         'value' => get_theme_mod('stat_2_value', 'XXXX'),
-        'label' => get_theme_mod('stat_2_label', 'XXXX — Légende statistique 2'),
+        'label' => get_theme_mod('stat_2_label', 'XXXX - Légende statistique 2'),
         'icon'  => get_theme_mod('stat_2_icon', 'groups'),
     ],
     [
         'value' => get_theme_mod('stat_3_value', 'XXXX'),
-        'label' => get_theme_mod('stat_3_label', 'XXXX — Légende statistique 3'),
+        'label' => get_theme_mod('stat_3_label', 'XXXX - Légende statistique 3'),
         'icon'  => get_theme_mod('stat_3_icon', 'verified'),
     ],
     [
         'value' => get_theme_mod('stat_4_value', 'XXXX'),
-        'label' => get_theme_mod('stat_4_label', 'XXXX — Légende statistique 4'),
+        'label' => get_theme_mod('stat_4_label', 'XXXX - Légende statistique 4'),
         'icon'  => get_theme_mod('stat_4_icon', 'star'),
     ],
 ];

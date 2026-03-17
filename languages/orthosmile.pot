@@ -43,7 +43,7 @@ msgstr ""
 msgid "⚙️ Options OrthoSmile"
 msgstr ""
 
-msgid "🏥 Cabinet — Global"
+msgid "🏥 Cabinet - Global"
 msgstr ""
 
 msgid "Nom du cabinet"
@@ -112,13 +112,13 @@ msgstr ""
 msgid "URL bouton secondaire"
 msgstr ""
 
-msgid "Badge %d — Afficher"
+msgid "Badge %d - Afficher"
 msgstr ""
 
-msgid "Badge %d — Texte"
+msgid "Badge %d - Texte"
 msgstr ""
 
-msgid "Badge %d — Icône Material Symbols"
+msgid "Badge %d - Icône Material Symbols"
 msgstr ""
 
 msgid "Spécialistes certifiés"
@@ -148,13 +148,13 @@ msgstr ""
 msgid "📊 Statistiques (compteurs)"
 msgstr ""
 
-msgid "Stat %d — Valeur"
+msgid "Stat %d - Valeur"
 msgstr ""
 
-msgid "Stat %d — Légende"
+msgid "Stat %d - Légende"
 msgstr ""
 
-msgid "Stat %d — Icône Material"
+msgid "Stat %d - Icône Material"
 msgstr ""
 
 msgid "👥 Équipe"
@@ -172,7 +172,7 @@ msgstr ""
 msgid "Label bouton RDV sur les cartes praticien"
 msgstr ""
 
-msgid "Photo de l'équipe (bannière) — ID image"
+msgid "Photo de l'équipe (bannière) - ID image"
 msgstr ""
 
 msgid "🎨 Couleurs"
@@ -253,16 +253,16 @@ msgstr ""
 msgid "Sous-titre témoignages"
 msgstr ""
 
-msgid "Témoignage %d — Prénom Nom"
+msgid "Témoignage %d - Prénom Nom"
 msgstr ""
 
-msgid "Témoignage %d — Texte"
+msgid "Témoignage %d - Texte"
 msgstr ""
 
-msgid "Témoignage %d — Note /5"
+msgid "Témoignage %d - Note /5"
 msgstr ""
 
-msgid "Témoignage %d — Traitement"
+msgid "Témoignage %d - Traitement"
 msgstr ""
 
 msgid "🖼️ Galerie Avant/Après"
@@ -274,13 +274,13 @@ msgstr ""
 msgid "Sous-titre galerie"
 msgstr ""
 
-msgid "Cas %d — Image AVANT"
+msgid "Cas %d - Image AVANT"
 msgstr ""
 
-msgid "Cas %d — Image APRÈS"
+msgid "Cas %d - Image APRÈS"
 msgstr ""
 
-msgid "Cas %d — Légende"
+msgid "Cas %d - Légende"
 msgstr ""
 
 msgid "📝 Titres des sections"
@@ -621,3 +621,138 @@ msgstr ""
 
 msgid "Nous adoptons les dernières technologies pour un meilleur confort."
 msgstr ""
+
+# --- template-parts/stats.php ---
+msgid "Nos chiffres"
+msgstr ""
+
+# --- template-parts/doctors.php ---
+msgid "Notre équipe"
+msgstr ""
+
+msgid "Nos praticiens"
+msgstr ""
+
+msgid "Photo de l'équipe du cabinet"
+msgstr ""
+
+msgid "Carousel de l'équipe"
+msgstr ""
+
+msgid "Des spécialistes passionnés à votre service"
+msgstr ""
+
+msgid "XXXX - Ajoutez vos praticiens depuis l'interface d'administration (Praticiens → Ajouter)."
+msgstr ""
+
+# --- template-parts/services.php ---
+msgid "Nos traitements"
+msgstr ""
+
+msgid "Nos solutions"
+msgstr ""
+
+msgid "Nos traitements orthodontiques"
+msgstr ""
+
+msgid "Des solutions modernes adaptées à chaque profil"
+msgstr ""
+
+msgid "XXXX - Ajoutez vos traitements depuis l'administration (Traitements → Ajouter)."
+msgstr ""
+
+# --- template-parts/gallery.php ---
+msgid "Galerie avant/après"
+msgstr ""
+
+msgid "Avant / Après"
+msgstr ""
+
+msgid "Nos résultats"
+msgstr ""
+
+msgid "Des transformations réelles, des sourires rayonnants"
+msgstr ""
+
+msgid "Avant traitement"
+msgstr ""
+
+msgid "Avant"
+msgstr ""
+
+msgid "Après traitement"
+msgstr ""
+
+msgid "Après"
+msgstr ""
+
+msgid "Glisser pour comparer"
+msgstr ""
+
+msgid "XXXX - Ajoutez vos photos avant/après via Apparence → Personnaliser → Galerie."
+msgstr ""
+
+# --- template-parts/testimonials.php ---
+msgid "Témoignages patients"
+msgstr ""
+
+msgid "Témoignages"
+msgstr ""
+
+msgid "Ce que disent nos patients"
+msgstr ""
+
+msgid "Des centaines de familles nous font confiance"
+msgstr ""
+
+# --- template-parts/faq.php ---
+msgid "Questions fréquentes"
+msgstr ""
+
+msgid "Tout ce que vous souhaitez savoir sur l'orthodontie"
+msgstr ""
+
+msgid "XXXX - Ajoutez vos questions fréquentes via l'administration (FAQ → Ajouter une question)."
+msgstr ""
+
+# --- template-parts/cta.php ---
+msgid "Consultation offerte"
+msgstr ""
+
+msgid "Prêt à transformer votre sourire ?"
+msgstr ""
+
+msgid "Consultez nos spécialistes et bénéficiez d'un bilan orthodontique offert."
+msgstr ""
+
+msgid "Appelez-nous directement"
+msgstr ""
+
+msgid "Nous contacter"
+msgstr ""
+
+# --- template-parts/footer.php ---
+msgid "Cabinet d'orthodontie spécialisé, offrant des traitements sur mesure pour tous les âges."
+msgstr ""
+
+msgid "Navigation"
+msgstr ""
+
+msgid "Accueil"
+msgstr ""
+
+msgid "Traitements"
+msgstr ""
+
+msgid "Orthodontie adulte"
+msgstr ""
+
+msgid "Orthodontie enfant"
+msgstr ""
+
+msgid "Thème"
+msgstr ""
+
+msgid "Confidentialité"
+msgstr ""
+

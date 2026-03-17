@@ -1,6 +1,6 @@
 <?php
 /**
- * Scripts and styles enqueue — OrthoSmile
+ * Scripts and styles enqueue - OrthoSmile
  *
  * @package OrthoSmile
  */
@@ -26,7 +26,7 @@ function orthosmile_scripts() {
         null
     );
 
-    /* ── Splide (carousel) — CDN ──────────────────────────── */
+    /* ── Splide (carousel) - CDN ──────────────────────────── */
     wp_enqueue_style('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css', [], '4.1.4');
     wp_enqueue_script('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', [], '4.1.4', true);
 

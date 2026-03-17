@@ -1,6 +1,6 @@
 <?php
 /**
- * OrthoSmile — Point d’entrée principal du thème.
+ * OrthoSmile - Point d’entrée principal du thème.
  * Charge les modules /inc.
  *
  * @package OrthoSmile

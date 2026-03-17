@@ -1,4 +1,4 @@
-/* Team / Doctors Section — OrthoSmile */
+/* Team / Doctors Section - OrthoSmile */
 
 .team-section {
     padding: var(--section-py) 0;
@@ -115,6 +115,14 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     line-clamp: 3;
+}
+.praticien-rdv-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
 }
 
 /* ── Splide arrows ──────────────────────────────────── */

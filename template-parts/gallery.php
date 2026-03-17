@@ -9,24 +9,24 @@ if (!defined('ABSPATH')) exit;
 
 if (!get_theme_mod('show_gallery', true)) return;
 
-$section_title    = get_theme_mod('gallery_title', 'Nos résultats');
-$section_subtitle = get_theme_mod('gallery_subtitle', 'Des transformations réelles, des sourires rayonnants');
+$section_title    = get_theme_mod('gallery_title',    __('Nos résultats', 'orthosmile'));
+$section_subtitle = get_theme_mod('gallery_subtitle', __('Des transformations réelles, des sourires rayonnants', 'orthosmile'));
 
 $gallery = [
     [
         'before' => get_theme_mod('gallery_1_before', ''),
         'after'  => get_theme_mod('gallery_1_after', ''),
-        'label'  => get_theme_mod('gallery_1_label', 'XXXX — Cas clinique 1'),
+        'label'  => get_theme_mod('gallery_1_label', 'XXXX - Cas clinique 1'),
     ],
     [
         'before' => get_theme_mod('gallery_2_before', ''),
         'after'  => get_theme_mod('gallery_2_after', ''),
-        'label'  => get_theme_mod('gallery_2_label', 'XXXX — Cas clinique 2'),
+        'label'  => get_theme_mod('gallery_2_label', 'XXXX - Cas clinique 2'),
     ],
     [
         'before' => get_theme_mod('gallery_3_before', ''),
         'after'  => get_theme_mod('gallery_3_after', ''),
-        'label'  => get_theme_mod('gallery_3_label', 'XXXX — Cas clinique 3'),
+        'label'  => get_theme_mod('gallery_3_label', 'XXXX - Cas clinique 3'),
     ],
 ];
 
@@ -105,7 +105,7 @@ foreach ($gallery as $g) {
         <div class="gallery-placeholder fade-in-up">
             <p class="placeholder-notice">
                 <span class="material-symbols-outlined" aria-hidden="true">info</span>
-                <?php esc_html_e('XXXX — Ajoutez vos photos avant/après via Apparence → Personnaliser → Galerie.', 'orthosmile'); ?>
+                <?php esc_html_e('XXXX - Ajoutez vos photos avant/après via Apparence → Personnaliser → Galerie.', 'orthosmile'); ?>
             </p>
         </div>
         <?php endif; ?>

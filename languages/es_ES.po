@@ -46,8 +46,8 @@ msgstr "Añade widgets aquí para que aparezcan en la barra lateral."
 msgid "⚙️ Options OrthoSmile"
 msgstr "⚙️ Opciones OrthoSmile"
 
-msgid "🏥 Cabinet — Global"
-msgstr "🏥 Clínica — General"
+msgid "🏥 Cabinet - Global"
+msgstr "🏥 Clínica - General"
 
 msgid "Nom du cabinet"
 msgstr "Nombre de la clínica"
@@ -115,14 +115,14 @@ msgstr "Déjelo vacío para ocultar el botón secundario."
 msgid "URL bouton secondaire"
 msgstr "URL del botón secundario"
 
-msgid "Badge %d — Afficher"
-msgstr "Insignia %d — Mostrar"
+msgid "Badge %d - Afficher"
+msgstr "Insignia %d - Mostrar"
 
-msgid "Badge %d — Texte"
-msgstr "Insignia %d — Texto"
+msgid "Badge %d - Texte"
+msgstr "Insignia %d - Texto"
 
-msgid "Badge %d — Icône Material Symbols"
-msgstr "Insignia %d — Icono Material Symbols"
+msgid "Badge %d - Icône Material Symbols"
+msgstr "Insignia %d - Icono Material Symbols"
 
 msgid "Spécialistes certifiés"
 msgstr "Especialistas certificados"
@@ -151,14 +151,14 @@ msgstr "Foto de la clínica o del equipo"
 msgid "📊 Statistiques (compteurs)"
 msgstr "📊 Estadísticas (contadores)"
 
-msgid "Stat %d — Valeur"
-msgstr "Estadística %d — Valor"
+msgid "Stat %d - Valeur"
+msgstr "Estadística %d - Valor"
 
-msgid "Stat %d — Légende"
-msgstr "Estadística %d — Etiqueta"
+msgid "Stat %d - Légende"
+msgstr "Estadística %d - Etiqueta"
 
-msgid "Stat %d — Icône Material"
-msgstr "Estadística %d — Icono Material"
+msgid "Stat %d - Icône Material"
+msgstr "Estadística %d - Icono Material"
 
 msgid "👥 Équipe"
 msgstr "👥 Equipo"
@@ -178,8 +178,8 @@ msgstr "Imagen panorámica mostrada como banner encima de las tarjetas de los es
 msgid "Label bouton RDV sur les cartes praticien"
 msgstr "Etiqueta del botón de cita en las tarjetas de especialistas"
 
-msgid "Photo de l'équipe (bannière) — ID image"
-msgstr "Foto del equipo (banner) — ID de imagen"
+msgid "Photo de l'équipe (bannière) - ID image"
+msgstr "Foto del equipo (banner) - ID de imagen"
 
 msgid "🎨 Couleurs"
 msgstr "🎨 Colores"
@@ -259,17 +259,17 @@ msgstr "Título de la sección de testimonios"
 msgid "Sous-titre témoignages"
 msgstr "Subtítulo de testimonios"
 
-msgid "Témoignage %d — Prénom Nom"
-msgstr "Testimonio %d — Nombre y apellidos"
+msgid "Témoignage %d - Prénom Nom"
+msgstr "Testimonio %d - Nombre y apellidos"
 
-msgid "Témoignage %d — Texte"
-msgstr "Testimonio %d — Texto"
+msgid "Témoignage %d - Texte"
+msgstr "Testimonio %d - Texto"
 
-msgid "Témoignage %d — Note /5"
-msgstr "Testimonio %d — Puntuación /5"
+msgid "Témoignage %d - Note /5"
+msgstr "Testimonio %d - Puntuación /5"
 
-msgid "Témoignage %d — Traitement"
-msgstr "Testimonio %d — Tratamiento"
+msgid "Témoignage %d - Traitement"
+msgstr "Testimonio %d - Tratamiento"
 
 msgid "🖼️ Galerie Avant/Après"
 msgstr "🖼️ Galería Antes/Después"
@@ -280,14 +280,14 @@ msgstr "Título de la sección de galería"
 msgid "Sous-titre galerie"
 msgstr "Subtítulo de la galería"
 
-msgid "Cas %d — Image AVANT"
-msgstr "Caso %d — Imagen ANTES"
+msgid "Cas %d - Image AVANT"
+msgstr "Caso %d - Imagen ANTES"
 
-msgid "Cas %d — Image APRÈS"
-msgstr "Caso %d — Imagen DESPUÉS"
+msgid "Cas %d - Image APRÈS"
+msgstr "Caso %d - Imagen DESPUÉS"
 
-msgid "Cas %d — Légende"
-msgstr "Caso %d — Leyenda"
+msgid "Cas %d - Légende"
+msgstr "Caso %d - Leyenda"
 
 msgid "📝 Titres des sections"
 msgstr "📝 Títulos de secciones"
@@ -476,3 +476,138 @@ msgstr "Horarios"
 
 msgid "Formulaire de Contact"
 msgstr "Formulario de contacto"
+
+# --- template-parts/stats.php ---
+msgid "Nos chiffres"
+msgstr "Nuestras cifras"
+
+# --- template-parts/doctors.php ---
+msgid "Notre équipe"
+msgstr "Nuestro equipo"
+
+msgid "Nos praticiens"
+msgstr "Nuestros especialistas"
+
+msgid "Photo de l'équipe du cabinet"
+msgstr "Foto del equipo de la clínica"
+
+msgid "Carousel de l'équipe"
+msgstr "Carrusel del equipo"
+
+msgid "Des spécialistes passionnés à votre service"
+msgstr "Especialistas apasionados a su servicio"
+
+msgid "XXXX - Ajoutez vos praticiens depuis l'interface d'administration (Praticiens → Ajouter)."
+msgstr "XXXX - Añade tus especialistas desde la interfaz de administración (Especialistas → Añadir)."
+
+# --- template-parts/services.php ---
+msgid "Nos traitements"
+msgstr "Nuestros tratamientos"
+
+msgid "Nos solutions"
+msgstr "Nuestras soluciones"
+
+msgid "Nos traitements orthodontiques"
+msgstr "Nuestros tratamientos ortodónticos"
+
+msgid "Des solutions modernes adaptées à chaque profil"
+msgstr "Soluciones modernas adaptadas a cada perfil"
+
+msgid "XXXX - Ajoutez vos traitements depuis l'administration (Traitements → Ajouter)."
+msgstr "XXXX - Añade tus tratamientos desde la administración (Tratamientos → Añadir)."
+
+# --- template-parts/gallery.php ---
+msgid "Galerie avant/après"
+msgstr "Galería antes/después"
+
+msgid "Avant / Après"
+msgstr "Antes / Después"
+
+msgid "Nos résultats"
+msgstr "Nuestros resultados"
+
+msgid "Des transformations réelles, des sourires rayonnants"
+msgstr "Transformaciones reales, sonrisas radiantes"
+
+msgid "Avant traitement"
+msgstr "Antes del tratamiento"
+
+msgid "Avant"
+msgstr "Antes"
+
+msgid "Après traitement"
+msgstr "Después del tratamiento"
+
+msgid "Après"
+msgstr "Después"
+
+msgid "Glisser pour comparer"
+msgstr "Desliza para comparar"
+
+msgid "XXXX - Ajoutez vos photos avant/après via Apparence → Personnaliser → Galerie."
+msgstr "XXXX - Añade tus fotos antes/después en Apariencia → Personalizar → Galería."
+
+# --- template-parts/testimonials.php ---
+msgid "Témoignages patients"
+msgstr "Testimonios de pacientes"
+
+msgid "Témoignages"
+msgstr "Testimonios"
+
+msgid "Ce que disent nos patients"
+msgstr "Lo que dicen nuestros pacientes"
+
+msgid "Des centaines de familles nous font confiance"
+msgstr "Cientos de familias confían en nosotros"
+
+# --- template-parts/faq.php ---
+msgid "Questions fréquentes"
+msgstr "Preguntas frecuentes"
+
+msgid "Tout ce que vous souhaitez savoir sur l'orthodontie"
+msgstr "Todo lo que necesitas saber sobre ortodoncia"
+
+msgid "XXXX - Ajoutez vos questions fréquentes via l'administration (FAQ → Ajouter une question)."
+msgstr "XXXX - Añade tus preguntas frecuentes desde la administración (FAQ → Añadir una pregunta)."
+
+# --- template-parts/cta.php ---
+msgid "Consultation offerte"
+msgstr "Consulta gratuita"
+
+msgid "Prêt à transformer votre sourire ?"
+msgstr "¿Listo para transformar tu sonrisa?"
+
+msgid "Consultez nos spécialistes et bénéficiez d'un bilan orthodontique offert."
+msgstr "Consulta a nuestros especialistas y benefíciate de una evaluación ortodóntica gratuita."
+
+msgid "Appelez-nous directement"
+msgstr "Llámenos directamente"
+
+msgid "Nous contacter"
+msgstr "Contáctenos"
+
+# --- template-parts/footer.php ---
+msgid "Cabinet d'orthodontie spécialisé, offrant des traitements sur mesure pour tous les âges."
+msgstr "Clínica de ortodoncia especializada con tratamientos a medida para todas las edades."
+
+msgid "Navigation"
+msgstr "Navegación"
+
+msgid "Accueil"
+msgstr "Inicio"
+
+msgid "Traitements"
+msgstr "Tratamientos"
+
+msgid "Orthodontie adulte"
+msgstr "Ortodoncia adulta"
+
+msgid "Orthodontie enfant"
+msgstr "Ortodoncia infantil"
+
+msgid "Thème"
+msgstr "Tema"
+
+msgid "Confidentialité"
+msgstr "Privacidad"
+

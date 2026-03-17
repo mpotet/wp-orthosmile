@@ -9,8 +9,8 @@ if (!defined('ABSPATH')) exit;
 
 if (!get_theme_mod('show_faq', true)) return;
 
-$section_title    = get_theme_mod('faq_title', 'Questions fréquentes');
-$section_subtitle = get_theme_mod('faq_subtitle', 'Tout ce que vous souhaitez savoir sur l\'orthodontie');
+$section_title    = get_theme_mod('faq_title',    __('Questions fréquentes', 'orthosmile'));
+$section_subtitle = get_theme_mod('faq_subtitle', __('Tout ce que vous souhaitez savoir sur l\'orthodontie', 'orthosmile'));
 
 $faqs = new WP_Query([
     'post_type'      => 'faq_item',
@@ -67,7 +67,7 @@ $faqs = new WP_Query([
         <div class="faq-placeholder fade-in-up">
             <p class="placeholder-notice">
                 <span class="material-symbols-outlined" aria-hidden="true">info</span>
-                <?php esc_html_e('XXXX — Ajoutez vos questions fréquentes via l\'administration (FAQ → Ajouter une question).', 'orthosmile'); ?>
+                <?php esc_html_e('XXXX - Ajoutez vos questions fréquentes via l\'administration (FAQ → Ajouter une question).', 'orthosmile'); ?>
             </p>
         </div>
         <?php endif; ?>

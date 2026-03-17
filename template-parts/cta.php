@@ -9,9 +9,10 @@ if (!defined('ABSPATH')) exit;
 
 if (!get_theme_mod('show_cta', true)) return;
 
-$cta_title    = get_theme_mod('cta_title', 'Prêt à transformer votre sourire ?');
-$cta_subtitle = get_theme_mod('cta_subtitle', 'Consultez nos spécialistes et bénéficiez d\'un bilan orthodontique offert.');
-$cta_btn      = get_theme_mod('cta_btn_text', 'Prendre rendez-vous');
+$cta_title    = get_theme_mod('cta_title',        __('Prêt à transformer votre sourire ?', 'orthosmile'));
+$cta_subtitle = get_theme_mod('cta_subtitle',    __('Consultez nos spécialistes et bénéficiez d\'un bilan orthodontique offert.', 'orthosmile'));
+$cta_btn      = get_theme_mod('cta_btn_text',    __('Prendre rendez-vous', 'orthosmile'));
+$cta_contact  = get_theme_mod('cta_contact_text',__('Nous contacter', 'orthosmile'));
 $rdv_url      = orthosmile_get_appointment_url();
 $phone        = get_theme_mod('phone_number', '');
 ?>
@@ -34,7 +35,7 @@ $phone        = get_theme_mod('phone_number', '');
                     <?php echo esc_html($cta_btn); ?>
                 </a>
                 <a href="#contact" class="btn btn-outline-white btn-lg">
-                    <?php esc_html_e('Nous contacter', 'orthosmile'); ?>
+                    <?php echo esc_html($cta_contact); ?>
                 </a>
             </div>
 

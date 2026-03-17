@@ -9,8 +9,8 @@ if (!defined('ABSPATH')) exit;
 
 if (!get_theme_mod('show_services', true)) return;
 
-$section_title    = get_theme_mod('services_title', 'Nos traitements orthodontiques');
-$section_subtitle = get_theme_mod('services_subtitle', 'Des solutions modernes adaptées à chaque profil');
+$section_title    = get_theme_mod('services_title',    __('Nos traitements orthodontiques', 'orthosmile'));
+$section_subtitle = get_theme_mod('services_subtitle', __('Des solutions modernes adaptées à chaque profil', 'orthosmile'));
 
 $traitements = new WP_Query([
     'post_type'      => 'traitement',
@@ -79,7 +79,7 @@ $traitements = new WP_Query([
         <div class="services-placeholder fade-in-up">
             <p class="placeholder-notice">
                 <span class="material-symbols-outlined" aria-hidden="true">info</span>
-                <?php esc_html_e('XXXX — Ajoutez vos traitements depuis l\'administration (Traitements → Ajouter).', 'orthosmile'); ?>
+                <?php esc_html_e('XXXX - Ajoutez vos traitements depuis l\'administration (Traitements → Ajouter).', 'orthosmile'); ?>
             </p>
         </div>
         <?php endif; ?>

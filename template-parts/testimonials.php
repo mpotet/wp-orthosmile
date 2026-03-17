@@ -9,8 +9,8 @@ if (!defined('ABSPATH')) exit;
 
 if (!get_theme_mod('show_testimonials', true)) return;
 
-$section_title    = get_theme_mod('testimonials_title', 'Ce que disent nos patients');
-$section_subtitle = get_theme_mod('testimonials_subtitle', 'Des centaines de familles nous font confiance');
+$section_title    = get_theme_mod('testimonials_title',    __('Ce que disent nos patients', 'orthosmile'));
+$section_subtitle = get_theme_mod('testimonials_subtitle', __('Des centaines de familles nous font confiance', 'orthosmile'));
 
 // Up to 6 testimonials from customizer
 $testimonials = [];
@@ -28,10 +28,10 @@ for ($i = 1; $i <= 6; $i++) {
 if (empty($testimonials)) {
     $testimonials = [
         [
-            'name'  => 'XXXX — Prénom Nom',
-            'text'  => 'XXXX — Ajoutez un témoignage patient via Apparence → Personnaliser → Témoignages.',
+            'name'  => 'XXXX - Prénom Nom',
+            'text'  => 'XXXX - Ajoutez un témoignage patient via Apparence → Personnaliser → Témoignages.',
             'rating' => 5,
-            'treat' => 'XXXX — Traitement',
+            'treat' => 'XXXX - Traitement',
         ],
     ];
 }

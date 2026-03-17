@@ -1,5 +1,5 @@
 /**
- * OrthoSmile — main.js
+ * OrthoSmile - main.js
  * Vanilla JS: header scroll, mobile menu, counters, Splide carousel,
  * before/after slider, FAQ accordion, fade-in observer, scroll-to-top.
  *
@@ -158,7 +158,7 @@
                 const rect  = stage.getBoundingClientRect();
                 const ratio = Math.min(Math.max((x - rect.left) / rect.width, 0.02), 0.98);
                 const pct   = Math.round(ratio * 100);
-                overlay.style.clipPath  = `inset(0 ${100 - pct}% 0 0)`;
+                overlay.style.clipPath  = `inset(0 0 0 ${pct}%)`;
                 divider.style.left      = pct + '%';
             }
 
@@ -182,7 +182,7 @@
             document.addEventListener('touchend', () => { isDragging = false; });
 
             // Initialise à 50%
-            overlay.style.clipPath = 'inset(0 50% 0 0)';
+            overlay.style.clipPath = 'inset(0 0 0 50%)';
             divider.style.left     = '50%';
         });
     }
