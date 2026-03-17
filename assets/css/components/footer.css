@@ -1,0 +1,122 @@
+/* Footer — OrthoSmile */
+
+.site-footer {
+    background: var(--color-bg-dark);
+    color: rgba(255,255,255,.7);
+    padding-top: 5rem;
+}
+
+/* ── Main grid ───────────────────────────────────────── */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+/* ── Brand column ────────────────────────────────────── */
+.footer-brand { max-width: 300px; }
+
+.footer-logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: .875rem;
+    letter-spacing: -0.02em;
+}
+.footer-description {
+    font-size: .875rem;
+    color: rgba(255,255,255,.48);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.footer-socials { display: flex; gap: .5rem; }
+.footer-social-link {
+    display: flex; align-items: center; justify-content: center;
+    width: 38px; height: 38px;
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: var(--radius-md);
+    color: rgba(255,255,255,.55);
+    text-decoration: none;
+    transition: var(--t-fast);
+}
+.footer-social-link:hover {
+    background: var(--color-teal);
+    border-color: var(--color-teal);
+    color: #fff;
+    transform: translateY(-2px);
+}
+.footer-social-link .material-symbols-outlined { font-size: 1.1rem; }
+
+/* ── Nav columns ─────────────────────────────────────── */
+.footer-col h4 {
+    font-size: .72rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-bottom: 1.25rem;
+    padding-bottom: .75rem;
+    border-bottom: 2px solid var(--color-teal);
+    display: inline-block;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: .625rem;
+    list-style: none;
+    padding: 0; margin: 0;
+}
+.footer-links a {
+    font-size: .875rem;
+    color: rgba(255,255,255,.48);
+    text-decoration: none;
+    transition: var(--t-fast);
+    display: inline-flex;
+    align-items: center;
+    gap: .375rem;
+}
+.footer-links a:hover { color: #fff; transform: translateX(4px); }
+.footer-links a .material-symbols-outlined { font-size: .9rem; color: var(--color-teal); }
+
+/* ── Contact column ──────────────────────────────────── */
+.footer-contact-list {
+    display: flex; flex-direction: column; gap: .875rem;
+    list-style: none; padding: 0; margin: 0;
+}
+.footer-contact-list li {
+    display: flex; align-items: flex-start; gap: .75rem;
+    font-size: .875rem; color: rgba(255,255,255,.48);
+}
+.footer-contact-list li .material-symbols-outlined {
+    font-size: 1.1rem; color: var(--color-teal);
+    flex-shrink: 0; margin-top: 1px;
+}
+.footer-contact-list a {
+    color: rgba(255,255,255,.65); text-decoration: none; transition: var(--t-fast);
+}
+.footer-contact-list a:hover { color: #fff; }
+
+/* ── Bottom bar ──────────────────────────────────────── */
+.footer-bottom {
+    padding: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.footer-legal,
+.footer-legal a {
+    font-size: .78rem;
+    color: rgba(255,255,255,.3);
+    text-decoration: none;
+}
+.footer-legal a:hover { color: rgba(255,255,255,.6); }

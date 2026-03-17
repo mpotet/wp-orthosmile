@@ -1,5 +1,5 @@
 /* Boutons OrthoSmile */
-.btn .material-symbols-outlined { font-size: 1.25rem; }
+.btn .material-symbols-outlined { font-size: 1.1rem; }
 
 .btn-primary {
     background: linear-gradient(135deg, var(--color-teal), var(--color-teal-dark));
