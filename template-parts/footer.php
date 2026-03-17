@@ -110,14 +110,11 @@ $socials = [
                     if ($traitements) :
                         foreach ($traitements as $traitement) :
                     ?>
-                    <li><a href="#services">
-                        <span class="material-symbols-outlined">chevron_right</span>
-                        <?php echo esc_html($traitement->post_title); ?>
-                    </a></li>
+                    <li><a href="#services"><?php echo esc_html($traitement->post_title); ?></a></li>
                     <?php endforeach; else : ?>
-                    <li><a href="#services"><span class="material-symbols-outlined">chevron_right</span><?php esc_html_e('Orthodontie adulte', 'orthosmile'); ?></a></li>
-                    <li><a href="#services"><span class="material-symbols-outlined">chevron_right</span><?php esc_html_e('Orthodontie enfant', 'orthosmile'); ?></a></li>
-                    <li><a href="#services"><span class="material-symbols-outlined">chevron_right</span>Invisalign</a></li>
+                    <li><a href="#services"><?php esc_html_e('Orthodontie adulte', 'orthosmile'); ?></a></li>
+                    <li><a href="#services"><?php esc_html_e('Orthodontie enfant', 'orthosmile'); ?></a></li>
+                    <li><a href="#services">Invisalign</a></li>
                     <?php endif; ?>
                 </ul>
             </div>

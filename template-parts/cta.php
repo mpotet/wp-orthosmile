@@ -30,11 +30,11 @@ $phone        = get_theme_mod('phone_number', '');
             <p class="cta-subtitle"><?php echo esc_html($cta_subtitle); ?></p>
 
             <div class="cta-buttons">
-                <a href="<?php echo esc_url($rdv_url); ?>" class="btn btn-gold btn-lg">
+                <a href="<?php echo esc_url($rdv_url); ?>" class="btn btn-primary btn-lg">
                     <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
                     <?php echo esc_html($cta_btn); ?>
                 </a>
-                <a href="#contact" class="btn btn-outline-white btn-lg">
+                <a href="#contact" class="btn btn-secondary btn-lg">
                     <?php echo esc_html($cta_contact); ?>
                 </a>
             </div>
