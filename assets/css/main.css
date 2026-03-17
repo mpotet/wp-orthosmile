@@ -3,8 +3,7 @@
 @import url("./components/stats.css");
 @import url("./components/buttons.css");
 @import url("./components/header.css");
-    transition: width .3s ease;
-}
+/* Correction : suppression de transition mal placée */
 
 .main-menu > li > a:hover,
 .main-menu > li.current-menu-item > a { color: var(--color-teal); }
@@ -1594,6 +1593,7 @@ a.contact-card .contact-card-value { color: var(--color-teal); }
 .praticien-name { font-size: 1.0625rem; font-weight: 700; color: var(--color-text); margin: 0 0 .25rem; }
 .praticien-poste { font-size: .8rem; font-weight: 600; color: var(--color-teal); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 .75rem; }
 .praticien-bio { font-size: .875rem; color: var(--color-text-secondary); line-height: 1.65; margin: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.praticien-bio { line-clamp: 3; }
 
 /* --- Team placeholder --- */
 .team-placeholder, .services-placeholder, .gallery-placeholder, .faq-placeholder {
