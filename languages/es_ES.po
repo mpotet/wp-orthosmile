@@ -1,0 +1,478 @@
+# Translation of OrthoSmile in Spanish (Spain)
+# Copyright (C) 2026 OrthoSmile
+# This file is distributed under the same license as the OrthoSmile package.
+msgid ""
+msgstr ""
+"Project-Id-Version: OrthoSmile 1.0.0\n"
+"Report-Msgid-Bugs-To: https://example.com/support\n"
+"POT-Creation-Date: 2026-03-17T12:00:00+00:00\n"
+"PO-Revision-Date: 2026-03-17T12:00:00+00:00\n"
+"Last-Translator: OrthoSmile Team\n"
+"Language-Team: Spanish\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: GitHub Copilot\n"
+"X-Domain: orthosmile\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# --- theme-setup.php ---
+msgid "Primary Menu"
+msgstr "Menú principal"
+
+msgid "Footer Menu"
+msgstr "Menú de pie de página"
+
+msgid "Footer 1"
+msgstr "Pie de página 1"
+
+msgid "Footer 2"
+msgstr "Pie de página 2"
+
+msgid "Footer 3"
+msgstr "Pie de página 3"
+
+msgid "Sidebar"
+msgstr "Barra lateral"
+
+msgid "Add widgets here to appear in your footer."
+msgstr "Añade widgets aquí para que aparezcan en el pie de página."
+
+msgid "Add widgets here to appear in your sidebar."
+msgstr "Añade widgets aquí para que aparezcan en la barra lateral."
+
+# --- customizer.php ---
+msgid "⚙️ Options OrthoSmile"
+msgstr "⚙️ Opciones OrthoSmile"
+
+msgid "🏥 Cabinet — Global"
+msgstr "🏥 Clínica — General"
+
+msgid "Nom du cabinet"
+msgstr "Nombre de la clínica"
+
+msgid "Slogan / Sous-titre cabinet"
+msgstr "Eslogan / Subtítulo de la clínica"
+
+msgid "📞 Coordonnées"
+msgstr "📞 Datos de contacto"
+
+msgid "Numéro de téléphone"
+msgstr "Número de teléfono"
+
+msgid "Email"
+msgstr "Correo electrónico"
+
+msgid "Adresse"
+msgstr "Dirección"
+
+msgid "Horaires d'ouverture"
+msgstr "Horario de apertura"
+
+msgid "URL prise de RDV (Doctolib, etc.)"
+msgstr "URL de cita previa (Doctoralia, etc.)"
+
+msgid "Laissez vide pour pointer vers la page /contact."
+msgstr "Déjelo vacío para enlazar con la página /contacto."
+
+msgid "Code intégration Google Maps (iframe)"
+msgstr "Código de integración de Google Maps (iframe)"
+
+msgid "🦸 Section Héro"
+msgstr "🦸 Sección Hero"
+
+msgid "Titre principal"
+msgstr "Título principal"
+
+msgid "Sous-titre"
+msgstr "Subtítulo"
+
+msgid "Texte bouton CTA principal"
+msgstr "Texto del botón CTA principal"
+
+msgid "URL bouton CTA (laissez vide = appointment_url)"
+msgstr "URL del botón CTA (dejar vacío = appointment_url)"
+
+msgid "Image verticale à droite du Hero"
+msgstr "Imagen vertical (lado derecho del Hero)"
+
+msgid "Afficher l'image du héro"
+msgstr "Mostrar imagen del hero"
+
+msgid "Décochez pour un layout pleine largeur sans image."
+msgstr "Desmarque para un diseño a ancho completo sin imagen."
+
+msgid "Texte alternatif de l'image (accessibilité)"
+msgstr "Texto alternativo de la imagen (accesibilidad)"
+
+msgid "Texte bouton secondaire"
+msgstr "Texto del botón secundario"
+
+msgid "Laissez vide pour masquer le bouton secondaire."
+msgstr "Déjelo vacío para ocultar el botón secundario."
+
+msgid "URL bouton secondaire"
+msgstr "URL del botón secundario"
+
+msgid "Badge %d — Afficher"
+msgstr "Insignia %d — Mostrar"
+
+msgid "Badge %d — Texte"
+msgstr "Insignia %d — Texto"
+
+msgid "Badge %d — Icône Material Symbols"
+msgstr "Insignia %d — Icono Material Symbols"
+
+msgid "Spécialistes certifiés"
+msgstr "Especialistas certificados"
+
+msgid "Invisalign Certified"
+msgstr "Certificado Invisalign"
+
+msgid "Pédiatrie & adultes"
+msgstr "Pediatría y adultos"
+
+msgid "Voir nos traitements"
+msgstr "Ver nuestros tratamientos"
+
+msgid "Votre sourire parfait commence ici"
+msgstr "Tu sonrisa perfecta empieza aquí"
+
+msgid "Décrivez votre cabinet et votre approche ici."
+msgstr "Describa su clínica y su enfoque aquí."
+
+msgid "Prendre rendez-vous"
+msgstr "Pedir cita"
+
+msgid "Photo du cabinet ou de l'équipe"
+msgstr "Foto de la clínica o del equipo"
+
+msgid "📊 Statistiques (compteurs)"
+msgstr "📊 Estadísticas (contadores)"
+
+msgid "Stat %d — Valeur"
+msgstr "Estadística %d — Valor"
+
+msgid "Stat %d — Légende"
+msgstr "Estadística %d — Etiqueta"
+
+msgid "Stat %d — Icône Material"
+msgstr "Estadística %d — Icono Material"
+
+msgid "👥 Équipe"
+msgstr "👥 Equipo"
+
+msgid "Titre section équipe"
+msgstr "Título de la sección del equipo"
+
+msgid "Sous-titre section équipe"
+msgstr "Subtítulo de la sección del equipo"
+
+msgid "Photo collective de l'équipe"
+msgstr "Foto grupal del equipo"
+
+msgid "Image panoramique affichée en bannière au-dessus des cartes praticiens."
+msgstr "Imagen panorámica mostrada como banner encima de las tarjetas de los especialistas."
+
+msgid "Label bouton RDV sur les cartes praticien"
+msgstr "Etiqueta del botón de cita en las tarjetas de especialistas"
+
+msgid "Photo de l'équipe (bannière) — ID image"
+msgstr "Foto del equipo (banner) — ID de imagen"
+
+msgid "🎨 Couleurs"
+msgstr "🎨 Colores"
+
+msgid "Couleur primaire (teal)"
+msgstr "Color primario (verde azulado)"
+
+msgid "Couleur accent (gold)"
+msgstr "Color de acento (dorado)"
+
+msgid "📲 Réseaux Sociaux"
+msgstr "📲 Redes Sociales"
+
+msgid "URL Facebook"
+msgstr "URL de Facebook"
+
+msgid "URL Instagram"
+msgstr "URL de Instagram"
+
+msgid "URL LinkedIn"
+msgstr "URL de LinkedIn"
+
+msgid "URL YouTube"
+msgstr "URL de YouTube"
+
+msgid "👁️ Affichage des Sections"
+msgstr "👁️ Visibilidad de Secciones"
+
+msgid "Afficher les statistiques"
+msgstr "Mostrar estadísticas"
+
+msgid "Afficher la section Équipe"
+msgstr "Mostrar sección Equipo"
+
+msgid "Afficher la section Services/Traitements"
+msgstr "Mostrar sección Servicios/Tratamientos"
+
+msgid "Afficher la galerie Avant/Après"
+msgstr "Mostrar galería Antes/Después"
+
+msgid "Afficher les témoignages"
+msgstr "Mostrar testimonios"
+
+msgid "Afficher la FAQ"
+msgstr "Mostrar FAQ"
+
+msgid "Afficher le CTA final"
+msgstr "Mostrar CTA final"
+
+msgid "🎯 Section CTA (appel à l'action)"
+msgstr "🎯 Sección CTA (llamada a la acción)"
+
+msgid "Titre CTA"
+msgstr "Título CTA"
+
+msgid "Sous-titre CTA"
+msgstr "Subtítulo CTA"
+
+msgid "Texte bouton CTA"
+msgstr "Texto del botón CTA"
+
+msgid "🔻 Footer"
+msgstr "🔻 Pie de página"
+
+msgid "Description cabinet (footer)"
+msgstr "Descripción de la clínica (pie de página)"
+
+msgid "Texte légal (ex: RPPS, mentions)"
+msgstr "Texto legal (ej.: número de colegiado, avisos)"
+
+msgid "⭐ Témoignages patients"
+msgstr "⭐ Testimonios de pacientes"
+
+msgid "Titre section témoignages"
+msgstr "Título de la sección de testimonios"
+
+msgid "Sous-titre témoignages"
+msgstr "Subtítulo de testimonios"
+
+msgid "Témoignage %d — Prénom Nom"
+msgstr "Testimonio %d — Nombre y apellidos"
+
+msgid "Témoignage %d — Texte"
+msgstr "Testimonio %d — Texto"
+
+msgid "Témoignage %d — Note /5"
+msgstr "Testimonio %d — Puntuación /5"
+
+msgid "Témoignage %d — Traitement"
+msgstr "Testimonio %d — Tratamiento"
+
+msgid "🖼️ Galerie Avant/Après"
+msgstr "🖼️ Galería Antes/Después"
+
+msgid "Titre section galerie"
+msgstr "Título de la sección de galería"
+
+msgid "Sous-titre galerie"
+msgstr "Subtítulo de la galería"
+
+msgid "Cas %d — Image AVANT"
+msgstr "Caso %d — Imagen ANTES"
+
+msgid "Cas %d — Image APRÈS"
+msgstr "Caso %d — Imagen DESPUÉS"
+
+msgid "Cas %d — Légende"
+msgstr "Caso %d — Leyenda"
+
+msgid "📝 Titres des sections"
+msgstr "📝 Títulos de secciones"
+
+msgid "Titre section Traitements"
+msgstr "Título de la sección Tratamientos"
+
+msgid "Sous-titre Traitements"
+msgstr "Subtítulo de Tratamientos"
+
+msgid "Titre section FAQ"
+msgstr "Título de la sección FAQ"
+
+msgid "Sous-titre FAQ"
+msgstr "Subtítulo de FAQ"
+
+# --- header.php ---
+msgid "Toggle navigation"
+msgstr "Mostrar/ocultar menú"
+
+msgid "Navigation principale"
+msgstr "Navegación principal"
+
+# --- template-parts/hero.php ---
+msgid "Cabinet Orthodontiste"
+msgstr "Clínica de Ortodoncia"
+
+# --- 404.php ---
+msgid "Oops! Cette page n'existe pas."
+msgstr "¡Vaya! Esta página no existe."
+
+msgid "Il semble que la page que vous recherchez ait été déplacée, renommée ou supprimée."
+msgstr "Parece que la página que buscas ha sido movida, renombrada o eliminada."
+
+msgid "Retour à l'accueil"
+msgstr "Volver al inicio"
+
+# --- index.php ---
+msgid "Derniers Articles"
+msgstr "Últimos artículos"
+
+msgid "Précédent"
+msgstr "Anterior"
+
+msgid "Suivant"
+msgstr "Siguiente"
+
+# --- template-tags.php ---
+#. translators: %s: post date.
+msgid "Posted on %s"
+msgstr "Publicado el %s"
+
+#. translators: %s: post author.
+msgid "by %s"
+msgstr "por %s"
+
+#. translators: 1: list of categories.
+msgid "Posted in %1$s"
+msgstr "Publicado en %1$s"
+
+#. translators: 1: list of tags.
+msgid "Tagged %1$s"
+msgstr "Etiquetado como %1$s"
+
+#. translators: %s: post title
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "Dejar un comentario<span class=\"screen-reader-text\"> en %s</span>"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Editar <span class=\"screen-reader-text\">%s</span>"
+
+# --- functions.php ---
+msgid "Erreur de sécurité"
+msgstr "Error de seguridad"
+
+msgid "Tous les champs requis doivent être remplis."
+msgstr "Todos los campos obligatorios deben estar rellenos."
+
+msgid "L'adresse email n'est pas valide."
+msgstr "La dirección de correo electrónico no es válida."
+
+msgid "Erreur lors de l'envoi du message. Veuillez réessayer."
+msgstr "Error al enviar el mensaje. Por favor, inténtalo de nuevo."
+
+msgid "Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais."
+msgstr "Tu mensaje ha sido enviado con éxito. Te responderemos lo antes posible."
+
+# --- template-parts/footer.php ---
+msgid "Votre partenaire de confiance pour des soins orthodontiques de qualité. Des traitements personnalisés pour des sourires naturels et durables."
+msgstr "Tu socio de confianza para una atención ortodóntica de calidad. Tratamientos personalizados para sonrisas naturales y duraderas."
+
+msgid "Services"
+msgstr "Servicios"
+
+msgid "Appareils Fixes"
+msgstr "Brackets fijos"
+
+msgid "Retenue Orthodontique"
+msgstr "Retenedor ortodóntico"
+
+msgid "Informations"
+msgstr "Información"
+
+msgid "Notre Équipe"
+msgstr "Nuestro equipo"
+
+msgid "FAQ"
+msgstr "FAQ"
+
+msgid "Galerie"
+msgstr "Galería"
+
+msgid "Contact"
+msgstr "Contacto"
+
+msgid "Tous droits réservés."
+msgstr "Todos los derechos reservados."
+
+msgid "Politique de confidentialité"
+msgstr "Política de privacidad"
+
+msgid "Mentions légales"
+msgstr "Aviso legal"
+
+msgid "Newsletter"
+msgstr "Boletín informativo"
+
+msgid "Restez informé de nos actualités et conseils orthodontiques."
+msgstr "Mantente informado sobre nuestras novedades y consejos de ortodoncia."
+
+msgid "Votre email"
+msgstr "Tu correo electrónico"
+
+msgid "S'abonner"
+msgstr "Suscribirse"
+
+# --- contact.php ---
+msgid "Contactez-nous"
+msgstr "Contáctenos"
+
+msgid "Nos Coordonnées"
+msgstr "Nuestros datos de contacto"
+
+msgid "Remplissez le formulaire ci-dessous pour nous contacter. Nous vous répondrons dans les plus brefs délais."
+msgstr "Rellena el formulario a continuación para contactarnos. Te responderemos lo antes posible."
+
+msgid "Nom complet"
+msgstr "Nombre completo"
+
+msgid "Demande de devis"
+msgstr "Solicitud de presupuesto"
+
+msgid "Poser une question"
+msgstr "Hacer una pregunta"
+
+msgid "Décrivez votre demande..."
+msgstr "Describe tu consulta..."
+
+msgid "Envoyer le message"
+msgstr "Enviar mensaje"
+
+msgid "Choisissez un sujet"
+msgstr "Elige un asunto"
+
+msgid "Urgence orthodontique"
+msgstr "Urgencia ortodóntica"
+
+msgid "Autre"
+msgstr "Otro"
+
+msgid "Message"
+msgstr "Mensaje"
+
+msgid "Sujet"
+msgstr "Asunto"
+
+msgid "Nom"
+msgstr "Nombre"
+
+msgid "Téléphone"
+msgstr "Teléfono"
+
+msgid "Horaires"
+msgstr "Horarios"
+
+msgid "Formulaire de Contact"
+msgstr "Formulario de contacto"

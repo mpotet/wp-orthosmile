@@ -6,33 +6,48 @@
     min-height: 80vh;
     display: flex;
     align-items: center;
+    /* Medical-premium gradient: deep navy → clinical teal */
     background:
-        linear-gradient(145deg,
-            var(--color-bg-dark) 0%,
-            #0C3B37 40%,
-            var(--color-teal-deep) 70%,
-            var(--color-teal) 100%);
+        linear-gradient(135deg,
+            #071225 0%,
+            #0D2550 30%,
+            #0B3A4E 60%,
+            #064E3B 100%);
     overflow: hidden;
     padding: 7rem 0 5rem;
 }
 
-/* Mesh/pattern overlay */
+/* Medical cross / precision pattern overlay */
 .hero::before {
     content: '';
     position: absolute; inset: 0;
     background-image:
-        radial-gradient(ellipse at 75% 30%, rgba(15,118,110,.22) 0%, transparent 55%),
-        radial-gradient(ellipse at 20% 80%, rgba(245,158,11,.07) 0%, transparent 50%),
-        url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8-8-3.6-8-8zm32 0c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8-8-3.6-8-8zM8 48c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8-8-3.6-8-8zm32 0c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8-8-3.6-8-8z' fill='rgba(255,255,255,.018)'/%3E%3C/svg%3E");
+        /* Soft blue radial glow — top-right (clinical precision) */
+        radial-gradient(ellipse at 85% 15%, rgba(59,130,246,.12) 0%, transparent 50%),
+        /* Soft teal glow — bottom-left (health/wellbeing) */
+        radial-gradient(ellipse at 10% 85%, rgba(15,118,110,.15) 0%, transparent 50%),
+        /* Subtle gold accent — center right */
+        radial-gradient(ellipse at 70% 60%, rgba(245,158,11,.04) 0%, transparent 40%),
+        /* Medical cross / plus pattern at minimal opacity */
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M28 20h4v20h-4zM20 28h20v4H20z' fill='rgba(255%2C255%2C255%2C.025)'/%3E%3C/g%3E%3C/svg%3E");
     pointer-events: none;
     z-index: 0;
 }
 
-/* Custom background image overlay */
-.hero[style*="background-image"]::after {
+/* Diagonal precision line — upper-right decorative element */
+.hero::after {
     content: '';
-    position: absolute; inset: 0;
-    background: linear-gradient(145deg, rgba(10,35,32,.92), rgba(15,118,110,.65));
+    position: absolute;
+    top: -10%; right: -5%;
+    width: 55%; height: 130%;
+    background: linear-gradient(135deg,
+        transparent 0%,
+        rgba(255,255,255,.018) 40%,
+        rgba(255,255,255,.035) 50%,
+        rgba(255,255,255,.018) 60%,
+        transparent 100%);
+    transform: rotate(-8deg);
+    pointer-events: none;
     z-index: 0;
 }
 
@@ -203,3 +218,15 @@
 }
 .hero-card-cta { margin-top: 1.5rem; }
 .hero-card-cta .btn { width: 100%; justify-content: center; }
+
+/* ── No-image variant (full-width centered layout) ── */
+.hero--no-image .hero-grid {
+    grid-template-columns: 1fr;
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+}
+.hero--no-image .hero-eyebrow { justify-content: center; }
+.hero--no-image .hero-badges  { justify-content: center; }
+.hero--no-image .hero-actions { justify-content: center; }
+.hero--no-image .hero-content { max-width: 100%; }

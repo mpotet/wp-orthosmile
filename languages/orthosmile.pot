@@ -40,10 +40,19 @@ msgid "Add widgets here to appear in your sidebar."
 msgstr ""
 
 # --- customizer.php ---
-msgid "Options OrthoSmile"
+msgid "⚙️ Options OrthoSmile"
 msgstr ""
 
-msgid "Coordonnées"
+msgid "🏥 Cabinet — Global"
+msgstr ""
+
+msgid "Nom du cabinet"
+msgstr ""
+
+msgid "Slogan / Sous-titre cabinet"
+msgstr ""
+
+msgid "📞 Coordonnées"
 msgstr ""
 
 msgid "Numéro de téléphone"
@@ -55,16 +64,19 @@ msgstr ""
 msgid "Adresse"
 msgstr ""
 
-msgid "Horaires d’ouverture"
+msgid "Horaires d'ouverture"
 msgstr ""
 
-msgid "Code d’intégration Google Maps"
+msgid "URL prise de RDV (Doctolib, etc.)"
 msgstr ""
 
-msgid "Collez ici le code d’intégration de Google Maps pour afficher votre localisation."
+msgid "Laissez vide pour pointer vers la page /contact."
 msgstr ""
 
-msgid "Section Héro"
+msgid "Code intégration Google Maps (iframe)"
+msgstr ""
+
+msgid "🦸 Section Héro"
 msgstr ""
 
 msgid "Titre principal"
@@ -73,58 +85,109 @@ msgstr ""
 msgid "Sous-titre"
 msgstr ""
 
-msgid "Texte du bouton CTA"
+msgid "Texte bouton CTA principal"
 msgstr ""
 
-msgid "URL du bouton CTA"
+msgid "URL bouton CTA (laissez vide = appointment_url)"
 msgstr ""
 
-msgid "Image de fond héro"
+msgid "Image verticale à droite du Hero"
 msgstr ""
 
-msgid "Section Confiance"
+msgid "Afficher l'image du héro"
 msgstr ""
 
-msgid "Titre de la section"
+msgid "Décochez pour un layout pleine largeur sans image."
 msgstr ""
 
-msgid "Sous-titre de la section"
+msgid "Texte alternatif de l'image (accessibilité)"
 msgstr ""
 
-msgid "Valeur 1"
+msgid "Texte bouton secondaire"
 msgstr ""
 
-msgid "Légende 1"
+msgid "Laissez vide pour masquer le bouton secondaire."
 msgstr ""
 
-msgid "Valeur 2"
+msgid "URL bouton secondaire"
 msgstr ""
 
-msgid "Légende 2"
+msgid "Badge %d — Afficher"
 msgstr ""
 
-msgid "Valeur 3"
+msgid "Badge %d — Texte"
 msgstr ""
 
-msgid "Légende 3"
+msgid "Badge %d — Icône Material Symbols"
 msgstr ""
 
-msgid "Couleurs"
+msgid "Spécialistes certifiés"
 msgstr ""
 
-msgid "Couleur primaire"
+msgid "Invisalign Certified"
 msgstr ""
 
-msgid "Couleur d’accent"
+msgid "Pédiatrie & adultes"
 msgstr ""
 
-msgid "Réseaux Sociaux"
+msgid "Voir nos traitements"
+msgstr ""
+
+msgid "Votre sourire parfait commence ici"
+msgstr ""
+
+msgid "Décrivez votre cabinet et votre approche ici."
+msgstr ""
+
+msgid "Prendre rendez-vous"
+msgstr ""
+
+msgid "Photo du cabinet ou de l'équipe"
+msgstr ""
+
+msgid "📊 Statistiques (compteurs)"
+msgstr ""
+
+msgid "Stat %d — Valeur"
+msgstr ""
+
+msgid "Stat %d — Légende"
+msgstr ""
+
+msgid "Stat %d — Icône Material"
+msgstr ""
+
+msgid "👥 Équipe"
+msgstr ""
+
+msgid "Titre section équipe"
+msgstr ""
+
+msgid "Sous-titre section équipe"
+msgstr ""
+
+msgid "Photo collective de l'équipe"
+msgstr ""
+
+msgid "Label bouton RDV sur les cartes praticien"
+msgstr ""
+
+msgid "Photo de l'équipe (bannière) — ID image"
+msgstr ""
+
+msgid "🎨 Couleurs"
+msgstr ""
+
+msgid "Couleur primaire (teal)"
+msgstr ""
+
+msgid "Couleur accent (gold)"
+msgstr ""
+
+msgid "📲 Réseaux Sociaux"
 msgstr ""
 
 msgid "URL Facebook"
-msgstr ""
-
-msgid "URL Twitter"
 msgstr ""
 
 msgid "URL Instagram"
@@ -133,31 +196,106 @@ msgstr ""
 msgid "URL LinkedIn"
 msgstr ""
 
-msgid "Affichage des Sections"
+msgid "URL YouTube"
 msgstr ""
 
-msgid "Afficher la section Services"
+msgid "👁️ Affichage des Sections"
 msgstr ""
 
-msgid "Afficher la section Galerie"
+msgid "Afficher les statistiques"
 msgstr ""
 
 msgid "Afficher la section Équipe"
 msgstr ""
 
-msgid "Afficher la section Témoignages"
+msgid "Afficher la section Services/Traitements"
 msgstr ""
 
-msgid "Afficher la section FAQ"
+msgid "Afficher la galerie Avant/Après"
 msgstr ""
 
-msgid "Afficher la section Appel à l’action"
+msgid "Afficher les témoignages"
 msgstr ""
 
-msgid "URL de prise de rendez-vous"
+msgid "Afficher la FAQ"
 msgstr ""
 
-msgid "Laissez vide pour utiliser la page de contact par défaut."
+msgid "Afficher le CTA final"
+msgstr ""
+
+msgid "🎯 Section CTA (appel à l'action)"
+msgstr ""
+
+msgid "Titre CTA"
+msgstr ""
+
+msgid "Sous-titre CTA"
+msgstr ""
+
+msgid "Texte bouton CTA"
+msgstr ""
+
+msgid "🔻 Footer"
+msgstr ""
+
+msgid "Description cabinet (footer)"
+msgstr ""
+
+msgid "Texte légal (ex: RPPS, mentions)"
+msgstr ""
+
+msgid "⭐ Témoignages patients"
+msgstr ""
+
+msgid "Titre section témoignages"
+msgstr ""
+
+msgid "Sous-titre témoignages"
+msgstr ""
+
+msgid "Témoignage %d — Prénom Nom"
+msgstr ""
+
+msgid "Témoignage %d — Texte"
+msgstr ""
+
+msgid "Témoignage %d — Note /5"
+msgstr ""
+
+msgid "Témoignage %d — Traitement"
+msgstr ""
+
+msgid "🖼️ Galerie Avant/Après"
+msgstr ""
+
+msgid "Titre section galerie"
+msgstr ""
+
+msgid "Sous-titre galerie"
+msgstr ""
+
+msgid "Cas %d — Image AVANT"
+msgstr ""
+
+msgid "Cas %d — Image APRÈS"
+msgstr ""
+
+msgid "Cas %d — Légende"
+msgstr ""
+
+msgid "📝 Titres des sections"
+msgstr ""
+
+msgid "Titre section Traitements"
+msgstr ""
+
+msgid "Sous-titre Traitements"
+msgstr ""
+
+msgid "Titre section FAQ"
+msgstr ""
+
+msgid "Sous-titre FAQ"
 msgstr ""
 
 # --- header.php ---

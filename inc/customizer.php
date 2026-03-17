@@ -107,6 +107,67 @@ function orthosmile_customize_register($wp_customize) {
         'settings' => 'hero_image',
     ]));
 
+    $wp_customize->add_setting('show_hero_image', ['default' => true, 'sanitize_callback' => 'orthosmile_sanitize_checkbox']);
+    $wp_customize->add_control('show_hero_image', [
+        'label'       => __('Afficher l\'image du héro', 'orthosmile'),
+        'description' => __('Décochez pour un layout pleine largeur sans image.', 'orthosmile'),
+        'section'     => 'orthosmile_hero_section',
+        'type'        => 'checkbox',
+    ]);
+
+    $wp_customize->add_setting('hero_image_alt', ['default' => '', 'sanitize_callback' => 'sanitize_text_field']);
+    $wp_customize->add_control('hero_image_alt', [
+        'label'   => __('Texte alternatif de l\'image (accessibilité)', 'orthosmile'),
+        'section' => 'orthosmile_hero_section',
+        'type'    => 'text',
+    ]);
+
+    $wp_customize->add_setting('hero_secondary_cta_text', ['default' => __('Voir nos traitements', 'orthosmile'), 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage']);
+    $wp_customize->add_control('hero_secondary_cta_text', [
+        'label'       => __('Texte bouton secondaire', 'orthosmile'),
+        'description' => __('Laissez vide pour masquer le bouton secondaire.', 'orthosmile'),
+        'section'     => 'orthosmile_hero_section',
+        'type'        => 'text',
+    ]);
+
+    $wp_customize->add_setting('hero_secondary_cta_url', ['default' => '#services', 'sanitize_callback' => 'sanitize_text_field']);
+    $wp_customize->add_control('hero_secondary_cta_url', [
+        'label'   => __('URL bouton secondaire', 'orthosmile'),
+        'section' => 'orthosmile_hero_section',
+        'type'    => 'text',
+    ]);
+
+    /* ── Hero Badges (3 × texte + icône + visible) ── */
+    $hero_badge_defaults = [
+        1 => ['icon' => 'workspace_premium', 'text' => __('Spécialistes certifiés', 'orthosmile')],
+        2 => ['icon' => 'visibility_off',    'text' => __('Invisalign Certified',      'orthosmile')],
+        3 => ['icon' => 'child_care',        'text' => __('Pédiatrie & adultes',  'orthosmile')],
+    ];
+
+    for ($i = 1; $i <= 3; $i++) {
+        $wp_customize->add_setting("hero_badge_{$i}_show", ['default' => true, 'sanitize_callback' => 'orthosmile_sanitize_checkbox']);
+        $wp_customize->add_control("hero_badge_{$i}_show", [
+            'label'   => sprintf(__('Badge %d — Afficher', 'orthosmile'), $i),
+            'section' => 'orthosmile_hero_section',
+            'type'    => 'checkbox',
+        ]);
+
+        $wp_customize->add_setting("hero_badge_{$i}_text", ['default' => $hero_badge_defaults[$i]['text'], 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage']);
+        $wp_customize->add_control("hero_badge_{$i}_text", [
+            'label'   => sprintf(__('Badge %d — Texte', 'orthosmile'), $i),
+            'section' => 'orthosmile_hero_section',
+            'type'    => 'text',
+        ]);
+
+        $wp_customize->add_setting("hero_badge_{$i}_icon", ['default' => $hero_badge_defaults[$i]['icon'], 'sanitize_callback' => 'sanitize_text_field']);
+        $wp_customize->add_control("hero_badge_{$i}_icon", [
+            'label'       => sprintf(__('Badge %d — Icône Material Symbols', 'orthosmile'), $i),
+            'description' => __('Ex : workspace_premium, verified, star, favorite…', 'orthosmile'),
+            'section'     => 'orthosmile_hero_section',
+            'type'        => 'text',
+        ]);
+    }
+
     /* ================================================================
        SECTION 4 — STATS (compteurs)
        ================================================================ */
