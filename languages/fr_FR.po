@@ -1,0 +1,478 @@
+# Translation of OrthoSmile in French (France)
+# Copyright (C) 2026 OrthoSmile
+# This file is distributed under the same license as the OrthoSmile package.
+msgid ""
+msgstr ""
+"Project-Id-Version: OrthoSmile 1.0.0\n"
+"Report-Msgid-Bugs-To: https://example.com/support\n"
+"POT-Creation-Date: 2026-03-17T12:00:00+00:00\n"
+"PO-Revision-Date: 2026-03-17T12:00:00+00:00\n"
+"Last-Translator: OrthoSmile Team\n"
+"Language-Team: French\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: GitHub Copilot\n"
+"X-Domain: orthosmile\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# --- theme-setup.php ---
+msgid "Primary Menu"
+msgstr "Menu principal"
+
+msgid "Footer Menu"
+msgstr "Menu pied de page"
+
+msgid "Footer 1"
+msgstr "Pied de page 1"
+
+msgid "Footer 2"
+msgstr "Pied de page 2"
+
+msgid "Footer 3"
+msgstr "Pied de page 3"
+
+msgid "Sidebar"
+msgstr "Barre latérale"
+
+msgid "Add widgets here to appear in your footer."
+msgstr "Ajoutez des widgets ici pour qu'ils apparaissent dans votre pied de page."
+
+msgid "Add widgets here to appear in your sidebar."
+msgstr "Ajoutez des widgets ici pour qu'ils apparaissent dans votre barre latérale."
+
+# --- customizer.php ---
+msgid "⚙️ Options OrthoSmile"
+msgstr "⚙️ Options OrthoSmile"
+
+msgid "🏥 Cabinet — Global"
+msgstr "🏥 Cabinet — Global"
+
+msgid "Nom du cabinet"
+msgstr "Nom du cabinet"
+
+msgid "Slogan / Sous-titre cabinet"
+msgstr "Slogan / Sous-titre cabinet"
+
+msgid "📞 Coordonnées"
+msgstr "📞 Coordonnées"
+
+msgid "Numéro de téléphone"
+msgstr "Numéro de téléphone"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Adresse"
+msgstr "Adresse"
+
+msgid "Horaires d'ouverture"
+msgstr "Horaires d'ouverture"
+
+msgid "URL prise de RDV (Doctolib, etc.)"
+msgstr "URL prise de RDV (Doctolib, etc.)"
+
+msgid "Laissez vide pour pointer vers la page /contact."
+msgstr "Laissez vide pour pointer vers la page /contact."
+
+msgid "Code intégration Google Maps (iframe)"
+msgstr "Code intégration Google Maps (iframe)"
+
+msgid "🦸 Section Héro"
+msgstr "🦸 Section Héro"
+
+msgid "Titre principal"
+msgstr "Titre principal"
+
+msgid "Sous-titre"
+msgstr "Sous-titre"
+
+msgid "Texte bouton CTA principal"
+msgstr "Texte bouton CTA principal"
+
+msgid "URL bouton CTA (laissez vide = appointment_url)"
+msgstr "URL bouton CTA (laissez vide = appointment_url)"
+
+msgid "Image verticale à droite du Hero"
+msgstr "Image verticale à droite du Héro"
+
+msgid "Afficher l'image du héro"
+msgstr "Afficher l'image du héro"
+
+msgid "Décochez pour un layout pleine largeur sans image."
+msgstr "Décochez pour un layout pleine largeur sans image."
+
+msgid "Texte alternatif de l'image (accessibilité)"
+msgstr "Texte alternatif de l'image (accessibilité)"
+
+msgid "Texte bouton secondaire"
+msgstr "Texte bouton secondaire"
+
+msgid "Laissez vide pour masquer le bouton secondaire."
+msgstr "Laissez vide pour masquer le bouton secondaire."
+
+msgid "URL bouton secondaire"
+msgstr "URL bouton secondaire"
+
+msgid "Badge %d — Afficher"
+msgstr "Badge %d — Afficher"
+
+msgid "Badge %d — Texte"
+msgstr "Badge %d — Texte"
+
+msgid "Badge %d — Icône Material Symbols"
+msgstr "Badge %d — Icône Material Symbols"
+
+msgid "Spécialistes certifiés"
+msgstr "Spécialistes certifiés"
+
+msgid "Invisalign Certified"
+msgstr "Certifié Invisalign"
+
+msgid "Pédiatrie & adultes"
+msgstr "Pédiatrie & adultes"
+
+msgid "Voir nos traitements"
+msgstr "Voir nos traitements"
+
+msgid "Votre sourire parfait commence ici"
+msgstr "Votre sourire parfait commence ici"
+
+msgid "Décrivez votre cabinet et votre approche ici."
+msgstr "Décrivez votre cabinet et votre approche ici."
+
+msgid "Prendre rendez-vous"
+msgstr "Prendre rendez-vous"
+
+msgid "Photo du cabinet ou de l'équipe"
+msgstr "Photo du cabinet ou de l'équipe"
+
+msgid "📊 Statistiques (compteurs)"
+msgstr "📊 Statistiques (compteurs)"
+
+msgid "Stat %d — Valeur"
+msgstr "Stat %d — Valeur"
+
+msgid "Stat %d — Légende"
+msgstr "Stat %d — Légende"
+
+msgid "Stat %d — Icône Material"
+msgstr "Stat %d — Icône Material"
+
+msgid "👥 Équipe"
+msgstr "👥 Équipe"
+
+msgid "Titre section équipe"
+msgstr "Titre section équipe"
+
+msgid "Sous-titre section équipe"
+msgstr "Sous-titre section équipe"
+
+msgid "Photo collective de l'équipe"
+msgstr "Photo collective de l'équipe"
+
+msgid "Image panoramique affichée en bannière au-dessus des cartes praticiens."
+msgstr "Image panoramique affichée en bannière au-dessus des cartes praticiens."
+
+msgid "Label bouton RDV sur les cartes praticien"
+msgstr "Label bouton RDV sur les cartes praticien"
+
+msgid "Photo de l'équipe (bannière) — ID image"
+msgstr "Photo de l'équipe (bannière) — ID image"
+
+msgid "🎨 Couleurs"
+msgstr "🎨 Couleurs"
+
+msgid "Couleur primaire (teal)"
+msgstr "Couleur primaire (teal)"
+
+msgid "Couleur accent (gold)"
+msgstr "Couleur accent (doré)"
+
+msgid "📲 Réseaux Sociaux"
+msgstr "📲 Réseaux Sociaux"
+
+msgid "URL Facebook"
+msgstr "URL Facebook"
+
+msgid "URL Instagram"
+msgstr "URL Instagram"
+
+msgid "URL LinkedIn"
+msgstr "URL LinkedIn"
+
+msgid "URL YouTube"
+msgstr "URL YouTube"
+
+msgid "👁️ Affichage des Sections"
+msgstr "👁️ Affichage des Sections"
+
+msgid "Afficher les statistiques"
+msgstr "Afficher les statistiques"
+
+msgid "Afficher la section Équipe"
+msgstr "Afficher la section Équipe"
+
+msgid "Afficher la section Services/Traitements"
+msgstr "Afficher la section Services/Traitements"
+
+msgid "Afficher la galerie Avant/Après"
+msgstr "Afficher la galerie Avant/Après"
+
+msgid "Afficher les témoignages"
+msgstr "Afficher les témoignages"
+
+msgid "Afficher la FAQ"
+msgstr "Afficher la FAQ"
+
+msgid "Afficher le CTA final"
+msgstr "Afficher le CTA final"
+
+msgid "🎯 Section CTA (appel à l'action)"
+msgstr "🎯 Section CTA (appel à l'action)"
+
+msgid "Titre CTA"
+msgstr "Titre CTA"
+
+msgid "Sous-titre CTA"
+msgstr "Sous-titre CTA"
+
+msgid "Texte bouton CTA"
+msgstr "Texte bouton CTA"
+
+msgid "🔻 Footer"
+msgstr "🔻 Pied de page"
+
+msgid "Description cabinet (footer)"
+msgstr "Description cabinet (pied de page)"
+
+msgid "Texte légal (ex: RPPS, mentions)"
+msgstr "Texte légal (ex : RPPS, mentions)"
+
+msgid "⭐ Témoignages patients"
+msgstr "⭐ Témoignages patients"
+
+msgid "Titre section témoignages"
+msgstr "Titre section témoignages"
+
+msgid "Sous-titre témoignages"
+msgstr "Sous-titre témoignages"
+
+msgid "Témoignage %d — Prénom Nom"
+msgstr "Témoignage %d — Prénom Nom"
+
+msgid "Témoignage %d — Texte"
+msgstr "Témoignage %d — Texte"
+
+msgid "Témoignage %d — Note /5"
+msgstr "Témoignage %d — Note /5"
+
+msgid "Témoignage %d — Traitement"
+msgstr "Témoignage %d — Traitement"
+
+msgid "🖼️ Galerie Avant/Après"
+msgstr "🖼️ Galerie Avant/Après"
+
+msgid "Titre section galerie"
+msgstr "Titre section galerie"
+
+msgid "Sous-titre galerie"
+msgstr "Sous-titre galerie"
+
+msgid "Cas %d — Image AVANT"
+msgstr "Cas %d — Image AVANT"
+
+msgid "Cas %d — Image APRÈS"
+msgstr "Cas %d — Image APRÈS"
+
+msgid "Cas %d — Légende"
+msgstr "Cas %d — Légende"
+
+msgid "📝 Titres des sections"
+msgstr "📝 Titres des sections"
+
+msgid "Titre section Traitements"
+msgstr "Titre section Traitements"
+
+msgid "Sous-titre Traitements"
+msgstr "Sous-titre Traitements"
+
+msgid "Titre section FAQ"
+msgstr "Titre section FAQ"
+
+msgid "Sous-titre FAQ"
+msgstr "Sous-titre FAQ"
+
+# --- header.php ---
+msgid "Toggle navigation"
+msgstr "Afficher/masquer le menu"
+
+msgid "Navigation principale"
+msgstr "Navigation principale"
+
+# --- template-parts/hero.php ---
+msgid "Cabinet Orthodontiste"
+msgstr "Cabinet Orthodontiste"
+
+# --- 404.php ---
+msgid "Oops! Cette page n'existe pas."
+msgstr "Oops ! Cette page n'existe pas."
+
+msgid "Il semble que la page que vous recherchez ait été déplacée, renommée ou supprimée."
+msgstr "Il semble que la page que vous recherchez ait été déplacée, renommée ou supprimée."
+
+msgid "Retour à l'accueil"
+msgstr "Retour à l'accueil"
+
+# --- index.php ---
+msgid "Derniers Articles"
+msgstr "Derniers Articles"
+
+msgid "Précédent"
+msgstr "Précédent"
+
+msgid "Suivant"
+msgstr "Suivant"
+
+# --- template-tags.php ---
+#. translators: %s: post date.
+msgid "Posted on %s"
+msgstr "Publié le %s"
+
+#. translators: %s: post author.
+msgid "by %s"
+msgstr "par %s"
+
+#. translators: 1: list of categories.
+msgid "Posted in %1$s"
+msgstr "Classé dans %1$s"
+
+#. translators: 1: list of tags.
+msgid "Tagged %1$s"
+msgstr "Étiqueté %1$s"
+
+#. translators: %s: post title
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "Laisser un commentaire<span class=\"screen-reader-text\"> sur %s</span>"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Modifier <span class=\"screen-reader-text\">%s</span>"
+
+# --- functions.php ---
+msgid "Erreur de sécurité"
+msgstr "Erreur de sécurité"
+
+msgid "Tous les champs requis doivent être remplis."
+msgstr "Tous les champs requis doivent être remplis."
+
+msgid "L'adresse email n'est pas valide."
+msgstr "L'adresse email n'est pas valide."
+
+msgid "Erreur lors de l'envoi du message. Veuillez réessayer."
+msgstr "Erreur lors de l'envoi du message. Veuillez réessayer."
+
+msgid "Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais."
+msgstr "Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais."
+
+# --- template-parts/footer.php ---
+msgid "Votre partenaire de confiance pour des soins orthodontiques de qualité. Des traitements personnalisés pour des sourires naturels et durables."
+msgstr "Votre partenaire de confiance pour des soins orthodontiques de qualité. Des traitements personnalisés pour des sourires naturels et durables."
+
+msgid "Services"
+msgstr "Services"
+
+msgid "Appareils Fixes"
+msgstr "Appareils Fixes"
+
+msgid "Retenue Orthodontique"
+msgstr "Retenue Orthodontique"
+
+msgid "Informations"
+msgstr "Informations"
+
+msgid "Notre Équipe"
+msgstr "Notre Équipe"
+
+msgid "FAQ"
+msgstr "FAQ"
+
+msgid "Galerie"
+msgstr "Galerie"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Tous droits réservés."
+msgstr "Tous droits réservés."
+
+msgid "Politique de confidentialité"
+msgstr "Politique de confidentialité"
+
+msgid "Mentions légales"
+msgstr "Mentions légales"
+
+msgid "Newsletter"
+msgstr "Newsletter"
+
+msgid "Restez informé de nos actualités et conseils orthodontiques."
+msgstr "Restez informé de nos actualités et conseils orthodontiques."
+
+msgid "Votre email"
+msgstr "Votre email"
+
+msgid "S'abonner"
+msgstr "S'abonner"
+
+# --- contact.php ---
+msgid "Contactez-nous"
+msgstr "Contactez-nous"
+
+msgid "Nos Coordonnées"
+msgstr "Nos Coordonnées"
+
+msgid "Remplissez le formulaire ci-dessous pour nous contacter. Nous vous répondrons dans les plus brefs délais."
+msgstr "Remplissez le formulaire ci-dessous pour nous contacter. Nous vous répondrons dans les plus brefs délais."
+
+msgid "Nom complet"
+msgstr "Nom complet"
+
+msgid "Demande de devis"
+msgstr "Demande de devis"
+
+msgid "Poser une question"
+msgstr "Poser une question"
+
+msgid "Décrivez votre demande..."
+msgstr "Décrivez votre demande..."
+
+msgid "Envoyer le message"
+msgstr "Envoyer le message"
+
+msgid "Choisissez un sujet"
+msgstr "Choisissez un sujet"
+
+msgid "Urgence orthodontique"
+msgstr "Urgence orthodontique"
+
+msgid "Autre"
+msgstr "Autre"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Sujet"
+msgstr "Sujet"
+
+msgid "Nom"
+msgstr "Nom"
+
+msgid "Téléphone"
+msgstr "Téléphone"
+
+msgid "Horaires"
+msgstr "Horaires"
+
+msgid "Formulaire de Contact"
+msgstr "Formulaire de Contact"
