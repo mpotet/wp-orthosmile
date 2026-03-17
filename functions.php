@@ -63,7 +63,7 @@ function orthosmile_handle_contact_form() {
 /* ── Notice succès contact ─────────────────────────────────── */
 add_action('wp_head', function () {
     if (!isset($_GET['contact_success'])) return;
-    $color = get_theme_mod('primary_color', '#0F766E');
+    $color = '#0F766E';
     printf(
         '<style>.os-notice{position:fixed;top:1.5rem;left:50%%;transform:translateX(-50%%);background:%s;color:#fff;padding:.875rem 2rem;border-radius:50px;z-index:9999;font-size:.9rem;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.2);animation:os-slide .4s ease}</style>
          <style>@keyframes os-slide{from{opacity:0;transform:translateX(-50%%) translateY(-12px)}to{opacity:1;transform:translateX(-50%%) translateY(0)}}</style>

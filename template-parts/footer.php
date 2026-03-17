@@ -185,7 +185,6 @@ $socials = [
                 <?php endif; ?>
             </p>
             <p class="footer-legal">
-                <?php esc_html_e('Thème', 'orthosmile'); ?>
                 <a href="<?php echo esc_url(home_url('/mentions-legales')); ?>"><?php esc_html_e('Mentions légales', 'orthosmile'); ?></a>
                 &middot;
                 <a href="<?php echo esc_url(home_url('/politique-confidentialite')); ?>"><?php esc_html_e('Confidentialité', 'orthosmile'); ?></a>

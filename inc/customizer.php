@@ -376,11 +376,3 @@ function orthosmile_customize_register($wp_customize) {
 
 }
 add_action('customize_register', 'orthosmile_customize_register');
-
-/**
- * Customizer live preview JS.
- */
-function orthosmile_customize_preview_js() {
-    wp_enqueue_script('orthosmile-customizer', get_template_directory_uri() . '/assets/js/customizer.js', ['customize-preview'], '2.0.0', true);
-}
-add_action('customize_preview_init', 'orthosmile_customize_preview_js');

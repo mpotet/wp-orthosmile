@@ -1,1 +1,0 @@
-<?php /* Deprecated: contents merged into customizer.php */

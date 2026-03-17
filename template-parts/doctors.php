@@ -57,7 +57,7 @@ $praticiens = new WP_Query([
                     <?php
                     $post_id    = get_the_ID();
                     $poste      = get_post_meta($post_id, '_praticien_poste', true);
-                    $bio        = get_post_meta($post_id, '_praticien_bio', true);
+                    $bio        = get_the_excerpt();
                     $specialites = get_post_meta($post_id, '_praticien_specialites', true);
                     if (!is_array($specialites)) $specialites = [];
                     ?>

@@ -90,7 +90,7 @@ $hero_class = 'hero' . ($has_hero_image ? '' : ' hero--no-image');
                     <?php endif; ?>
 
                     <?php if (!empty($hero_secondary_cta_text) && !empty($hero_secondary_cta_url)) : ?>
-                    <a href="<?php echo esc_url($hero_secondary_cta_url); ?>" class="btn btn-outline-white btn-lg">
+                    <a href="<?php echo esc_url($hero_secondary_cta_url); ?>" class="btn btn-secondary btn-lg">
                         <?php echo esc_html($hero_secondary_cta_text); ?>
                         <span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span>
                     </a>

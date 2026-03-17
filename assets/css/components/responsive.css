@@ -13,7 +13,6 @@
     .stat-card:nth-child(even) { border-left: 1px solid var(--color-border-light); }
     .contact-cards      { grid-template-columns: repeat(2, 1fr); }
     .contact-container  { grid-template-columns: 1fr; gap: 2rem; }
-    .specialists-grid   { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* ── 1024px ──────────────────────────────────────────── */
@@ -32,10 +31,10 @@
 
     .container { padding: 0 1.25rem; }
 
-    /* Ribbon */
-    .ribbon-inner    { flex-direction: column; gap: .5rem; text-align: center; }
-    .ribbon-contacts { flex-wrap: wrap; justify-content: center; }
-    .ribbon-hours    { display: none; }
+    /* Info bar */
+    .header-info-inner { flex-direction: column; gap: .375rem; text-align: center; }
+    .header-info-left  { flex-wrap: wrap; justify-content: center; }
+    .info-hours        { display: none; }
 
     /* Header */
     .header-inner { padding: .875rem 1.25rem; flex-wrap: wrap; gap: .75rem; }
@@ -63,7 +62,6 @@
     .main-menu > li > a::after { display: none; }
     .main-menu > li > a:hover { background: var(--color-teal-ultralight); }
     .header-cta-group { gap: .5rem; }
-    .header-phone-btn span:not(.material-symbols-outlined) { display: none; }
     .menu-toggle { display: flex; }
 
     /* Hero */
@@ -82,8 +80,7 @@
     /* Grids */
     .services-grid,
     .testimonials-grid,
-    .gallery-grid,
-    .specialists-grid { grid-template-columns: 1fr; }
+    .gallery-grid       { grid-template-columns: 1fr; }
 
     /* Contact */
     .contact-cards    { grid-template-columns: 1fr 1fr; }

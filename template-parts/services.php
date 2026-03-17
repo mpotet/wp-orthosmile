@@ -38,10 +38,13 @@ $traitements = new WP_Query([
             <?php while ($traitements->have_posts()) : $traitements->the_post(); ?>
             <?php
             $post_id     = get_the_ID();
-            $icon        = get_post_meta($post_id, '_traitement_icone', true) ?: 'dentistry';
-            $badge       = get_post_meta($post_id, '_traitement_badge', true);
-            $prix        = get_post_meta($post_id, '_traitement_prix', true);
-            $description = get_post_meta($post_id, '_traitement_description', true) ?: get_the_excerpt();
+            $icon  = get_post_meta($post_id, '_traitement_icone', true) ?: 'dentistry';
+            $badge = get_post_meta($post_id, '_traitement_badge', true);
+            $prix  = get_post_meta($post_id, '_traitement_prix', true);
+            $desc_raw = get_post_meta($post_id, '_traitement_description', true);
+            $description_html = $desc_raw
+                ? wp_kses_post(wpautop($desc_raw))
+                : wp_kses_post(apply_filters('the_content', get_the_content()));
             ?>
             <article class="service-card fade-in-up">
                 <div class="service-card-inner">
@@ -52,8 +55,8 @@ $traitements = new WP_Query([
                         <span class="service-badge"><?php echo esc_html($badge); ?></span>
                     <?php endif; ?>
                     <h3 class="service-title"><?php the_title(); ?></h3>
-                    <?php if ($description) : ?>
-                        <p class="service-description"><?php echo esc_html($description); ?></p>
+                    <?php if ($description_html) : ?>
+                        <div class="service-description"><?php echo $description_html; ?></div>
                     <?php endif; ?>
                     <?php if ($prix) : ?>
                         <div class="service-price">

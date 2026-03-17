@@ -178,18 +178,6 @@ msgstr "Image panoramique affichée en bannière au-dessus des cartes praticiens
 msgid "Label bouton RDV sur les cartes praticien"
 msgstr "Label bouton RDV sur les cartes praticien"
 
-msgid "Photo de l'équipe (bannière) - ID image"
-msgstr "Photo de l'équipe (bannière) - ID image"
-
-msgid "🎨 Couleurs"
-msgstr "🎨 Couleurs"
-
-msgid "Couleur primaire (teal)"
-msgstr "Couleur primaire (teal)"
-
-msgid "Couleur accent (gold)"
-msgstr "Couleur accent (doré)"
-
 msgid "📲 Réseaux Sociaux"
 msgstr "📲 Réseaux Sociaux"
 
@@ -364,42 +352,12 @@ msgstr "Modifier <span class=\"screen-reader-text\">%s</span>"
 msgid "Erreur de sécurité"
 msgstr "Erreur de sécurité"
 
-msgid "Tous les champs requis doivent être remplis."
-msgstr "Tous les champs requis doivent être remplis."
-
-msgid "L'adresse email n'est pas valide."
-msgstr "L'adresse email n'est pas valide."
-
-msgid "Erreur lors de l'envoi du message. Veuillez réessayer."
-msgstr "Erreur lors de l'envoi du message. Veuillez réessayer."
-
-msgid "Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais."
-msgstr "Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais."
+msgid "Message envoyé avec succès !"
+msgstr "Message envoyé avec succès !"
 
 # --- template-parts/footer.php ---
-msgid "Votre partenaire de confiance pour des soins orthodontiques de qualité. Des traitements personnalisés pour des sourires naturels et durables."
-msgstr "Votre partenaire de confiance pour des soins orthodontiques de qualité. Des traitements personnalisés pour des sourires naturels et durables."
-
-msgid "Services"
-msgstr "Services"
-
-msgid "Appareils Fixes"
-msgstr "Appareils Fixes"
-
-msgid "Retenue Orthodontique"
-msgstr "Retenue Orthodontique"
-
-msgid "Informations"
-msgstr "Informations"
-
-msgid "Notre Équipe"
-msgstr "Notre Équipe"
-
 msgid "FAQ"
 msgstr "FAQ"
-
-msgid "Galerie"
-msgstr "Galerie"
 
 msgid "Contact"
 msgstr "Contact"
@@ -407,23 +365,8 @@ msgstr "Contact"
 msgid "Tous droits réservés."
 msgstr "Tous droits réservés."
 
-msgid "Politique de confidentialité"
-msgstr "Politique de confidentialité"
-
 msgid "Mentions légales"
 msgstr "Mentions légales"
-
-msgid "Newsletter"
-msgstr "Newsletter"
-
-msgid "Restez informé de nos actualités et conseils orthodontiques."
-msgstr "Restez informé de nos actualités et conseils orthodontiques."
-
-msgid "Votre email"
-msgstr "Votre email"
-
-msgid "S'abonner"
-msgstr "S'abonner"
 
 # --- contact.php ---
 msgid "Contactez-nous"

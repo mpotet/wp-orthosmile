@@ -1,16 +1,29 @@
-/* Header & Ribbon - OrthoSmile */
+/* Header - OrthoSmile */
 
 /* =====================================================
-   TOP RIBBON
+   OUTER WRAPPER (sticky)
    ===================================================== */
-.site-ribbon {
-    background: var(--color-bg-dark);
-    padding: .5rem 0;
-    font-size: .8rem;
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-sticky);
+    transition: var(--t);
+}
+.site-header.scrolled .header-nav {
+    box-shadow: 0 4px 28px rgba(0,0,0,.07);
+}
+
+/* =====================================================
+   INFO BAR (ex-ribbon)
+   ===================================================== */
+.header-info-bar {
+    background: linear-gradient(90deg, var(--color-teal-dark) 0%, var(--color-teal) 100%);
+    padding: .4rem 0;
+    font-size: .78rem;
     font-weight: 500;
 }
 
-.ribbon-inner {
+.header-info-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -18,87 +31,88 @@
     flex-wrap: wrap;
 }
 
-.ribbon-contacts {
+.header-info-left {
     display: flex;
     align-items: center;
     gap: 1.25rem;
     flex-wrap: wrap;
 }
 
-.ribbon-contact {
+.info-contact {
     display: flex;
     align-items: center;
-    gap: .375rem;
-    color: rgba(255,255,255,.85);
+    gap: .325rem;
+    color: rgba(255,255,255,.88);
     text-decoration: none;
     transition: var(--t-fast);
 }
-.ribbon-contact:hover { color: #fff; }
-.ribbon-contact .material-symbols-outlined { font-size: 1rem; opacity: .75; }
+.info-contact:hover { color: #fff; }
+.info-contact .material-symbols-outlined { font-size: .9rem; opacity: .8; }
 
-.ribbon-hours {
+.info-hours {
     display: flex;
     align-items: center;
-    gap: .375rem;
+    gap: .325rem;
     color: rgba(255,255,255,.6);
 }
-.ribbon-hours .material-symbols-outlined { font-size: 1rem; }
+.info-hours .material-symbols-outlined { font-size: .9rem; }
 
-.ribbon-actions { display: flex; align-items: center; gap: .75rem; }
+.header-info-right {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
 
-.ribbon-social { display: flex; align-items: center; gap: .375rem; }
-.ribbon-social a {
+.info-social {
+    display: flex;
+    align-items: center;
+    gap: .325rem;
+}
+.info-social a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 26px; height: 26px;
+    width: 24px; height: 24px;
     background: rgba(255,255,255,.1);
     border-radius: var(--radius-full);
     color: rgba(255,255,255,.75);
     transition: var(--t-fast);
 }
-.ribbon-social a:hover { background: rgba(255,255,255,.25); color: #fff; }
-.ribbon-social a .material-symbols-outlined { font-size: .9rem; }
+.info-social a:hover { background: rgba(255,255,255,.25); color: #fff; }
 
-.ribbon-cta {
+.info-cta {
     display: inline-flex;
     align-items: center;
-    gap: .375rem;
+    gap: .325rem;
     background: var(--color-gold);
     color: #fff;
-    font-size: .72rem;
+    font-size: .7rem;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: .07em;
-    padding: .375rem 1rem;
+    padding: .3rem .875rem;
     border-radius: var(--radius-full);
     text-decoration: none;
     transition: var(--t);
-    box-shadow: 0 2px 10px rgba(245,158,11,.4);
+    box-shadow: 0 2px 8px rgba(245,158,11,.35);
+    white-space: nowrap;
 }
-.ribbon-cta:hover {
+.info-cta:hover {
     background: var(--color-gold-dark);
     color: #fff;
     transform: translateY(-1px);
 }
-.ribbon-cta .material-symbols-outlined { font-size: .9rem; }
+.info-cta .material-symbols-outlined { font-size: .85rem; }
 
 /* =====================================================
-   MAIN HEADER
+   MAIN NAVIGATION BAR
    ===================================================== */
-.site-header {
-    background: rgba(255,255,255,.92);
+.header-nav {
+    background: rgba(255,255,255,.95);
     backdrop-filter: blur(24px) saturate(180%);
     -webkit-backdrop-filter: blur(24px) saturate(180%);
     border-bottom: 1px solid rgba(15,118,110,.08);
-    position: sticky;
-    top: 0;
-    z-index: var(--z-sticky);
     transition: var(--t);
-}
-.site-header.scrolled {
-    box-shadow: 0 4px 28px rgba(0,0,0,.07);
-    border-bottom-color: transparent;
 }
 
 .header-inner {
@@ -106,7 +120,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
-    padding: 1rem 2rem;
+    padding: .875rem 2rem;
     max-width: 1280px;
     margin: 0 auto;
 }
@@ -162,8 +176,7 @@
 .main-menu > li > a::after {
     content: '';
     position: absolute;
-    bottom: 2px;
-    left: 0; right: 0;
+    bottom: 2px; left: 0; right: 0;
     height: 2px;
     background: var(--color-teal);
     border-radius: var(--radius-full);
@@ -175,34 +188,13 @@
 .main-menu > li > a:hover::after,
 .main-menu > li.current-menu-item > a::after { transform: scaleX(1); }
 
-/* ── Header CTA group ─────────────────────────────── */
+/* ── Header CTA ───────────────────────────────────── */
 .header-cta-group {
     display: flex;
     align-items: center;
     gap: .625rem;
     flex-shrink: 0;
 }
-
-.header-phone-btn {
-    display: flex;
-    align-items: center;
-    gap: .375rem;
-    color: var(--color-text-secondary);
-    font-size: .8125rem;
-    font-weight: 600;
-    padding: .625rem .875rem;
-    border: 1.5px solid var(--color-border);
-    border-radius: var(--radius-full);
-    text-decoration: none;
-    transition: var(--t);
-    white-space: nowrap;
-}
-.header-phone-btn:hover {
-    color: var(--color-teal);
-    border-color: var(--color-teal-light);
-    background: var(--color-teal-ultralight);
-}
-.header-phone-btn .material-symbols-outlined { font-size: 1rem; color: var(--color-teal); }
 
 .btn-appointment {
     background: linear-gradient(135deg, var(--color-teal), var(--color-teal-dark));
