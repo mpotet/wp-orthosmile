@@ -1,69 +1,230 @@
 /*
- * Global styles: variables, reset, typography, utilities
+ * Global styles: variables, reset, typography, utilities, base components
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
-
+/* =====================================================
+   1. CSS CUSTOM PROPERTIES (DESIGN TOKENS)
+   ===================================================== */
 :root {
-    /* Palette */
-    --color-teal: #0F766E;
-    --color-navy: #1E3A8A;
-    --color-gold: #F59E0B;
-    --color-bg: #FFFFFF;
-    --color-bg-section: #F0FDFA;
-    --color-bg-alt: #F8FFFE;
-    --color-text: #111827;
+    /* ── Couleurs principales ─── */
+    --color-teal:           #0F766E;
+    --color-teal-dark:      #0D5E57;
+    --color-teal-deep:      #064E3B;
+    --color-teal-light:     #99F6E4;
+    --color-teal-ultralight:#F0FDFA;
+
+    --color-navy:           #1E3A8A;
+    --color-navy-dark:      #0F1F5C;
+
+    --color-gold:           #F59E0B;
+    --color-gold-dark:      #D97706;
+
+    /* ── Arrière-plans ──────── */
+    --color-bg:             #FFFFFF;
+    --color-bg-section:     #F0FDFA;
+    --color-bg-alt:         #F8FFFE;
+    --color-bg-dark:        #0A2320;
+
+    /* ── Texte ──────────────── */
+    --color-text:           #111827;
     --color-text-secondary: #374151;
-    --color-text-light: #6B7280;
-    --color-text-muted: #9CA3AF;
-    --color-border: #E5E7EB;
-    --color-border-light: #F3F4F6;
-    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --color-text-light:     #6B7280;
+    --color-text-muted:     #9CA3AF;
+
+    /* ── Bordures ───────────── */
+    --color-border:         #E5E7EB;
+    --color-border-light:   #F3F4F6;
+
+    /* ── Typographie ────────── */
+    --font-body:    'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --font-mono: 'Fira Code', 'Cascadia Code', monospace;
-    --radius-xl: 2rem;
+    --font-mono:    'Fira Code', 'Cascadia Code', monospace;
+
+    /* ── Border-radius ──────── */
+    --radius-sm:   .375rem;
+    --radius-md:   .625rem;
+    --radius-lg:   1rem;
+    --radius-xl:   1.5rem;
+    --radius-2xl:  2rem;
     --radius-full: 999px;
+
+    /* ── Ombres ─────────────── */
+    --shadow-sm:      0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+    --shadow-md:      0 4px 12px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.06);
+    --shadow-lg:      0 8px 24px rgba(0,0,0,.10), 0 4px 10px rgba(0,0,0,.06);
+    --shadow-xl:      0 16px 48px rgba(0,0,0,.12), 0 6px 18px rgba(0,0,0,.08);
+    --shadow-teal:    0 4px 20px rgba(15,118,110,.35);
+    --shadow-teal-lg: 0 8px 32px rgba(15,118,110,.45);
+
+    /* ── Transitions ────────── */
+    --t:      all .25s ease;
+    --t-fast: all .15s ease;
+    --t-slow: all .45s ease;
+
+    /* ── Z-index ────────────── */
+    --z-dropdown: 100;
+    --z-sticky:   200;
+    --z-modal:    500;
+
+    /* ── Espacements sections ─ */
+    --section-py:    6rem;
+    --section-py-sm: 4rem;
 }
 
+/* =====================================================
+   2. RESET & BASE
+   ===================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+
 html, body {
+    margin: 0;
+    padding: 0;
     font-family: var(--font-body);
     color: var(--color-text);
     background: var(--color-bg);
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
+img, video, svg {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+a { color: inherit; text-decoration: none; }
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+ul, ol { list-style: none; margin: 0; padding: 0; }
+
+/* =====================================================
+   3. TYPOGRAPHIE
+   ===================================================== */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     color: var(--color-text);
     line-height: 1.2;
     font-weight: 800;
-    margin-bottom: 1rem;
+    margin: 0 0 1rem;
 }
 
-h1 { font-size: clamp(2.5rem, 5.5vw, 4rem); letter-spacing: -0.03em; }
+h1 { font-size: clamp(2.5rem, 5.5vw, 4rem);   letter-spacing: -0.03em; }
 h2 { font-size: clamp(1.875rem, 3.5vw, 2.75rem); letter-spacing: -0.02em; }
-h3 { font-size: 1.5rem; font-weight: 700; }
-h4 { font-size: 1.25rem; font-weight: 700; }
+h3 { font-size: 1.5rem;   font-weight: 700; }
+h4 { font-size: 1.25rem;  font-weight: 700; }
 h5 { font-size: 1.125rem; font-weight: 600; }
-h6 { font-size: 1rem; font-weight: 600; }
+h6 { font-size: 1rem;     font-weight: 600; }
 
-p { line-height: 1.75; color: var(--color-text-light); margin-bottom: 1rem; }
+p {
+    line-height: 1.75;
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
+}
 p:last-child { margin-bottom: 0; }
 
+/* =====================================================
+   4. MISE EN PAGE — CONTENEUR
+   ===================================================== */
 .container {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
+/* =====================================================
+   5. EN-TÊTE DE SECTION (section-header, section-eyebrow…)
+   ===================================================== */
+.section-header {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 3.5rem;
+}
+
+.section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .375rem;
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    color: var(--color-teal);
+    background: var(--color-teal-ultralight);
+    border: 1px solid var(--color-teal-light);
+    padding: .375rem 1rem;
+    border-radius: var(--radius-full);
+    margin-bottom: 1rem;
+}
+.section-eyebrow .material-symbols-outlined { font-size: .85rem; }
+
+.section-title {
+    font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+    font-weight: 800;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+    margin-bottom: .875rem;
+}
+
+.section-subtitle {
+    font-size: 1.0625rem;
+    color: var(--color-text-light);
+    line-height: 1.75;
+    margin: 0;
+}
+
+/* =====================================================
+   6. BOUTON DE BASE (.btn)
+   ===================================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    font-family: var(--font-body);
+    font-size: .9375rem;
+    font-weight: 700;
+    padding: .875rem 1.75rem;
+    border-radius: var(--radius-full);
+    border: 2px solid transparent;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--t);
+    line-height: 1;
+    white-space: nowrap;
+    letter-spacing: .01em;
+}
+.btn .material-symbols-outlined { font-size: 1.1rem; }
+
+/* =====================================================
+   7. UTILITAIRES
+   ===================================================== */
+.text-teal   { color: var(--color-teal); }
+.text-navy   { color: var(--color-navy); }
+.text-gold   { color: var(--color-gold); }
+.text-muted  { color: var(--color-text-muted); }
 .text-center { text-align: center; }
-.text-teal { color: var(--color-teal); }
-.text-navy { color: var(--color-navy); }
-.text-gold { color: var(--color-gold); }
-.text-muted { color: var(--color-text-muted); }
+
 .bg-teal-soft { background: var(--color-teal-ultralight); }
-.bg-dark { background: var(--color-bg-dark); }
+.bg-dark      { background: var(--color-bg-dark); }
+
 .rounded-full { border-radius: var(--radius-full); }
-.shadow-teal { box-shadow: 0 4px 32px rgba(15,118,110,0.08); }
+.shadow-teal  { box-shadow: var(--shadow-teal); }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    user-select: none;
+}
+.material-symbols-outlined.filled {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}

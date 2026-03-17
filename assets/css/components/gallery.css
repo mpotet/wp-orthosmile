@@ -1,0 +1,175 @@
+/* Gallery / Avant-Après Section — OrthoSmile */
+
+.gallery-section {
+    padding: var(--section-py) 0;
+    background: var(--color-bg-alt);
+}
+
+/* ── Grid ────────────────────────────────────────────── */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* ── Gallery item ────────────────────────────────────── */
+.gallery-item {
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--t);
+    background: var(--color-bg-section);
+}
+.gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.gallery-placeholder {
+    aspect-ratio: 4/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+    background: linear-gradient(135deg, var(--color-teal-ultralight), var(--color-teal-light));
+    color: var(--color-teal);
+    border-radius: var(--radius-xl);
+    border: 2px dashed var(--color-teal-light);
+    padding: 2rem;
+    text-align: center;
+}
+.gallery-placeholder .material-symbols-outlined { font-size: 3rem; opacity: .45; }
+.gallery-placeholder p { font-size: .8125rem; font-weight: 600; margin: 0; opacity: .7; }
+
+/* ── Before/After interactive slider ────────────────── */
+.before-after-wrap { position: relative; }
+
+.before-after-stage {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    cursor: col-resize;
+    border-radius: var(--radius-xl);
+    user-select: none;
+}
+.before-after-stage .before-after-base {
+    position: absolute; inset: 0;
+}
+.before-after-stage .before-after-overlay {
+    position: absolute; inset: 0; overflow: hidden;
+}
+.before-after-stage .before-after-overlay img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+}
+
+.before-after-base {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+}
+.before-after-base img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.before-after-after,
+.before-after-before {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+.before-after-after img,
+.before-after-before img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+}
+
+.before-after-overlay {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    clip-path: inset(0 50% 0 0);
+}
+
+.before-after-divider {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 50%;
+    width: 3px;
+    background: #fff;
+    box-shadow: 0 0 12px rgba(0,0,0,.4);
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.before-after-handle {
+    width: 44px; height: 44px;
+    background: #fff;
+    border-radius: var(--radius-full);
+    box-shadow: 0 4px 16px rgba(0,0,0,.3);
+    display: flex; align-items: center; justify-content: center;
+    cursor: col-resize;
+    flex-shrink: 0;
+    border: none;
+    transition: var(--t-fast);
+}
+.before-after-handle:hover { background: var(--color-teal-ultralight); }
+.before-after-handle .material-symbols-outlined { font-size: 1.25rem; color: var(--color-teal); }
+
+/* ── Labels ──────────────────────────────────────────── */
+/* .ba-tag is INSIDE the stage (positioned absolute) */
+.ba-tag {
+    position: absolute;
+    bottom: .875rem;
+    font-size: .65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    padding: .25rem .625rem;
+    border-radius: var(--radius-full);
+    z-index: 2;
+}
+.ba-tag--before {
+    left: .875rem;
+    background: rgba(15,23,42,.7);
+    color: rgba(255,255,255,.9);
+}
+.ba-tag--after {
+    right: .875rem;
+    background: var(--color-teal);
+    color: #fff;
+}
+
+/* .ba-label is OUTSIDE the stage (regular flow caption) */
+.ba-label {
+    font-size: .875rem;
+    color: var(--color-text-secondary);
+    text-align: center;
+    margin-top: .75rem;
+    font-style: italic;
+    padding: 0;
+}
+
+/* ── Placeholder ─────────────────────────────────────── */
+.before-after-placeholder {
+    width: 100%; height: 100%; min-height: 200px;
+    background: var(--color-bg-section);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: .5rem;
+    color: var(--color-text-muted);
+    font-size: .875rem; font-weight: 600;
+}
+.before-after-placeholder .material-symbols-outlined { font-size: 3rem; opacity: .35; }
+
+/* ── Section placeholder ─────────────────────────────── */
+.gallery-placeholder.fade-in-up { padding: 4rem 2rem; }

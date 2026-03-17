@@ -1,4 +1,29 @@
-/* Header & Ribbon OrthoSmile */
+/* Header & Ribbon — OrthoSmile */
+
+/* =====================================================
+   TOP RIBBON
+   ===================================================== */
+.site-ribbon {
+    background: var(--color-bg-dark);
+    padding: .5rem 0;
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.ribbon-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.ribbon-contacts {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
 
 .ribbon-contact {
     display: flex;
@@ -58,6 +83,9 @@
 }
 .ribbon-cta .material-symbols-outlined { font-size: .9rem; }
 
+/* =====================================================
+   MAIN HEADER
+   ===================================================== */
 .site-header {
     background: rgba(255,255,255,.92);
     backdrop-filter: blur(24px) saturate(180%);
@@ -68,8 +96,145 @@
     z-index: var(--z-sticky);
     transition: var(--t);
 }
-
 .site-header.scrolled {
     box-shadow: 0 4px 28px rgba(0,0,0,.07);
     border-bottom-color: transparent;
 }
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* ── Branding ─────────────────────────────────────── */
+.site-branding {
+    display: flex;
+    flex-direction: column;
+    gap: .125rem;
+    flex-shrink: 0;
+}
+.site-name {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+.site-name:hover { color: var(--color-teal); }
+.site-tagline {
+    font-size: .72rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    letter-spacing: .02em;
+}
+
+/* ── Primary navigation ───────────────────────────── */
+.site-navigation { display: flex; align-items: center; flex: 1; justify-content: center; }
+
+.main-menu {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu > li > a {
+    display: flex;
+    align-items: center;
+    padding: .5rem .875rem;
+    font-size: .875rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    transition: var(--t-fast);
+    position: relative;
+}
+.main-menu > li > a::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0; right: 0;
+    height: 2px;
+    background: var(--color-teal);
+    border-radius: var(--radius-full);
+    transform: scaleX(0);
+    transition: transform .25s ease;
+}
+.main-menu > li > a:hover,
+.main-menu > li.current-menu-item > a { color: var(--color-teal); }
+.main-menu > li > a:hover::after,
+.main-menu > li.current-menu-item > a::after { transform: scaleX(1); }
+
+/* ── Header CTA group ─────────────────────────────── */
+.header-cta-group {
+    display: flex;
+    align-items: center;
+    gap: .625rem;
+    flex-shrink: 0;
+}
+
+.header-phone-btn {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    color: var(--color-text-secondary);
+    font-size: .8125rem;
+    font-weight: 600;
+    padding: .625rem .875rem;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    transition: var(--t);
+    white-space: nowrap;
+}
+.header-phone-btn:hover {
+    color: var(--color-teal);
+    border-color: var(--color-teal-light);
+    background: var(--color-teal-ultralight);
+}
+.header-phone-btn .material-symbols-outlined { font-size: 1rem; color: var(--color-teal); }
+
+.btn-appointment {
+    background: linear-gradient(135deg, var(--color-teal), var(--color-teal-dark));
+    color: #fff;
+    font-size: .8125rem;
+    font-weight: 700;
+    padding: .75rem 1.375rem;
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    transition: var(--t);
+    box-shadow: var(--shadow-teal);
+    white-space: nowrap;
+    display: inline-block;
+}
+.btn-appointment:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-teal-lg);
+}
+
+/* ── Mobile toggle ────────────────────────────────── */
+.menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 42px; height: 42px;
+    background: var(--color-teal-ultralight);
+    border: 1.5px solid var(--color-teal-light);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: var(--t-fast);
+    flex-shrink: 0;
+}
+.menu-toggle:hover { background: var(--color-teal-light); }
+.menu-toggle .material-symbols-outlined { font-size: 1.5rem; color: var(--color-teal); }

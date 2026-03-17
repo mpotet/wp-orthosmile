@@ -1,0 +1,221 @@
+/* Contact Section & Form — OrthoSmile */
+
+/* ── Contact info cards (homepage) ──────────────────── */
+.contact-section {
+    padding: var(--section-py) 0;
+    background: var(--color-bg);
+}
+
+.contact-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+}
+
+.contact-card {
+    background: #fff;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: var(--t);
+    text-decoration: none;
+    display: block;
+}
+.contact-card:hover {
+    border-color: var(--color-teal-light);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    background: var(--color-teal-ultralight);
+}
+
+.contact-card-icon {
+    width: 52px; height: 52px;
+    background: linear-gradient(135deg, var(--color-teal-ultralight), var(--color-teal-light));
+    border-radius: var(--radius-xl);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1rem;
+    transition: var(--t);
+}
+.contact-card:hover .contact-card-icon {
+    background: linear-gradient(135deg, var(--color-teal), var(--color-teal-dark));
+}
+.contact-card-icon .material-symbols-outlined {
+    font-size: 1.5rem; color: var(--color-teal); transition: var(--t);
+}
+.contact-card:hover .contact-card-icon .material-symbols-outlined { color: #fff; }
+
+.contact-card-label {
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--color-text-muted);
+    margin-bottom: .375rem;
+    display: block;
+}
+.contact-card-value {
+    font-size: .9375rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.5;
+    margin: 0;
+}
+a.contact-card .contact-card-value { color: var(--color-teal); }
+
+/* ── Map ─────────────────────────────────────────────── */
+.contact-map,
+.map-container {
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    margin-top: 1.5rem;
+}
+.contact-map iframe,
+.map-container iframe { width: 100%; height: 320px; border: none; display: block; }
+
+/* ── Contact page layout (2 columns) ────────────────── */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.contact-info-card {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-2xl);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-sm);
+}
+.contact-info-card h3 {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--color-teal-ultralight);
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.contact-item:last-of-type { margin-bottom: 0; }
+
+.contact-icon {
+    width: 44px; height: 44px;
+    background: linear-gradient(135deg, var(--color-teal-ultralight), var(--color-teal-light));
+    border-radius: var(--radius-lg);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    color: var(--color-teal);
+}
+.contact-icon .material-symbols-outlined { font-size: 1.25rem; }
+
+.contact-details h4 { font-size: .875rem; margin: 0 0 .25rem; color: var(--color-text); }
+.contact-details p,
+.contact-details a {
+    font-size: .875rem; color: var(--color-text-light); margin: 0; text-decoration: none;
+}
+.contact-details a:hover { color: var(--color-teal); }
+
+/* ── Contact form wrapper ────────────────────────────── */
+.contact-form-wrapper,
+.contact-form-section {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-2xl);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-sm);
+}
+.contact-form-wrapper h3 { margin-bottom: .5rem; }
+.contact-form-wrapper > p { margin-bottom: 2rem; color: var(--color-text-light); }
+
+.contact-form-section { padding: var(--section-py) 0; background: var(--color-bg-alt); }
+.contact-form-wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-2xl);
+    padding: 3rem;
+    box-shadow: var(--shadow-sm);
+}
+.contact-form-wrap h2 { margin-bottom: .5rem; }
+.contact-form-wrap > p { margin-bottom: 2rem; }
+
+/* ── Form ────────────────────────────────────────────── */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+}
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: .375rem;
+}
+.form-group label {
+    font-size: .78rem;
+    font-weight: 700;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+.form-group .required { color: #EF4444; margin-left: 2px; }
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: .875rem 1.125rem;
+    font-family: var(--font-body);
+    font-size: .9375rem;
+    color: var(--color-text);
+    background: var(--color-bg-section);
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    transition: var(--t-fast);
+    outline: none;
+    box-sizing: border-box;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--color-teal);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(15,118,110,.1);
+}
+.form-group textarea { resize: vertical; min-height: 150px; }
+.form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236B7280'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 18px;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+/* ── Success message ─────────────────────────────────── */
+.contact-success {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    background: #f0fdf4;
+    border: 1.5px solid #bbf7d0;
+    color: #16a34a;
+    border-radius: var(--radius-lg);
+    padding: 1rem 1.25rem;
+    font-size: .9375rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+.contact-success .material-symbols-outlined { font-size: 1.25rem; flex-shrink: 0; }

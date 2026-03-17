@@ -1,0 +1,119 @@
+/* Specialists Section — OrthoSmile */
+
+.specialists-section {
+    padding: var(--section-py) 0;
+    background: var(--color-bg-alt);
+}
+
+/* ── Team photo ─────────────────────────────────────── */
+.specialists-team-photo {
+    margin-bottom: 3rem;
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    position: relative;
+}
+.specialists-team-photo img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+}
+.specialists-team-photo-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(10,46,43,.8));
+    padding: 2.5rem 2rem 1.5rem;
+    color: rgba(255,255,255,.9);
+    font-size: .875rem;
+    font-weight: 500;
+}
+.specialists-team-photo-placeholder {
+    width: 100%;
+    height: 260px;
+    background: linear-gradient(135deg, var(--color-teal-ultralight), var(--color-teal-light));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--color-teal);
+    border-radius: var(--radius-2xl);
+    border: 2px dashed var(--color-teal-light);
+    padding: 2rem;
+    text-align: center;
+}
+.specialists-team-photo-placeholder .material-symbols-outlined { font-size: 3.5rem; opacity: .4; }
+.specialists-team-photo-placeholder p { font-size: .875rem; font-weight: 600; margin: 0; opacity: .7; }
+
+/* ── Grid ────────────────────────────────────────────── */
+.specialists-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* ── Card ────────────────────────────────────────────── */
+.specialist-card {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    transition: var(--t);
+    box-shadow: var(--shadow-sm);
+}
+.specialist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-teal-light);
+}
+
+.specialist-photo {
+    height: 260px;
+    background: linear-gradient(135deg, var(--color-teal-ultralight), var(--color-teal-light));
+    overflow: hidden;
+    position: relative;
+}
+.specialist-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: var(--t-slow);
+    display: block;
+}
+.specialist-card:hover .specialist-photo img { transform: scale(1.04); }
+.specialist-photo-placeholder {
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--color-teal);
+}
+.specialist-photo-placeholder .material-symbols-outlined { font-size: 5rem; opacity: .35; }
+
+.specialist-content { padding: 1.5rem; }
+
+.specialist-name {
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: var(--color-text);
+    margin: 0 0 .25rem;
+    letter-spacing: -0.01em;
+}
+
+.specialist-title {
+    display: block;
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    color: var(--color-teal);
+    margin-bottom: .875rem;
+    padding-bottom: .875rem;
+    border-bottom: 2px solid var(--color-teal-ultralight);
+}
+
+.specialist-description {
+    font-size: .875rem;
+    color: var(--color-text-light);
+    line-height: 1.7;
+    margin: 0;
+}

@@ -1,0 +1,12 @@
+/* Splide carousel overrides — OrthoSmile */
+
+.splide__pagination__page {
+    background: var(--color-border);
+    transition: var(--t-fast);
+}
+.splide__pagination__page.is-active {
+    background: var(--color-teal);
+    transform: scale(1.25);
+}
+
+.splide__track { border-radius: var(--radius-xl); }

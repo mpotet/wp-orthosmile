@@ -1,0 +1,87 @@
+/* CTA Dark Section — OrthoSmile */
+
+.cta-section {
+    padding: var(--section-py) 0;
+    background:
+        linear-gradient(145deg,
+            var(--color-bg-dark) 0%,
+            var(--color-navy-dark) 50%,
+            var(--color-teal-deep) 100%);
+    position: relative;
+    overflow: hidden;
+}
+.cta-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+        radial-gradient(ellipse at 80% 20%, rgba(15,118,110,.25) 0%, transparent 55%),
+        radial-gradient(ellipse at 10% 80%, rgba(245,158,11,.08) 0%, transparent 45%);
+    pointer-events: none;
+}
+
+.cta-content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.cta-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .375rem;
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: var(--color-gold);
+    background: rgba(245,158,11,.12);
+    border: 1px solid rgba(245,158,11,.3);
+    padding: .375rem 1.125rem;
+    border-radius: var(--radius-full);
+    margin-bottom: 1.25rem;
+}
+.cta-eyebrow .material-symbols-outlined { font-size: .9rem; }
+
+.cta-title {
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 1.25rem;
+    line-height: 1.1;
+    -webkit-text-fill-color: #fff;
+    background: none;
+    letter-spacing: -0.025em;
+}
+
+.cta-subtitle {
+    font-size: 1.125rem;
+    color: rgba(255,255,255,.7);
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+}
+
+.cta-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cta-phone {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: rgba(255,255,255,.75);
+    font-size: .875rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    justify-content: center;
+    text-decoration: none;
+    transition: var(--t-fast);
+}
+.cta-phone:hover { color: #fff; }
+.cta-phone .material-symbols-outlined { color: var(--color-gold); font-size: 1.1rem; }

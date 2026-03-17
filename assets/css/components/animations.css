@@ -1,0 +1,69 @@
+/* Animations & Scroll-to-top — OrthoSmile */
+
+/* =====================================================
+   SCROLL-TO-TOP
+   ===================================================== */
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem; right: 2rem;
+    width: 46px; height: 46px;
+    background: linear-gradient(135deg, var(--color-teal), var(--color-teal-dark));
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    z-index: var(--z-modal);
+    box-shadow: var(--shadow-teal-lg);
+    transition: var(--t);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+}
+.scroll-to-top:hover { transform: translateY(-4px); }
+/* JS adds .visible or .is-visible */
+.scroll-to-top.visible,
+.scroll-to-top.is-visible { opacity: 1; pointer-events: auto; }
+
+/* =====================================================
+   KEYFRAMES
+   ===================================================== */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-32px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-10px); }
+}
+
+@keyframes countUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =====================================================
+   FADE-IN-UP (intersection-observer driven)
+   ===================================================== */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .6s ease, transform .6s ease;
+}
+/* JS adds .animated or .visible */
+.fade-in-up.animated,
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger delays */
+.fade-in-up:nth-child(1) { transition-delay: .05s; }
+.fade-in-up:nth-child(2) { transition-delay: .15s; }
+.fade-in-up:nth-child(3) { transition-delay: .25s; }
+.fade-in-up:nth-child(4) { transition-delay: .35s; }
