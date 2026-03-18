@@ -17,13 +17,18 @@ if (!defined('ABSPATH')) {
  * @return mixed
  */
 function orthosmile_get_option($key, $default = false) {
+    // Priorité : options du panel admin custom (orthosmile_*)
+    $value = get_option('orthosmile_' . $key, null);
+    if ($value !== null && $value !== '') {
+        return $value;
+    }
+
+    // Fallback : theme_mods Customizer (settings existants)
     $value = get_theme_mod($key, $default);
-    
-    // If value is empty and we have a default, return default
     if (empty($value) && $default !== false) {
         return $default;
     }
-    
+
     return $value;
 }
 

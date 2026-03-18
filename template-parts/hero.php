@@ -2,7 +2,7 @@
 /**
  * Template part: Hero section.
  *
- * All texts and images are configurable via the Customizer (Appearance → Customize).
+ * All texts and images are configurable via the admin panel (OrthoSmile → Réglages → Contenu).
  * Leaving a field empty hides the corresponding element.
  *
  * @package OrthoSmile
@@ -11,22 +11,22 @@
 if (!defined('ABSPATH')) exit;
 
 /* ── Core content ─────────────────────────────────── */
-$hero_title    = get_theme_mod('hero_title', __('Votre sourire parfait commence ici', 'orthosmile'));
-$hero_subtitle = get_theme_mod('hero_subtitle', __('Décrivez votre cabinet et votre approche ici.', 'orthosmile'));
-$hero_cta_text = get_theme_mod('hero_cta_text', __('Prendre rendez-vous', 'orthosmile'));
-$hero_cta_url  = get_theme_mod('hero_cta_url', '') ?: orthosmile_get_appointment_url();
+$hero_title    = orthosmile_get_option('hero_title', __('Votre sourire parfait commence ici', 'orthosmile'));
+$hero_subtitle = orthosmile_get_option('hero_subtitle', __('Décrivez votre cabinet et votre approche ici.', 'orthosmile'));
+$hero_cta_text = orthosmile_get_option('hero_cta_text', __('Prendre rendez-vous', 'orthosmile'));
+$hero_cta_url  = orthosmile_get_option('hero_cta_url', '') ?: orthosmile_get_appointment_url();
 
 /* ── Secondary CTA ────────────────────────────────── */
-$hero_secondary_cta_text = get_theme_mod('hero_secondary_cta_text', __('Voir nos traitements', 'orthosmile'));
-$hero_secondary_cta_url  = get_theme_mod('hero_secondary_cta_url', '#services');
+$hero_secondary_cta_text = orthosmile_get_option('hero_secondary_cta_text', __('Voir nos traitements', 'orthosmile'));
+$hero_secondary_cta_url  = orthosmile_get_option('hero_secondary_cta_url', '#services');
 
 /* ── Eyebrow / cabinet name ───────────────────────── */
-$cabinet_name = get_theme_mod('cabinet_name', get_bloginfo('name'));
+$cabinet_name = orthosmile_get_option('cabinet_name', get_bloginfo('name'));
 
 /* ── Hero image (optional) ────────────────────────── */
-$hero_image       = get_theme_mod('hero_image', '');
-$hero_image_alt   = get_theme_mod('hero_image_alt', __('Photo du cabinet ou de l\'équipe', 'orthosmile'));
-$show_hero_image  = get_theme_mod('show_hero_image', true);
+$hero_image       = orthosmile_get_option('hero_image', '');
+$hero_image_alt   = orthosmile_get_option('hero_image_alt', __('Photo du cabinet ou de l\'équipe', 'orthosmile'));
+$show_hero_image  = orthosmile_get_option('show_hero_image', '1');
 $has_hero_image   = $show_hero_image && !empty($hero_image);
 
 /* ── Badges (3 configurable, each optional) ───────── */
@@ -37,9 +37,9 @@ for ($i = 1; $i <= 3; $i++) {
         2 => ['icon' => 'visibility_off',    'text' => __('Invisalign Certified',    'orthosmile')],
         3 => ['icon' => 'child_care',        'text' => __('Pédiatrie & adultes',     'orthosmile')],
     ];
-    $show = get_theme_mod("hero_badge_{$i}_show", true);
-    $text = get_theme_mod("hero_badge_{$i}_text", $defaults[$i]['text']);
-    $icon = get_theme_mod("hero_badge_{$i}_icon", $defaults[$i]['icon']);
+    $show = orthosmile_get_option("hero_badge_{$i}_show", '1');
+    $text = orthosmile_get_option("hero_badge_{$i}_text", $defaults[$i]['text']);
+    $icon = orthosmile_get_option("hero_badge_{$i}_icon", $defaults[$i]['icon']);
     if ($show && !empty($text)) {
         $badges[] = ['text' => $text, 'icon' => $icon];
     }

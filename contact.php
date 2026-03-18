@@ -66,7 +66,7 @@ $contact = orthosmile_get_contact_info();
 
                     <?php if ($contact['map_embed']) : ?>
                     <div class="contact-map">
-                        <?php echo wp_kses_post($contact['map_embed']); ?>
+                        <?php echo $contact['map_embed']; ?>
                     </div>
                     <?php endif; ?>
                 </div>

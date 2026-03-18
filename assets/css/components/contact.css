@@ -133,7 +133,7 @@ a.contact-card .contact-card-value { color: var(--color-teal); }
 .contact-form-wrapper h3 { margin-bottom: .5rem; }
 .contact-form-wrapper > p { margin-bottom: 2rem; color: var(--color-text-light); }
 
-.contact-form-section { padding: var(--section-py) 0; background: var(--color-bg-alt); }
+.contact-form-section { padding: var(--section-py) 0; background: var(--color-bg); }
 .contact-form-wrap {
     max-width: 680px;
     margin: 0 auto;

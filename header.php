@@ -18,13 +18,13 @@ if (!defined('ABSPATH')) exit;
 <?php wp_body_open(); ?>
 
 <?php
-$phone   = get_theme_mod('phone_number', '');
-$email   = get_theme_mod('contact_email', '');
-$hours   = get_theme_mod('opening_hours', '');
+$phone   = orthosmile_get_option( 'phone_number', '' );
+$email   = orthosmile_get_option( 'contact_email', '' );
+$hours   = orthosmile_get_option( 'opening_hours', '' );
 $rdv_url = orthosmile_get_appointment_url();
-$fb_url  = get_theme_mod('facebook_url', '');
-$ig_url  = get_theme_mod('instagram_url', '');
-$li_url  = get_theme_mod('linkedin_url', '');
+$fb_url  = orthosmile_get_option( 'facebook_url', '' );
+$ig_url  = orthosmile_get_option( 'instagram_url', '' );
+$li_url  = orthosmile_get_option( 'linkedin_url', '' );
 ?>
 
 <header id="masthead" class="site-header" role="banner">
@@ -89,17 +89,23 @@ $li_url  = get_theme_mod('linkedin_url', '');
 
             <!-- Logo / Branding -->
             <div class="site-branding">
-                <?php if (has_custom_logo()) : ?>
+                <?php if ( has_custom_logo() ) : ?>
                     <?php the_custom_logo(); ?>
-                <?php else :
-                    $cabinet_name   = get_theme_mod('cabinet_name', get_bloginfo('name'));
-                    $cabinet_slogan = get_theme_mod('cabinet_slogan', get_bloginfo('description'));
-                ?>
-                    <a href="<?php echo esc_url(home_url('/')); ?>" rel="home" class="site-name">
-                        <?php echo esc_html($cabinet_name ?: get_bloginfo('name')); ?>
+                <?php elseif ( $logo_url = orthosmile_get_option( 'logo_url', '' ) ) : ?>
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                        <img src="<?php echo esc_url( $logo_url ); ?>"
+                             alt="<?php echo esc_attr( orthosmile_get_option( 'cabinet_name', get_bloginfo( 'name' ) ) ); ?>"
+                             style="max-height:60px;width:auto;">
                     </a>
-                    <?php if ($cabinet_slogan) : ?>
-                        <span class="site-tagline"><?php echo esc_html($cabinet_slogan); ?></span>
+                <?php else :
+                    $cabinet_name   = orthosmile_get_option( 'cabinet_name', get_bloginfo( 'name' ) );
+                    $cabinet_slogan = orthosmile_get_option( 'cabinet_slogan', get_bloginfo( 'description' ) );
+                ?>
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-name">
+                        <?php echo esc_html( $cabinet_name ?: get_bloginfo( 'name' ) ); ?>
+                    </a>
+                    <?php if ( $cabinet_slogan ) : ?>
+                        <span class="site-tagline"><?php echo esc_html( $cabinet_slogan ); ?></span>
                     <?php endif; ?>
                 <?php endif; ?>
             </div>

@@ -7,14 +7,14 @@
 
 if (!defined('ABSPATH')) exit;
 
-if (!get_theme_mod('show_cta', true)) return;
+if ( ! orthosmile_get_option( 'show_cta', '1' ) ) return;
 
-$cta_title    = get_theme_mod('cta_title',        __('Prêt à transformer votre sourire ?', 'orthosmile'));
-$cta_subtitle = get_theme_mod('cta_subtitle',    __('Consultez nos spécialistes et bénéficiez d\'un bilan orthodontique offert.', 'orthosmile'));
-$cta_btn      = get_theme_mod('cta_btn_text',    __('Prendre rendez-vous', 'orthosmile'));
-$cta_contact  = get_theme_mod('cta_contact_text',__('Nous contacter', 'orthosmile'));
+$cta_title    = orthosmile_get_option( 'cta_title',        __( 'Prêt à transformer votre sourire ?', 'orthosmile' ) );
+$cta_subtitle = orthosmile_get_option( 'cta_subtitle',     __( 'Consultez nos spécialistes et bénéficiez d\'un bilan orthodontique offert.', 'orthosmile' ) );
+$cta_btn      = orthosmile_get_option( 'cta_btn_text',     __( 'Prendre rendez-vous', 'orthosmile' ) );
+$cta_contact  = orthosmile_get_option( 'cta_contact_text', __( 'Nous contacter', 'orthosmile' ) );
 $rdv_url      = orthosmile_get_appointment_url();
-$phone        = get_theme_mod('phone_number', '');
+$phone        = orthosmile_get_option( 'phone_number', '' );
 ?>
 
 <section class="cta-section" id="cta">
@@ -30,11 +30,11 @@ $phone        = get_theme_mod('phone_number', '');
             <p class="cta-subtitle"><?php echo esc_html($cta_subtitle); ?></p>
 
             <div class="cta-buttons">
-                <a href="<?php echo esc_url($rdv_url); ?>" class="btn btn-primary btn-lg">
+                <a href="<?php echo esc_url($rdv_url); ?>" class="btn btn-gold btn-lg">
                     <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
                     <?php echo esc_html($cta_btn); ?>
                 </a>
-                <a href="#contact" class="btn btn-secondary btn-lg">
+                <a href="#contact" class="btn btn-outline-white btn-lg">
                     <?php echo esc_html($cta_contact); ?>
                 </a>
             </div>

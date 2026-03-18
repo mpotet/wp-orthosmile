@@ -7,28 +7,28 @@
 
 if (!defined('ABSPATH')) exit;
 
-if (!get_theme_mod('show_stats', true)) return;
+if (!orthosmile_get_option('show_stats', '1')) return;
 
 $stats = [
     [
-        'value' => get_theme_mod('stat_1_value', 'XXXX'),
-        'label' => get_theme_mod('stat_1_label', 'XXXX - Légende statistique 1'),
-        'icon'  => get_theme_mod('stat_1_icon', 'emoji_events'),
+        'value' => orthosmile_get_option('stat_1_value', 'XXXX'),
+        'label' => orthosmile_get_option('stat_1_label', 'XXXX - Légende statistique 1'),
+        'icon'  => orthosmile_get_option('stat_1_icon', 'emoji_events'),
     ],
     [
-        'value' => get_theme_mod('stat_2_value', 'XXXX'),
-        'label' => get_theme_mod('stat_2_label', 'XXXX - Légende statistique 2'),
-        'icon'  => get_theme_mod('stat_2_icon', 'groups'),
+        'value' => orthosmile_get_option('stat_2_value', 'XXXX'),
+        'label' => orthosmile_get_option('stat_2_label', 'XXXX - Légende statistique 2'),
+        'icon'  => orthosmile_get_option('stat_2_icon', 'groups'),
     ],
     [
-        'value' => get_theme_mod('stat_3_value', 'XXXX'),
-        'label' => get_theme_mod('stat_3_label', 'XXXX - Légende statistique 3'),
-        'icon'  => get_theme_mod('stat_3_icon', 'verified'),
+        'value' => orthosmile_get_option('stat_3_value', 'XXXX'),
+        'label' => orthosmile_get_option('stat_3_label', 'XXXX - Légende statistique 3'),
+        'icon'  => orthosmile_get_option('stat_3_icon', 'verified'),
     ],
     [
-        'value' => get_theme_mod('stat_4_value', 'XXXX'),
-        'label' => get_theme_mod('stat_4_label', 'XXXX - Légende statistique 4'),
-        'icon'  => get_theme_mod('stat_4_icon', 'star'),
+        'value' => orthosmile_get_option('stat_4_value', 'XXXX'),
+        'label' => orthosmile_get_option('stat_4_label', 'XXXX - Légende statistique 4'),
+        'icon'  => orthosmile_get_option('stat_4_icon', 'star'),
     ],
 ];
 ?>
