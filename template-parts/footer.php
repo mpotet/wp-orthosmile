@@ -160,7 +160,7 @@ $socials = [
                 </ul>
 
                 <?php if ($rdv_url) : ?>
-                <a href="<?php echo esc_url($rdv_url); ?>" class="btn btn-primary btn-sm" style="margin-top:1.25rem;">
+                <a href="<?php echo esc_url($rdv_url); ?>" class="btn btn-primary btn-sm footer-rdv-btn">
                     <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
                     <?php esc_html_e('Prendre rendez-vous', 'orthosmile'); ?>
                 </a>
@@ -171,7 +171,7 @@ $socials = [
         <!-- Footer bottom bar -->
         <div class="footer-bottom">
             <p class="footer-legal">
-                &copy; <?php echo date('Y'); ?> <?php echo esc_html($cabinet_name); ?>.
+                &copy; <?php echo wp_date('Y'); ?> <?php echo esc_html($cabinet_name); ?>.
                 <?php esc_html_e('Tous droits réservés.', 'orthosmile'); ?>
                 <?php if ($footer_legal) : ?>
                     &mdash; <?php echo esc_html($footer_legal); ?>

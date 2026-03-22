@@ -34,7 +34,7 @@ $phone        = orthosmile_get_option( 'phone_number', '' );
                     <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
                     <?php echo esc_html($cta_btn); ?>
                 </a>
-                <a href="#contact" class="btn btn-outline-white btn-lg">
+                <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn btn-outline-white btn-lg">
                     <?php echo esc_html($cta_contact); ?>
                 </a>
             </div>
@@ -43,7 +43,7 @@ $phone        = orthosmile_get_option( 'phone_number', '' );
             <a href="tel:<?php echo esc_attr(preg_replace('/[^0-9+]/', '', $phone)); ?>" class="cta-phone">
                 <span class="material-symbols-outlined" aria-hidden="true">call</span>
                 <?php echo esc_html($phone); ?>
-                <span style="opacity:.5;margin:0 .25rem;">&mdash;</span>
+                <span class="cta-phone-sep" aria-hidden="true">&mdash;</span>
                 <?php esc_html_e('Appelez-nous directement', 'orthosmile'); ?>
             </a>
             <?php endif; ?>

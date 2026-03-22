@@ -43,7 +43,7 @@ if ( ! $has_posts && ! current_user_can( 'manage_options' ) ) return;
 			<?php $faq_index = 0; ?>
 			<?php while ( $faqs->have_posts() ) : $faqs->the_post(); ?>
 			<?php
-			$answer   = get_post_meta( get_the_ID(), '_faq_reponse', true ) ?: get_the_content();
+			$answer   = get_the_content();
 			$item_id  = 'faq-item-'  . get_the_ID();
 			$panel_id = 'faq-panel-' . get_the_ID();
 			?>

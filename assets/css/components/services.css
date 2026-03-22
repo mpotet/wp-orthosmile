@@ -105,7 +105,7 @@
 .service-badge {
     position: absolute;
     top: .875rem; right: .875rem;
-    background: var(--color-gold);
+    background: var(--color-teal-dark);
     color: #fff;
     font-size: .65rem;
     font-weight: 800;
@@ -113,7 +113,7 @@
     letter-spacing: .07em;
     padding: .25rem .625rem;
     border-radius: var(--radius-full);
-    box-shadow: 0 2px 8px rgba(245,158,11,.4);
+    box-shadow: 0 2px 8px rgba(var(--color-teal-rgb),.4);
 }
 
 /* ── Text content ────────────────────────────────────── */

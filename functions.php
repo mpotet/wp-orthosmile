@@ -52,7 +52,7 @@ function orthosmile_handle_contact_form() {
         wp_die(__('Données invalides ou manquantes.', 'orthosmile'));
     }
 
-    $to   = get_option('admin_email');
+    $to   = orthosmile_get_option( 'contact_email', get_option( 'admin_email' ) );
     $subj = sprintf(__('[OrthoSmile] Nouveau message de %s', 'orthosmile'), $name);
     $body = "Nom : $name\nEmail : $email\nTéléphone : $phone\nSujet : $subject\n\n$message\n\nDate : " . wp_date('d/m/Y H:i');
 
@@ -61,34 +61,39 @@ function orthosmile_handle_contact_form() {
     exit;
 }
 
-/* ── CSS admin notices + about section ────────────────────── */
+/* ── CSS admin notices (inline car injecté après les CSS compilés) ─── */
 add_action( 'wp_enqueue_scripts', function () {
 	wp_add_inline_style( 'orthosmile-main',
-		/* Empty notices (admin only) */
 		'.orthosmile-empty-notice{display:flex;align-items:flex-start;gap:10px;background:#e8f5e9;border-left:4px solid #0F766E;border-radius:0 6px 6px 0;padding:16px 20px;margin:24px 0;font-size:14px;color:#065f46}'
 		. '.orthosmile-empty-notice .material-symbols-outlined{font-size:20px;flex-shrink:0;margin-top:1px}'
 		. '.orthosmile-empty-notice p{margin:0}'
 		. '.orthosmile-empty-notice a{color:#0F766E;font-weight:600;text-decoration:underline}'
-		/* About section */
-		. '.about-section{background:var(--color-bg-alt,#f0f9f5)}'
-		. '.about-inner{display:grid;gap:3rem;align-items:center;margin-top:2.5rem}'
-		. '.about-has-image{grid-template-columns:1fr 1fr}'
-		. '.about-no-image{grid-template-columns:1fr;max-width:760px;margin-left:auto;margin-right:auto}'
-		. '.about-image-wrap{border-radius:var(--radius-lg,12px);overflow:hidden;box-shadow:var(--shadow-lg)}'
-		. '.about-image{width:100%;height:100%;object-fit:cover;display:block;max-height:480px}'
-		. '.about-body{display:flex;flex-direction:column;gap:1.25rem}'
-		. '.about-text{color:var(--color-text);line-height:1.8;font-size:1rem;white-space:pre-line}'
-		. '@media(max-width:768px){.about-has-image{grid-template-columns:1fr}.about-image{max-height:280px}}'
 	);
 }, 20 );
+
+/* ── SEO meta tags ──────────────────────────────────────────── */
+add_action('wp_head', function () {
+    $meta_desc = get_option('orthosmile_meta_desc', '');
+    $og_image  = get_option('orthosmile_og_image',  '');
+    if ( $meta_desc ) {
+        echo '<meta name="description" content="' . esc_attr( $meta_desc ) . '">' . "\n";
+        echo '<meta property="og:description" content="' . esc_attr( $meta_desc ) . '">' . "\n";
+    }
+    if ( $og_image ) {
+        echo '<meta property="og:image" content="' . esc_url( $og_image ) . '">' . "\n";
+        echo '<meta property="og:image:width" content="1200">' . "\n";
+        echo '<meta property="og:image:height" content="630">' . "\n";
+    }
+}, 2);
 
 /* ── GA4 injection ─────────────────────────────────────────── */
 add_action('wp_head', function () {
     $ga_id = get_option('orthosmile_ga_id', '');
     if (!$ga_id) return;
-    $ga_id = esc_js($ga_id);
-    echo "<script async src=\"https://www.googletagmanager.com/gtag/js?id={$ga_id}\"></script>\n";
-    echo "<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','{$ga_id}');</script>\n";
+    $ga_id_attr = esc_attr( $ga_id );
+    $ga_id_js   = esc_js( $ga_id );
+    echo "<script async src=\"https://www.googletagmanager.com/gtag/js?id={$ga_id_attr}\"></script>\n";
+    echo "<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','{$ga_id_js}');</script>\n";
 }, 1);
 
 /* ── Notice succès contact ─────────────────────────────────── */

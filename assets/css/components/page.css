@@ -5,7 +5,7 @@
    ===================================================== */
 .page-banner {
     background: linear-gradient(135deg, var(--color-teal-ultralight) 0%, #fff 60%);
-    border-bottom: 1px solid rgba(15,118,110,.08);
+    border-bottom: 1px solid rgba(var(--color-teal-rgb),.08);
     padding: 3rem 0 2.25rem;
 }
 .page-banner-title {
@@ -15,6 +15,13 @@
     letter-spacing: -.03em;
     line-height: 1.15;
     margin: 0 0 .625rem;
+}
+.page-banner-subtitle {
+    font-size: 1.0625rem;
+    color: var(--color-text-light);
+    line-height: 1.7;
+    margin: .5rem 0 0;
+    max-width: 640px;
 }
 .breadcrumb {
     display: flex;

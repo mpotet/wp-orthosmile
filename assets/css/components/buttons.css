@@ -43,11 +43,11 @@
 .btn-gold {
     background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
     color: #fff;
-    box-shadow: 0 4px 20px rgba(245,158,11,.35);
+    box-shadow: 0 4px 20px rgba(var(--color-gold-rgb),.35);
 }
 .btn-gold:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 28px rgba(245,158,11,.50);
+    box-shadow: 0 8px 28px rgba(var(--color-gold-rgb),.50);
     color: #fff;
 }
 

@@ -3,10 +3,14 @@
 .site-footer {
     background: var(--color-bg-dark);
     color: rgba(255,255,255,.7);
-    padding-top: 5rem;
+    padding-top: var(--section-py);
 }
 
-/* ── Main grid ───────────────────────────────────────── */
+/* RDV button in footer nav column */
+.footer-rdv-btn {
+    display: inline-flex;
+    margin-top: 1.25rem;
+}
 .footer-grid {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1.5fr;

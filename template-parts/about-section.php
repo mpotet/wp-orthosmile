@@ -25,7 +25,7 @@ if (
 ) return;
 ?>
 
-<section id="about" class="about-section section-padded" aria-label="<?php esc_attr_e( 'À propos du cabinet', 'orthosmile' ); ?>">
+<section id="about" class="about-section" aria-label="<?php esc_attr_e( 'À propos du cabinet', 'orthosmile' ); ?>">
 	<div class="container">
 
 		<div class="section-header">
@@ -54,7 +54,7 @@ if (
 
 			<div class="about-body">
 
-				<?php if ( $texte && ! str_starts_with( $texte, 'XXXX' ) ) : ?>
+				<?php if ( $texte ) : ?>
 				<div class="about-text">
 					<?php echo nl2br( esc_html( $texte ) ); ?>
 				</div>

@@ -106,3 +106,4 @@
 }
 .cta-phone:hover { color: #fff; }
 .cta-phone .material-symbols-outlined { font-size: 1.1rem; opacity: .8; }
+.cta-phone-sep { opacity: .5; margin: 0 .25rem; }
